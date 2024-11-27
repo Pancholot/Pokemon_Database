@@ -1,0 +1,33 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de logs
+*.log
+*.tmp
+
+# Archivos CSV o sensibles
+*.csv
+
+# Archivos de dependencias
+*.lock
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
