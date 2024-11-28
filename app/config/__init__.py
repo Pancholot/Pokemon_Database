@@ -11,3 +11,4 @@ class Config:
     MYSQL_DATABASE_DB: str = "basededatos"
     MYSQL_DATABASE_PORT: int = 3307
     MYSQL_DATABASE_CHARSET: str = "utf8mb4"
+    MONGO_URI: str = os.getenv("MONGO_URI")
