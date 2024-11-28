@@ -49,6 +49,16 @@ class Trainer:
         return trainer
 
     @staticmethod
+    def login(mail: str, password: str):
+        if mongo.db is None:
+            return None
+        trainer = mongo.db.trainers.find_one({"mail": mail, "password": password})
+        if trainer:
+            # Convertir el _id de ObjectId a string
+            trainer["_id"] = str(trainer["_id"])
+        return trainer
+
+    @staticmethod
     def add_pokemon_to_team(new_pokemon: int, _id: str):
         if mongo.db is None:
             return False
