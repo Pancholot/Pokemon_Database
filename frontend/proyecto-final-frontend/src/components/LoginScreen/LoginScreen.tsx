@@ -25,7 +25,7 @@ const LoginScreen = () => {
             }
             return response.json()
         }).then(data => {
-            localStorage.setItem("token_pokemon", data.trainer)
+            localStorage.setItem("token_pokemon", JSON.stringify(data.trainer))
             navigate("/")
         })
 

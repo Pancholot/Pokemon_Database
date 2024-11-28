@@ -4,15 +4,22 @@ import { useNavigate } from 'react-router'
 const Home = ({ children }: any) => {
 
     const navigate = useNavigate()
-    const trainerData = localStorage.getItem("token_pokemon")
+    const token = localStorage.getItem("token_pokemon");
+    const trainerData = token ? JSON.parse(token) : null;
+
+
 
     /*SI NO ESTÁS INICIADO SESIÓN, TE MANDA A INICIAR SESIÓN XD */
-    if (!localStorage.getItem("token_pokemon")) {
+    if (!trainerData) {
         navigate("/login")
     }
 
     return (
         <div>
+            <h2>Hola, {trainerData.name}</h2>
+            {trainerData.pokemon_team.map((pokemon: any) => (
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon}.png`} />
+            ))}
             {children}
         </div>
     )
