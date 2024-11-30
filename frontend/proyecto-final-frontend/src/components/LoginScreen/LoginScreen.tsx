@@ -1,33 +1,25 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { InputStyle, PrimaryButtonStyle, labelStyle } from './classnameStyles'
 import { useNavigate } from 'react-router'
+import axios from 'axios'
 
 const LoginScreen = () => {
 
-    const [email, setEmail] = useState("")
+    const [mail, setMail] = useState("")
     const [password, setPassword] = useState("")
     let navigate = useNavigate()
 
     const Login = async (event: any) => {
         event.preventDefault()
-        fetch("http://192.168.0.127:5000/trainer/login", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'  // Indica que el cuerpo de la solicitud es JSON
-            },
-            body: JSON.stringify({
-                "mail": email,
-                password
-            })
-        }).then(response => {
-            if (!response.ok) {
-                throw new Error("Hubo un error en la solicitud: " + response.statusText)
+        try {
+            const response = await axios.post("http://127.0.0.1:5000/trainer/login", { mail, password })
+            if (response.data.success) {
+                localStorage.setItem("token_pokemon", JSON.stringify(response.data.trainer))
+                navigate("/")
             }
-            return response.json()
-        }).then(data => {
-            localStorage.setItem("token_pokemon", JSON.stringify(data.trainer))
-            navigate("/")
-        })
+        } catch (error) {
+            console.log(error)
+        }
 
     }
 
@@ -40,7 +32,7 @@ const LoginScreen = () => {
                 <form className='flex flex-col items-center justify-center' onSubmit={Login}>
                     <label htmlFor='email' id="email" className={labelStyle}>Email</label>
                     <input type='email' name='email' placeholder='Type your email...' className={InputStyle} onChange={(event: any) => {
-                        setEmail(event.target.value)
+                        setMail(event.target.value)
                     }} />
                     <label htmlFor='password' className={labelStyle}>Password</label>
                     <input type='password' name='password' placeholder='Type your password...' className={InputStyle} onChange={(event: any) => {

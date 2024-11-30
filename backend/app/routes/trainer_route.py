@@ -16,8 +16,9 @@ def register_trainer():
 
 @trainer_bp.route("/trainer/login", methods=["POST"])
 def login_trainer():
-    data = request.get_json()
 
+    data = request.get_json()
+    print({**data})
     mail = data.get("mail")
     password = data.get("password")
     if not mail or not password:
