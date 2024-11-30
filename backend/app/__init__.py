@@ -3,10 +3,14 @@ from flask_cors import CORS
 from flaskext.mysql import MySQL
 from app.config import Config
 from flask_pymongo import PyMongo
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager
 
 mongo: PyMongo = PyMongo()
 mysql: MySQL = MySQL()
 cors: CORS = CORS()
+bcrypt: Bcrypt = Bcrypt()
+jwt: JWTManager = JWTManager()
 
 
 def create_app() -> Flask:
@@ -15,6 +19,8 @@ def create_app() -> Flask:
     cors.init_app(app)
     mysql.init_app(app)
     mongo.init_app(app)
+    bcrypt.init_app(app)
+    jwt.init_app(app)
     from app.routes.pokemon_route import pokemon_bp
 
     app.register_blueprint(pokemon_bp)

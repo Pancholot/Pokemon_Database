@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { InputStyle, PrimaryButtonStyle, labelStyle } from './classnameStyles'
 import { useNavigate } from 'react-router'
-import axios from 'axios'
+import { loginTrainer, retrieveData } from '@/funcs/api'
 
 const LoginScreen = () => {
 
@@ -12,9 +12,12 @@ const LoginScreen = () => {
     const Login = async (event: any) => {
         event.preventDefault()
         try {
-            const response = await axios.post("http://127.0.0.1:5000/trainer/login", { mail, password })
-            if (response.data.success) {
-                localStorage.setItem("token_pokemon", JSON.stringify(response.data.trainer))
+            const response = await loginTrainer({ mail, password });
+
+            if (response) {
+                const { trainer } = await retrieveData("/trainer");
+                console.log(trainer)
+                localStorage.setItem("token_pokemon", JSON.stringify(trainer));
                 navigate("/")
             }
         } catch (error) {

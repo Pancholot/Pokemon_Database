@@ -5,6 +5,9 @@ load_dotenv()
 
 
 class Config:
+    JWT_SECRET_KEY: str | None = os.getenv(
+        "JWT_SECRET_KEY"
+    )
     MYSQL_DATABASE_HOST: str = "localhost"
     MYSQL_DATABASE_USER: str = "root"
     MYSQL_DATABASE_PASSWORD: str = "1234567890"

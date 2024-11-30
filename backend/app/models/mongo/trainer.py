@@ -1,6 +1,8 @@
-from app import mongo
+from app import mongo, bcrypt
 from datetime import datetime
 from bson import ObjectId
+import re
+
 
 
 class Trainer:
@@ -34,10 +36,16 @@ class Trainer:
         }
 
     @staticmethod
-    def register_trainer(data: dict):
+    def register_trainer(data: dict) -> bool:
         if mongo.db is None:
             return False
-        trainer = Trainer(**data)
+        new_data : dict = data
+        new_data["password"] = bcrypt.generate_password_hash(new_data["password"]).decode("utf-8")
+        email: str = new_data.get("mail")
+        email_regex = r"^[^@]+@[^@]+\.[^@]+$"
+        if not re.match(email_regex, email):
+            return False
+        trainer = Trainer(**new_data)
         result = mongo.db.trainers.insert_one(trainer.to_dict()).acknowledged
         return result
 
@@ -46,17 +54,22 @@ class Trainer:
         if mongo.db is None:
             return None
         trainer = mongo.db.trainers.find_one({"_id": ObjectId(id)})
+        trainer["_id"] = str(trainer["_id"])
         return trainer
 
     @staticmethod
-    def login(mail: str, password: str):
+    def login(mail: str, password: str)->dict:
         if mongo.db is None:
-            return None
-        trainer = mongo.db.trainers.find_one({"mail": mail, "password": password})
-        if trainer:
-            # Convertir el _id de ObjectId a string
-            trainer["_id"] = str(trainer["_id"])
-        return trainer
+            return {"message": "Internal server error", "success" :False}
+        
+        trainer: dict | None = mongo.db.trainers.find_one({"mail": mail})
+        if not trainer:
+            return {"message": "Trainer not found", "success":  False}
+
+        if bcrypt.check_password_hash(trainer["password"], password): 
+            return {"message": "Success login", "success" :True, "_id" : str(trainer["_id"])}
+        else:
+            return {"message": "Invalid credentials","success" : False}
 
     @staticmethod
     def add_pokemon_to_team(new_pokemon: int, _id: str):
@@ -66,3 +79,4 @@ class Trainer:
             {"_id": ObjectId(_id)}, {"$push": {"pokemon_team": new_pokemon}}
         ).acknowledged
         return result
+

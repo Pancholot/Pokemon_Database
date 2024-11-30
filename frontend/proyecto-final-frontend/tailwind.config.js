@@ -12,7 +12,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        bgLogin: 'url("https://wallpapercave.com/wp/wp13129046.png")'
+        bgLogin: 'url("https://wallpapercave.com/wp/wp13129046.png")',
+        bgRegister: 'url("https://images5.alphacoders.com/135/1351897.png")'
       },
 
       borderRadius: {
