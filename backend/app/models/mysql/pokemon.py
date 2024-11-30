@@ -17,7 +17,7 @@ class Pokemon:
         sp_defense: int,
         base_total: int,
         base_egg_steps: int,
-        base_hapiness: int,
+        base_happiness: int,
         weight_kg: float,
         height_m: float,
         capture_rate: int,
@@ -40,7 +40,7 @@ class Pokemon:
         self.sp_defense: int = sp_defense
         self.base_total: int = base_total
         self.base_egg_steps: int = base_egg_steps
-        self.base_hapiness: int = base_hapiness
+        self.base_happiness: int = base_happiness
         self.weight_kg: float = weight_kg
         self.height_m: float = height_m
         self.capture_rate: int = capture_rate
@@ -65,7 +65,7 @@ class Pokemon:
             "sp_defense": self.sp_defense,
             "base_total": self.base_total,
             "base_egg_steps": self.base_egg_steps,
-            "base_hapiness": self.base_hapiness,
+            "base_happiness": self.base_happiness,
             "weight_kg": self.weight_kg,
             "height_m": self.height_m,
             "capture_rate": self.capture_rate,

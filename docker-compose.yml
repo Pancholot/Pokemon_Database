@@ -1,0 +1,41 @@
+services:
+  backend:
+      build:
+        context: ./backend
+      ports:
+        - "5000:5000"
+      env_file:
+        - ./backend/.env
+      depends_on:
+        mysql:
+          condition: service_healthy
+      restart: always # Reinicia automáticamente si el contenedor falla
+  mysql:
+    image: mysql:latest
+    container_name: mysql-dbunit
+    ports:
+      - "3306:3306" 
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: basededatos
+      MYSQL_USER: nuevousuario
+      MYSQL_PASSWORD: password
+    volumes:
+      # Carga el archivo SQL para inicializar la base de datos al inicio
+      - ./backend/resources/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Carpeta para importar/exportar archivos desde MySQL
+      - ./backend/resources:/var/lib/mysql-files
+      # Persistencia de datos de la base de datos
+      - db_data:/var/lib/mysql
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --secure-file-priv=/var/lib/mysql-files
+    healthcheck: # Verifica que MySQL esté operativo antes de que otros servicios lo utilicen
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always # Reinicia automáticamente el contenedor si falla
+
+volumes:
+  db_data:

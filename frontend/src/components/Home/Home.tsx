@@ -43,23 +43,30 @@ const Home = ({ children }: any) => {
     return <div>No hay pokemones para capturar</div>;
   }
 
-  const handleCatch = async (pokemon_id: number) => {
+  const handleCatch = async (pokedex_number: number) => {
     try {
       const response = await putData("/capture", {
-        pokemon_id: pokemon_id,
+        pokemon_id: pokedex_number,
         lista_pokemon_to_catch: numToCatch,
       });
+      console.log(response);
       setCaught(response.success);
     } catch {
       console.error("Error al capturar el pokemon");
     }
   };
 
-  const { name } = trainerData;
+  const { name, pokemon_team } = trainerData;
+  console.log(pokemon_team);
 
   return (
-    <div className="bg-slate-100 min-h-screen min-w-fit flex-row space-x-7 justify-evenly">
+    <div className="space-x-7 justify-evenly">
       <h2>Hola, {name}</h2>
+      {caught ? (
+        <div>¡Has capturado todos los pokemones!</div>
+      ) : (
+        <div>¡Ha capturar todos los pokemones!</div>
+      )}
       {!caught &&
         toCatch.map((pokemon, index) => {
           return (
@@ -74,7 +81,6 @@ const Home = ({ children }: any) => {
             </button>
           );
         })}
-      {caught && <div>¡Has capturado todos los pokemones!</div>}
 
       {children}
     </div>

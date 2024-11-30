@@ -30,5 +30,4 @@ def create_app() -> Flask:
     from app.routes.captures_route import capture_bp
 
     app.register_blueprint(capture_bp)
-
     return app
