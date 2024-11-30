@@ -1,0 +1,802 @@
+pokedex_number	name	abilities	attack	defense	speed	hp	sp_attack	sp_defense	base_total	base_egg_steps	base_happiness	weight_kg	height_m	capture_rate	classIfication	type1	type2	experience_growth	percentage_male	generation	is_legendary
+1	Bulbasaur	['Overgrow', 'Chlorophyll']	49	49	45	45	65	65	318	5120	70	6.9	0.7	45	Seed 	grass	poison	1059860	88.1	1	N
+2	Ivysaur	['Overgrow', 'Chlorophyll']	62	63	60	60	80	80	405	5120	70	13.0	1.0	45	Seed 	grass	poison	1059860	88.1	1	N
+3	Venusaur	['Overgrow', 'Chlorophyll']	100	123	80	80	122	120	625	5120	70	100.0	2.0	45	Seed 	grass	poison	1059860	88.1	1	N
+4	Charmander	['Blaze', 'Solar Power']	52	43	65	39	60	50	309	5120	70	8.5	0.6	45	Lizard 	fire	NULL	1059860	88.1	1	N
+5	Charmeleon	['Blaze', 'Solar Power']	64	58	80	58	80	65	405	5120	70	19.0	1.1	45	Flame 	fire	NULL	1059860	88.1	1	N
+6	Charizard	['Blaze', 'Solar Power']	104	78	100	78	159	115	634	5120	70	90.5	1.7	45	Flame 	fire	flying	1059860	88.1	1	N
+7	Squirtle	['Torrent', 'Rain Dish']	48	65	43	44	50	64	314	5120	70	9.0	0.5	45	Tiny Turtle 	water	NULL	1059860	88.1	1	N
+8	Wartortle	['Torrent', 'Rain Dish']	63	80	58	59	65	80	405	5120	70	22.5	1.0	45	Turtle 	water	NULL	1059860	88.1	1	N
+9	Blastoise	['Torrent', 'Rain Dish']	103	120	78	79	135	115	630	5120	70	85.5	1.6	45	Shellfish 	water	NULL	1059860	88.1	1	N
+10	Caterpie	['Shield Dust', 'Run Away']	30	35	45	45	20	20	195	3840	70	2.9	0.3	255	Worm 	bug	NULL	1000000	50.0	1	N
+11	Metapod	['Shed Skin']	20	55	30	50	25	25	205	3840	70	9.9	0.7	120	Cocoon 	bug	NULL	1000000	50.0	1	N
+12	Butterfree	['Compoundeyes', 'Tinted Lens']	45	50	70	60	90	80	395	3840	70	32.0	1.1	45	Butterfly 	bug	flying	1000000	50.0	1	N
+13	Weedle	['Shield Dust', 'Run Away']	35	30	50	40	20	20	195	3840	70	3.2	0.3	255	Hairy 	bug	poison	1000000	50.0	1	N
+14	Kakuna	['Shed Skin']	25	50	35	45	25	25	205	3840	70	10.0	0.6	120	Cocoon 	bug	poison	1000000	50.0	1	N
+15	Beedrill	['Swarm', 'Sniper']	150	40	145	65	15	80	495	3840	70	29.5	1.0	45	Poison Bee 	bug	poison	1000000	50.0	1	N
+16	Pidgey	['Keen Eye', 'Tangled Feet', 'Big Pecks']	45	40	56	40	35	35	251	3840	70	1.8	0.3	255	Tiny Bird 	normal	flying	1059860	50.0	1	N
+17	Pidgeotto	['Keen Eye', 'Tangled Feet', 'Big Pecks']	60	55	71	63	50	50	349	3840	70	30.0	1.1	120	Bird 	normal	flying	1059860	50.0	1	N
+18	Pidgeot	['Keen Eye', 'Tangled Feet', 'Big Pecks']	80	80	121	83	135	80	579	3840	70	39.5	1.5	45	Bird 	normal	flying	1059860	50.0	1	N
+19	Rattata	['Run Away', 'Guts', 'Hustle', 'Gluttony', 'Hustle', 'Thick Fat']	56	35	72	30	25	35	253	3840	70	NULL	NULL	255	Mouse 	normal	dark	1000000	50.0	1	N
+20	Raticate	['Run Away', 'Guts', 'Hustle', 'Gluttony', 'Hustle', 'Thick Fat']	71	70	77	75	40	80	413	3840	70	NULL	NULL	127	Mouse 	normal	dark	1000000	50.0	1	N
+21	Spearow	['Keen Eye', 'Sniper']	60	30	70	40	31	31	262	3840	70	2.0	0.3	255	Tiny Bird 	normal	flying	1000000	50.0	1	N
+22	Fearow	['Keen Eye', 'Sniper']	90	65	100	65	61	61	442	3840	70	38.0	1.2	90	Beak 	normal	flying	1000000	50.0	1	N
+23	Ekans	['Intimidate', 'Shed Skin', 'Unnerve']	60	44	55	35	40	54	288	5120	70	6.9	2.0	255	Snake 	poison	NULL	1000000	50.0	1	N
+24	Arbok	['Intimidate', 'Shed Skin', 'Unnerve']	95	69	80	60	65	79	448	5120	70	65.0	3.5	90	Cobra 	poison	NULL	1000000	50.0	1	N
+25	Pikachu	['Static', 'Lightningrod']	55	40	90	35	50	50	320	2560	70	6.0	0.4	190	Mouse 	electric	NULL	1000000	50.0	1	N
+26	Raichu	['Static', 'Lightningrod', 'Surge Surfer']	85	50	110	60	95	85	485	2560	70	NULL	NULL	75	Mouse 	electric	electric	1000000	50.0	1	N
+27	Sandshrew	['Sand Veil', 'Sand Rush', 'Snow Cloak', 'Slush Rush']	75	90	40	50	10	35	300	5120	70	NULL	NULL	255	Mouse 	ground	ice	1000000	50.0	1	N
+28	Sandslash	['Sand Veil', 'Sand Rush', 'Snow Cloak', 'Slush Rush']	100	120	65	75	25	65	450	5120	70	NULL	NULL	90	Mouse 	ground	ice	1000000	50.0	1	N
+29	Nidoran♀	['Poison Point', 'Rivalry', 'Hustle']	47	52	41	55	40	40	275	5120	70	7.0	0.4	235	Poison Pin 	poison	NULL	1059860	0.0	1	N
+30	Nidorina	['Poison Point', 'Rivalry', 'Hustle']	62	67	56	70	55	55	365	5120	70	20.0	0.8	120	Poison Pin 	poison	NULL	1059860	0.0	1	N
+31	Nidoqueen	['Poison Point', 'Rivalry', 'Sheer Force']	92	87	76	90	75	85	505	5120	70	60.0	1.3	45	Drill 	poison	ground	1059860	0.0	1	N
+32	Nidoran♂	['Poison Point', 'Rivalry', 'Hustle']	57	40	50	46	40	40	273	5120	70	9.0	0.5	235	Poison Pin 	poison	NULL	1059860	100.0	1	N
+33	Nidorino	['Poison Point', 'Rivalry', 'Hustle']	72	57	65	61	55	55	365	5120	70	19.5	0.9	120	Poison Pin 	poison	NULL	1059860	100.0	1	N
+34	Nidoking	['Poison Point', 'Rivalry', 'Sheer Force']	102	77	85	81	85	75	505	5120	70	62.0	1.4	45	Drill 	poison	ground	1059860	100.0	1	N
+35	Clefairy	['Cute Charm', 'Magic Guard', 'Friend Guard']	45	48	35	70	60	65	323	2560	140	7.5	0.6	150	Fairy 	fairy	NULL	800000	24.6	1	N
+36	Clefable	['Cute Charm', 'Magic Guard', 'Unaware']	70	73	60	95	95	90	483	2560	140	40.0	1.3	25	Fairy 	fairy	NULL	800000	24.6	1	N
+37	Vulpix	['Flash Fire', 'Drought', 'Snow Cloak', 'Snow Warning']	41	40	65	38	50	65	299	5120	70	NULL	NULL	190	Fox 	fire	ice	1000000	24.6	1	N
+38	Ninetales	['Flash Fire', 'Drought', 'Snow Cloak', 'Snow Warning']	67	75	109	73	81	100	505	5120	70	NULL	NULL	75	Fox 	fire	ice	1000000	24.6	1	N
+39	Jigglypuff	['Cute Charm', 'Competitive', 'Friend Guard']	45	20	20	115	45	25	270	2560	70	5.5	0.5	170	Balloon 	normal	fairy	800000	24.6	1	N
+40	Wigglytuff	['Cute Charm', 'Competitive', 'Frisk']	70	45	45	140	85	50	435	2560	70	12.0	1.0	50	Balloon 	normal	fairy	800000	24.6	1	N
+41	Zubat	['Inner Focus', 'Infiltrator']	45	35	55	40	30	40	245	3840	70	7.5	0.8	255	Bat 	poison	flying	1000000	50.0	1	N
+42	Golbat	['Inner Focus', 'Infiltrator']	80	70	90	75	65	75	455	3840	70	55.0	1.6	90	Bat 	poison	flying	1000000	50.0	1	N
+43	Oddish	['Chlorophyll', 'Run Away']	50	55	30	45	75	65	320	5120	70	5.4	0.5	255	Weed 	grass	poison	1059860	50.0	1	N
+44	Gloom	['Chlorophyll', 'Stench']	65	70	40	60	85	75	395	5120	70	8.6	0.8	120	Weed 	grass	poison	1059860	50.0	1	N
+45	Vileplume	['Chlorophyll', 'Effect Spore']	80	85	50	75	110	90	490	5120	70	18.6	1.2	45	Flower 	grass	poison	1059860	50.0	1	N
+46	Paras	['Effect Spore', 'Dry Skin', 'Damp']	70	55	25	35	45	55	285	5120	70	5.4	0.3	190	Mushroom 	bug	grass	1000000	50.0	1	N
+47	Parasect	['Effect Spore', 'Dry Skin', 'Damp']	95	80	30	60	60	80	405	5120	70	29.5	1.0	75	Mushroom 	bug	grass	1000000	50.0	1	N
+48	Venonat	['Compoundeyes', 'Tinted Lens', 'Run Away']	55	50	45	60	40	55	305	5120	70	30.0	1.0	190	Insect 	bug	poison	1000000	50.0	1	N
+49	Venomoth	['Shield Dust', 'Tinted Lens', 'Wonder Skin ']	65	60	90	70	90	75	450	5120	70	12.5	1.5	75	Poison Moth 	bug	poison	1000000	50.0	1	N
+50	Diglett	['Sand Veil', 'Arena Trap', 'Sand Force', 'Sand Veil', 'Tangling Hair', 'Sand Force']	55	30	90	10	35	45	265	5120	70	NULL	NULL	255	Mole 	ground	ground	1000000	50.0	1	N
+51	Dugtrio	['Sand Veil', 'Arena Trap', 'Sand Force', 'Sand Veil', 'Tangling Hair', 'Sand Force']	100	60	110	35	50	70	425	5120	70	NULL	NULL	50	Mole 	ground	ground	1000000	50.0	1	N
+52	Meowth	['Pickup', 'Technician', 'Unnerve', 'Pickup', 'Technician', 'Rattled']	35	35	90	40	50	40	290	5120	70	NULL	NULL	255	Scratch Cat 	normal	dark	1000000	50.0	1	N
+53	Persian	['Limber', 'Technician', 'Unnerve', 'Fur Coat', 'Technician', 'Rattled']	60	60	115	65	75	65	440	5120	70	NULL	NULL	90	Classy Cat 	normal	dark	1000000	50.0	1	N
+54	Psyduck	['Damp', 'Cloud Nine', 'Swift Swim']	52	48	55	50	65	50	320	5120	70	19.6	0.8	190	Duck 	water	NULL	1000000	50.0	1	N
+55	Golduck	['Damp', 'Cloud Nine', 'Swift Swim']	82	78	85	80	95	80	500	5120	70	76.6	1.7	75	Duck 	water	NULL	1000000	50.0	1	N
+56	Mankey	['Vital Spirit', 'Anger Point', 'Defiant']	80	35	70	40	35	45	305	5120	70	28.0	0.5	190	Pig Monkey 	fighting	NULL	1000000	50.0	1	N
+57	Primeape	['Vital Spirit', 'Anger Point', 'Defiant']	105	60	95	65	60	70	455	5120	70	32.0	1.0	75	Pig Monkey 	fighting	NULL	1000000	50.0	1	N
+58	Growlithe	['Intimidate', 'Flash Fire', 'Justified']	70	45	60	55	70	50	350	5120	70	19.0	0.7	190	Puppy 	fire	NULL	1250000	75.4	1	N
+59	Arcanine	['Intimidate', 'Flash Fire', 'Justified']	110	80	95	90	100	80	555	5120	70	155.0	1.9	75	Legendary 	fire	NULL	1250000	75.4	1	N
+60	Poliwag	['Water Absorb', 'Damp', 'Swift Swim']	50	40	90	40	40	40	300	5120	70	12.4	0.6	255	Tadpole 	water	NULL	1059860	50.0	1	N
+61	Poliwhirl	['Water Absorb', 'Damp', 'Swift Swim']	65	65	90	65	50	50	385	5120	70	20.0	1.0	120	Tadpole 	water	NULL	1059860	50.0	1	N
+62	Poliwrath	['Water Absorb', 'Damp', 'Swift Swim']	95	95	70	90	70	90	510	5120	70	54.0	1.3	45	Tadpole 	water	fighting	1059860	50.0	1	N
+63	Abra	['Synchronize', 'Inner Focus', 'Magic Guard']	20	15	90	25	105	55	310	5120	70	19.5	0.9	200	Psi 	psychic	NULL	1059860	75.4	1	N
+64	Kadabra	['Synchronize', 'Inner Focus', 'Magic Guard']	35	30	105	40	120	70	400	5120	70	56.5	1.3	100	Psi 	psychic	NULL	1059860	75.4	1	N
+65	Alakazam	['Synchronize', 'Inner Focus', 'Magic Guard']	50	65	150	55	175	105	600	5120	70	48.0	1.5	50	Psi 	psychic	NULL	1059860	75.4	1	N
+66	Machop	['Guts', 'No Guard', 'Steadfast']	80	50	35	70	35	35	305	5120	70	19.5	0.8	180	Superpower 	fighting	NULL	1059860	75.4	1	N
+67	Machoke	['Guts', 'No Guard', 'Steadfast']	100	70	45	80	50	60	405	5120	70	70.5	1.5	90	Superpower 	fighting	NULL	1059860	75.4	1	N
+68	Machamp	['Guts', 'No Guard', 'Steadfast']	130	80	55	90	65	85	505	5120	70	130.0	1.6	45	Superpower 	fighting	NULL	1059860	75.4	1	N
+69	Bellsprout	['Chlorophyll', 'Gluttony']	75	35	40	50	70	30	300	5120	70	4.0	0.7	255	Flower 	grass	poison	1059860	50.0	1	N
+70	Weepinbell	['Chlorophyll', 'Gluttony']	90	50	55	65	85	45	390	5120	70	6.4	1.0	120	Flycatcher 	grass	poison	1059860	50.0	1	N
+71	Victreebel	['Chlorophyll', 'Gluttony']	105	65	70	80	100	70	490	5120	70	15.5	1.7	45	Flycatcher 	grass	poison	1059860	50.0	1	N
+72	Tentacool	['Clear Body', 'Liquid Ooze', 'Rain Dish']	40	35	70	40	50	100	335	5120	70	45.5	0.9	190	Jellyfish 	water	poison	1250000	50.0	1	N
+73	Tentacruel	['Clear Body', 'Liquid Ooze', 'Rain Dish']	70	65	100	80	80	120	515	5120	70	55.0	1.6	60	Jellyfish 	water	poison	1250000	50.0	1	N
+74	Geodude	['Rock Head', 'Sturdy', 'Sand Veil', 'Magnet Pull', 'Sturdy', 'Galvanize']	80	100	20	40	30	30	300	3840	70	NULL	NULL	255	Rock 	rock	ground	1059860	50.0	1	N
+75	Graveler	['Rock Head', 'Sturdy', 'Sand Veil', 'Magnet Pull', 'Sturdy', 'Galvanize']	95	115	35	55	45	45	390	3840	70	NULL	NULL	120	Rock 	rock	ground	1059860	50.0	1	N
+76	Golem	['Rock Head', 'Sturdy', 'Sand Veil', 'Magnet Pull', 'Sturdy', 'Galvanize']	120	130	45	80	55	65	495	3840	70	NULL	NULL	45	Megaton 	rock	ground	1059860	50.0	1	N
+77	Ponyta	['Run Away', 'Flash Fire', 'Flame Body']	85	55	90	50	65	65	410	5120	70	30.0	1.0	190	Fire Horse 	fire	NULL	1000000	50.0	1	N
+78	Rapidash	['Run Away', 'Flash Fire', 'Flame Body']	100	70	105	65	80	80	500	5120	70	95.0	1.7	60	Fire Horse 	fire	NULL	1000000	50.0	1	N
+79	Slowpoke	['Oblivious', 'Own Tempo', 'Regenerator']	65	65	15	90	40	40	315	5120	70	36.0	1.2	190	Dopey 	water	psychic	1000000	50.0	1	N
+80	Slowbro	['Oblivious', 'Own Tempo', 'Regenerator']	75	180	30	95	130	80	590	5120	70	78.5	1.6	75	Hermit Crab 	water	psychic	1000000	50.0	1	N
+81	Magnemite	['Magnet Pull', 'Sturdy', 'Analytic']	35	70	45	25	95	55	325	5120	70	6.0	0.3	190	Magnet 	electric	steel	1000000	NULL	1	N
+82	Magneton	['Magnet Pull', 'Sturdy', 'Analytic']	60	95	70	50	120	70	465	5120	70	60.0	1.0	60	Magnet 	electric	steel	1000000	NULL	1	N
+83	Farfetch'd	['Keen Eye', 'Inner Focus', 'Defiant']	90	55	60	52	58	62	377	5120	70	15.0	0.8	45	Wild Duck 	normal	flying	1000000	50.0	1	N
+84	Doduo	['Run Away', 'Early Bird', 'Tangled Feet']	85	45	75	35	35	35	310	5120	70	39.2	1.4	190	Twin Bird 	normal	flying	1000000	50.0	1	N
+85	Dodrio	['Run Away', 'Early Bird', 'Tangled Feet']	110	70	110	60	60	60	470	5120	70	85.2	1.8	45	Triple Bird 	normal	flying	1000000	50.0	1	N
+86	Seel	['Thick Fat', 'Hydration', 'Ice Body']	45	55	45	65	45	70	325	5120	70	90.0	1.1	190	Sea Lion 	water	NULL	1000000	50.0	1	N
+87	Dewgong	['Thick Fat', 'Hydration', 'Ice Body']	70	80	70	90	70	95	475	5120	70	120.0	1.7	75	Sea Lion 	water	ice	1000000	50.0	1	N
+88	Grimer	['Stench', 'Sticky Hold', 'Poison Touch', 'Poison Touch', 'Gluttony', 'Power of Alchemy']	80	50	25	80	40	50	325	5120	70	NULL	NULL	190	Sludge 	poison	poison	1000000	50.0	1	N
+89	Muk	['Stench', 'Sticky Hold', 'Poison Touch', 'Poison Touch', 'Gluttony', 'Power of Alchemy']	105	75	50	105	65	100	500	5120	70	NULL	NULL	75	Sludge 	poison	poison	1000000	50.0	1	N
+90	Shellder	['Shell Armor', 'Skill Link', 'Overcoat']	65	100	40	30	45	25	305	5120	70	4.0	0.3	190	Bivalve 	water	NULL	1250000	50.0	1	N
+91	Cloyster	['Shell Armor', 'Skill Link', 'Overcoat']	95	180	70	50	85	45	525	5120	70	132.5	1.5	60	Bivalve 	water	ice	1250000	50.0	1	N
+92	Gastly	['Levitate']	35	30	80	30	100	35	310	5120	70	0.1	1.3	190	Gas 	ghost	poison	1059860	50.0	1	N
+93	Haunter	['Levitate']	50	45	95	45	115	55	405	5120	70	0.1	1.6	90	Gas 	ghost	poison	1059860	50.0	1	N
+94	Gengar	['Cursed Body']	65	80	130	60	170	95	600	5120	70	40.5	1.5	45	Shadow 	ghost	poison	1059860	50.0	1	N
+95	Onix	['Rock Head', 'Sturdy', 'Weak Armor']	45	160	70	35	30	45	385	6400	70	210.0	8.8	45	Rock Snake 	rock	ground	1000000	50.0	1	N
+96	Drowzee	['Insomnia', 'Forewarn', 'Inner Focus']	48	45	42	60	43	90	328	5120	70	32.4	1.0	190	Hypnosis 	psychic	NULL	1000000	50.0	1	N
+97	Hypno	['Insomnia', 'Forewarn', 'Inner Focus']	73	70	67	85	73	115	483	5120	70	75.6	1.6	75	Hypnosis 	psychic	NULL	1000000	50.0	1	N
+98	Krabby	['Hyper Cutter', 'Shell Armor', 'Sheer Force']	105	90	50	30	25	25	325	5120	70	6.5	0.4	225	River Crab 	water	NULL	1000000	50.0	1	N
+99	Kingler	['Hyper Cutter', 'Shell Armor', 'Sheer Force']	130	115	75	55	50	50	475	5120	70	60.0	1.3	60	Pincer 	water	NULL	1000000	50.0	1	N
+100	Voltorb	['Soundproof', 'Static', 'Aftermath']	30	50	100	40	55	55	330	5120	70	10.4	0.5	190	Ball 	electric	NULL	1000000	NULL	1	N
+101	Electrode	['Soundproof', 'Static', 'Aftermath']	50	70	150	60	80	80	490	5120	70	66.6	1.2	60	Ball 	electric	NULL	1000000	NULL	1	N
+102	Exeggcute	['Chlorophyll', 'Harvest']	40	80	40	60	60	45	325	5120	70	2.5	0.4	90	Egg 	grass	psychic	1250000	50.0	1	N
+103	Exeggutor	['Chlorophyll', 'Harvest', 'Frisk', 'Harvest']	105	85	45	95	125	75	530	5120	70	NULL	NULL	45	Coconut 	grass	psychic	1250000	50.0	1	N
+104	Cubone	['Rock Head', 'Lightningrod', 'Battle Armor']	50	95	35	50	40	50	320	5120	70	6.5	0.4	190	Lonely 	ground	NULL	1000000	50.0	1	N
+105	Marowak	['Rock Head', 'Lightningrod', 'Battle Armor', 'Cursed Body', 'Lightningrod', 'Rock Head']	80	110	45	60	50	80	425	5120	70	NULL	NULL	75	Bone Keeper 	ground	fire	1000000	50.0	1	N
+106	Hitmonlee	['Limber', 'Reckless', 'Unburden']	120	53	87	50	35	110	455	6400	70	49.8	1.5	45	Kicking 	fighting	NULL	1000000	100.0	1	N
+107	Hitmonchan	['Keen Eye', 'Iron Fist', 'Inner Focus']	105	79	76	50	35	110	455	6400	70	50.2	1.4	45	Punching 	fighting	NULL	1000000	100.0	1	N
+108	Lickitung	['Own Tempo', 'Oblivious', 'Cloud Nine']	55	75	30	90	60	75	385	5120	70	65.5	1.2	45	Licking 	normal	NULL	1000000	50.0	1	N
+109	Koffing	['Levitate']	65	95	35	40	60	45	340	5120	70	1.0	0.6	190	Poison Gas 	poison	NULL	1000000	50.0	1	N
+110	Weezing	['Levitate']	90	120	60	65	85	70	490	5120	70	9.5	1.2	60	Poison Gas 	poison	NULL	1000000	50.0	1	N
+111	Rhyhorn	['Lightningrod', 'Rock Head', 'Reckless']	85	95	25	80	30	30	345	5120	70	115.0	1.0	120	Spikes 	ground	rock	1250000	50.0	1	N
+112	Rhydon	['Lightningrod', 'Rock Head', 'Reckless']	130	120	40	105	45	45	485	5120	70	120.0	1.9	60	Drill 	ground	rock	1250000	50.0	1	N
+113	Chansey	['Natural Cure', 'Serene Grace', 'Healer']	5	5	50	250	35	105	450	10240	140	34.6	1.1	30	Egg 	normal	NULL	800000	0.0	1	N
+114	Tangela	['Chlorophyll', 'Leaf Guard', 'Regenerator']	55	115	60	65	100	40	435	5120	70	35.0	1.0	45	Vine 	grass	NULL	1000000	50.0	1	N
+115	Kangaskhan	['Early Bird', 'Scrappy', 'Inner Focus']	125	100	100	105	60	100	590	5120	70	80.0	2.2	45	Parent 	normal	NULL	1000000	0.0	1	N
+116	Horsea	['Swift Swim', 'Sniper', 'Damp']	40	70	60	30	70	25	295	5120	70	8.0	0.4	225	Dragon 	water	NULL	1000000	50.0	1	N
+117	Seadra	['Poison Point', 'Sniper', 'Damp']	65	95	85	55	95	45	440	5120	70	25.0	1.2	75	Dragon 	water	NULL	1000000	50.0	1	N
+118	Goldeen	['Swift Swim', 'Water Veil', 'Lightningrod']	67	60	63	45	35	50	320	5120	70	15.0	0.6	225	Goldfish 	water	NULL	1000000	50.0	1	N
+119	Seaking	['Swift Swim', 'Water Veil', 'Lightningrod']	92	65	68	80	65	80	450	5120	70	39.0	1.3	60	Goldfish 	water	NULL	1000000	50.0	1	N
+120	Staryu	['Illuminate', 'Natural Cure', 'Analytic']	45	55	85	30	70	55	340	5120	70	34.5	0.8	225	Starshape 	water	NULL	1250000	NULL	1	N
+121	Starmie	['Illuminate', 'Natural Cure', 'Analytic']	75	85	115	60	100	85	520	5120	70	80.0	1.1	60	Mysterious 	water	psychic	1250000	NULL	1	N
+122	Mr. Mime	['Soundproof', 'Filter', 'Technician']	45	65	90	40	100	120	460	6400	70	54.5	1.3	45	Barrier 	psychic	fairy	1000000	50.0	1	N
+123	Scyther	['Swarm', 'Technician', 'Steadfast']	110	80	105	70	55	80	500	6400	70	56.0	1.5	45	Mantis 	bug	flying	1000000	50.0	1	N
+124	Jynx	['Oblivious', 'Forewarn', 'Dry Skin']	50	35	95	65	115	95	455	6400	70	40.6	1.4	45	Humanshape 	ice	psychic	1000000	0.0	1	N
+125	Electabuzz	['Static', 'Vital Spirit']	83	57	105	65	95	85	490	6400	70	30.0	1.1	45	Electric 	electric	NULL	1000000	75.4	1	N
+126	Magmar	['Flame Body', 'Vital Spirit']	95	57	93	65	100	85	495	6400	70	44.5	1.3	45	Spitfire 	fire	NULL	1000000	75.4	1	N
+127	Pinsir	['Hyper Cutter', 'Mold Breaker', 'Moxie']	155	120	105	65	65	90	600	6400	70	55.0	1.5	45	Stagbeetle 	bug	NULL	1250000	50.0	1	N
+128	Tauros	['Intimidate', 'Anger Point', 'Sheer Force']	100	95	110	75	40	70	490	5120	70	88.4	1.4	45	Wild Bull 	normal	NULL	1250000	100.0	1	N
+129	Magikarp	['Swift Swim', 'Rattled']	10	55	80	20	15	20	200	1280	70	10.0	0.9	255	Fish 	water	NULL	1250000	50.0	1	N
+130	Gyarados	['Intimidate', 'Moxie']	155	109	81	95	70	130	640	1280	70	235.0	6.5	45	Atrocious 	water	flying	1250000	50.0	1	N
+131	Lapras	['Water Absorb', 'Shell Armor', 'Hydration']	85	80	60	130	85	95	535	10240	70	220.0	2.5	45	Transport 	water	ice	1250000	50.0	1	N
+132	Ditto	['Limber', 'Imposter']	48	48	48	48	48	48	288	5120	70	4.0	0.3	35	Transform 	normal	NULL	1000000	NULL	1	N
+133	Eevee	['Run Away', 'Adaptability', 'Anticipation']	55	50	55	55	45	65	325	8960	70	6.5	0.3	45	Evolution 	normal	NULL	1000000	88.1	1	N
+134	Vaporeon	['Water Absorb', 'Hydration']	65	60	65	130	110	95	525	8960	70	29.0	1.0	45	Bubble Jet 	water	NULL	1000000	88.1	1	N
+135	Jolteon	['Volt Absorb', 'Quick Feet']	65	60	130	65	110	95	525	8960	70	24.5	0.8	45	Lightning 	electric	NULL	1000000	88.1	1	N
+136	Flareon	['Flash Fire', 'Guts']	130	60	65	65	95	110	525	8960	70	25.0	0.9	45	Flame 	fire	NULL	1000000	88.1	1	N
+137	Porygon	['Trace', 'Download', 'Analytic']	60	70	40	65	85	75	395	5120	70	36.5	0.8	45	Virtual 	normal	NULL	1000000	NULL	1	N
+138	Omanyte	['Swift Swim', 'Shell Armor', 'Weak Armor']	40	100	35	35	90	55	355	7680	70	7.5	0.4	45	Spiral 	rock	water	1000000	88.1	1	N
+139	Omastar	['Swift Swim', 'Shell Armor', 'Weak Armor']	60	125	55	70	115	70	495	7680	70	35.0	1.0	45	Spiral 	rock	water	1000000	88.1	1	N
+140	Kabuto	['Swift Swim', 'Battle Armor', 'Weak Armor']	80	90	55	30	55	45	355	7680	70	11.5	0.5	45	Shellfish 	rock	water	1000000	88.1	1	N
+141	Kabutops	['Swift Swim', 'Battle Armor', 'Weak Armor']	115	105	80	60	65	70	495	7680	70	40.5	1.3	45	Shellfish 	rock	water	1000000	88.1	1	N
+142	Aerodactyl	['Rock Head', 'Pressure', 'Unnerve']	135	85	150	80	70	95	615	8960	70	59.0	1.8	45	Fossil 	rock	flying	1250000	88.1	1	N
+143	Snorlax	['Immunity', 'Thick Fat', 'Gluttony']	110	65	30	160	65	110	540	10240	70	460.0	2.1	25	Sleeping 	normal	NULL	1250000	88.1	1	N
+144	Articuno	['Pressure', 'Snow Cloak']	85	100	85	90	95	125	580	20480	35	55.4	1.7	3	Freeze 	ice	flying	1250000	NULL	1	Y
+145	Zapdos	['Pressure', 'Static']	90	85	100	90	125	90	580	20480	35	52.6	1.6	3	Electric 	electric	flying	1250000	NULL	1	Y
+146	Moltres	['Pressure', 'Flame Body']	100	90	90	90	125	85	580	20480	35	60.0	2.0	3	Flame 	fire	flying	1250000	NULL	1	Y
+147	Dratini	['Shed Skin', 'Marvel Scale']	64	45	50	41	50	50	300	10240	35	3.3	1.8	45	Dragon 	dragon	NULL	1250000	50.0	1	N
+148	Dragonair	['Shed Skin', 'Marvel Scale']	84	65	70	61	70	70	420	10240	35	16.5	4.0	45	Dragon 	dragon	NULL	1250000	50.0	1	N
+149	Dragonite	['Inner Focus', 'Multiscale']	134	95	80	91	100	100	600	10240	35	210.0	2.2	45	Dragon 	dragon	flying	1250000	50.0	1	N
+150	Mewtwo	['Pressure', 'Unnerve']	150	70	140	106	194	120	780	30720	0	122.0	2.0	3	Genetic 	psychic	NULL	1250000	NULL	1	Y
+151	Mew	['Synchronize']	100	100	100	100	100	100	600	30720	100	4.0	0.4	45	New Species 	psychic	NULL	1059860	NULL	1	Y
+152	Chikorita	['Overgrow', 'Leaf Guard']	49	65	45	45	49	65	318	5120	70	6.4	0.9	45	Leaf 	grass	NULL	1059860	88.1	2	N
+153	Bayleef	['Overgrow', 'Leaf Guard']	62	80	60	60	63	80	405	5120	70	15.8	1.2	45	Leaf 	grass	NULL	1059860	88.1	2	N
+154	Meganium	['Overgrow', 'Leaf Guard']	82	100	80	80	83	100	525	5120	70	100.5	1.8	45	Herb 	grass	NULL	1059860	88.1	2	N
+155	Cyndaquil	['Blaze', 'Flash Fire']	52	43	65	39	60	50	309	5120	70	7.9	0.5	45	Fire Mouse 	fire	NULL	1059860	88.1	2	N
+156	Quilava	['Blaze', 'Flash Fire']	64	58	80	58	80	65	405	5120	70	19.0	0.9	45	Volcano 	fire	NULL	1059860	88.1	2	N
+157	Typhlosion	['Blaze', 'Flash Fire']	84	78	100	78	109	85	534	5120	70	79.5	1.7	45	Volcano 	fire	NULL	1059860	88.1	2	N
+158	Totodile	['Torrent', 'Sheer Force']	65	64	43	50	44	48	314	5120	70	9.5	0.6	45	Big Jaw 	water	NULL	1059860	88.1	2	N
+159	Croconaw	['Torrent', 'Sheer Force']	80	80	58	65	59	63	405	5120	70	25.0	1.1	45	Big Jaw 	water	NULL	1059860	88.1	2	N
+160	Feraligatr	['Torrent', 'Sheer Force']	105	100	78	85	79	83	530	5120	70	88.8	2.3	45	Big Jaw 	water	NULL	1059860	88.1	2	N
+161	Sentret	['Run Away', 'Keen Eye', 'Frisk']	46	34	20	35	35	45	215	3840	70	6.0	0.8	255	Scout 	normal	NULL	1000000	50.0	2	N
+162	Furret	['Run Away', 'Keen Eye', 'Frisk']	76	64	90	85	45	55	415	3840	70	32.5	1.8	90	Long Body 	normal	NULL	1000000	50.0	2	N
+163	Hoothoot	['Insomnia', 'Keen Eye', 'Tinted Lens']	30	30	50	60	36	56	262	3840	70	21.2	0.7	255	Owl 	normal	flying	1000000	50.0	2	N
+164	Noctowl	['Insomnia', 'Keen Eye', 'Tinted Lens']	50	50	70	100	86	96	452	3840	70	40.8	1.6	90	Owl 	normal	flying	1000000	50.0	2	N
+165	Ledyba	['Swarm', 'Early Bird', 'Rattled']	20	30	55	40	40	80	265	3840	70	10.8	1.0	255	Five Star 	bug	flying	800000	50.0	2	N
+166	Ledian	['Swarm', 'Early Bird', 'Iron Fist']	35	50	85	55	55	110	390	3840	70	35.6	1.4	90	Five Star 	bug	flying	800000	50.0	2	N
+167	Spinarak	['Swarm', 'Insomnia', 'Sniper']	60	40	30	40	40	40	250	3840	70	8.5	0.5	255	String Spit 	bug	poison	800000	50.0	2	N
+168	Ariados	['Swarm', 'Insomnia', 'Sniper']	90	70	40	70	60	70	400	3840	70	33.5	1.1	90	Long Leg 	bug	poison	800000	50.0	2	N
+169	Crobat	['Inner Focus', 'Infiltrator']	90	80	130	85	70	80	535	3840	70	75.0	1.8	90	Bat 	poison	flying	1000000	50.0	2	N
+170	Chinchou	['Volt Absorb', 'Illuminate', 'Water Absorb']	38	38	67	75	56	56	330	5120	70	12.0	0.5	190	Angler 	water	electric	1250000	50.0	2	N
+171	Lanturn	['Volt Absorb', 'Illuminate', 'Water Absorb']	58	58	67	125	76	76	460	5120	70	22.5	1.2	75	Light 	water	electric	1250000	50.0	2	N
+172	Pichu	['Static', 'Lightningrod']	40	15	60	20	35	35	205	2560	70	2.0	0.3	190	Tiny Mouse 	electric	NULL	1000000	50.0	2	N
+173	Cleffa	['Cute Charm', 'Magic Guard', 'Friend Guard']	25	28	15	50	45	55	218	2560	140	3.0	0.3	150	Star Shape 	fairy	NULL	800000	24.6	2	N
+174	Igglybuff	['Cute Charm', 'Competitive', 'Friend Guard']	30	15	15	90	40	20	210	2560	70	1.0	0.3	170	Balloon 	normal	fairy	800000	24.6	2	N
+175	Togepi	['Hustle', 'Serene Grace', 'Super Luck']	20	65	20	35	40	65	245	2560	70	1.5	0.3	190	Spike Ball 	fairy	NULL	800000	88.1	2	N
+176	Togetic	['Hustle', 'Serene Grace', 'Super Luck']	40	85	40	55	80	105	405	2560	70	3.2	0.6	75	Happiness 	fairy	flying	800000	88.1	2	N
+177	Natu	['Synchronize', 'Early Bird', 'Magic Bounce']	50	45	70	40	70	45	320	5120	70	2.0	0.2	190	Little Bird 	psychic	flying	1000000	50.0	2	N
+178	Xatu	['Synchronize', 'Early Bird', 'Magic Bounce']	75	70	95	65	95	70	470	5120	70	15.0	1.5	75	Mystic 	psychic	flying	1000000	50.0	2	N
+179	Mareep	['Static', 'Plus']	40	40	35	55	65	45	280	5120	70	7.8	0.6	235	Wool 	electric	NULL	1059860	50.0	2	N
+180	Flaaffy	['Static', 'Plus']	55	55	45	70	80	60	365	5120	70	13.3	0.8	120	Wool 	electric	NULL	1059860	50.0	2	N
+181	Ampharos	['Static', 'Plus']	95	105	45	90	165	110	610	5120	70	61.5	1.4	45	Light 	electric	NULL	1059860	50.0	2	N
+182	Bellossom	['Chlorophyll', 'Healer']	80	95	50	75	90	100	490	5120	70	5.8	0.4	45	Flower 	grass	NULL	1059860	50.0	2	N
+183	Marill	['Thick Fat', 'Huge Power', 'Sap Sipper']	20	50	40	70	20	50	250	2560	70	8.5	0.4	190	Aquamouse 	water	fairy	800000	50.0	2	N
+184	Azumarill	['Thick Fat', 'Huge Power', 'Sap Sipper']	50	80	50	100	60	80	420	2560	70	28.5	0.8	75	Aquarabbit 	water	fairy	800000	50.0	2	N
+185	Sudowoodo	['Sturdy', 'Rock Head', 'Rattled']	100	115	30	70	30	65	410	5120	70	38.0	1.2	65	Imitation 	rock	NULL	1000000	50.0	2	N
+186	Politoed	['Water Absorb', 'Damp', 'Drizzle']	75	75	70	90	90	100	500	5120	70	33.9	1.1	45	Frog 	water	NULL	1059860	50.0	2	N
+187	Hoppip	['Chlorophyll', 'Leaf Guard', 'Infiltrator']	35	40	50	35	35	55	250	5120	70	0.5	0.4	255	Cottonweed 	grass	flying	1059860	50.0	2	N
+188	Skiploom	['Chlorophyll', 'Leaf Guard', 'Infiltrator']	45	50	80	55	45	65	340	5120	70	1.0	0.6	120	Cottonweed 	grass	flying	1059860	50.0	2	N
+189	Jumpluff	['Chlorophyll', 'Leaf Guard', 'Infiltrator']	55	70	110	75	55	95	460	5120	70	3.0	0.8	45	Cottonweed 	grass	flying	1059860	50.0	2	N
+190	Aipom	['Run Away', 'Pickup', 'Skill Link']	70	55	85	55	40	55	360	5120	70	11.5	0.8	45	Long Tail 	normal	NULL	800000	50.0	2	N
+191	Sunkern	['Chlorophyll', 'Solar Power', 'Early Bird']	30	30	30	30	30	30	180	5120	70	1.8	0.3	235	Seed 	grass	NULL	1059860	50.0	2	N
+192	Sunflora	['Chlorophyll', 'Solar Power', 'Early Bird']	75	55	30	75	105	85	425	5120	70	8.5	0.8	120	Sun 	grass	NULL	1059860	50.0	2	N
+193	Yanma	['Speed Boost', 'Compoundeyes', 'Frisk']	65	45	95	65	75	45	390	5120	70	38.0	1.2	75	Clear Wing 	bug	flying	1000000	50.0	2	N
+194	Wooper	['Damp', 'Water Absorb', 'Unaware']	45	45	15	55	25	25	210	5120	70	8.5	0.4	255	Water Fish 	water	ground	1000000	50.0	2	N
+195	Quagsire	['Damp', 'Water Absorb', 'Unaware']	85	85	35	95	65	65	430	5120	70	75.0	1.4	90	Water Fish 	water	ground	1000000	50.0	2	N
+196	Espeon	['Synchronize', 'Magic Bounce']	65	60	110	65	130	95	525	8960	70	26.5	0.9	45	Sun 	psychic	NULL	1000000	88.1	2	N
+197	Umbreon	['Synchronize', 'Inner Focus']	65	110	65	95	60	130	525	8960	35	27.0	1.0	45	Moonlight 	dark	NULL	1000000	88.1	2	N
+198	Murkrow	['Insomnia', 'Super Luck', 'Prankster']	85	42	91	60	85	42	405	5120	35	2.1	0.5	30	Darkness 	dark	flying	1059860	50.0	2	N
+199	Slowking	['Oblivious', 'Own Tempo', 'Regenerator']	75	80	30	95	100	110	490	5120	70	79.5	2.0	70	Royal 	water	psychic	1000000	50.0	2	N
+200	Misdreavus	['Levitate']	60	60	85	60	85	85	435	6400	35	1.0	0.7	45	Screech 	ghost	NULL	800000	50.0	2	N
+201	Unown	['Levitate']	72	48	48	48	72	48	336	10240	70	5.0	0.5	225	Symbol 	psychic	NULL	1000000	NULL	2	N
+202	Wobbuffet	['Shadow Tag', 'Telepathy']	33	58	33	190	33	58	405	5120	70	28.5	1.3	45	Patient 	psychic	NULL	1000000	50.0	2	N
+203	Girafarig	['Inner Focus', 'Early Bird', 'Sap Sipper']	80	65	85	70	90	65	455	5120	70	41.5	1.5	60	Long Neck 	normal	psychic	1000000	50.0	2	N
+204	Pineco	['Sturdy', 'Overcoat']	65	90	15	50	35	35	290	5120	70	7.2	0.6	190	Bagworm 	bug	NULL	1000000	50.0	2	N
+205	Forretress	['Sturdy', 'Overcoat']	90	140	40	75	60	60	465	5120	70	125.8	1.2	75	Bagworm 	bug	steel	1000000	50.0	2	N
+206	Dunsparce	['Serene Grace', 'Run Away', 'Rattled']	70	70	45	100	65	65	415	5120	70	14.0	1.5	190	Land Snake 	normal	NULL	1000000	50.0	2	N
+207	Gligar	['Hyper Cutter', 'Sand Veil', 'Immunity']	75	105	85	65	35	65	430	5120	70	64.8	1.1	60	Flyscorpion 	ground	flying	1059860	50.0	2	N
+208	Steelix	['Rock Head', 'Sturdy', 'Sheer Force']	125	230	30	75	55	95	610	6400	70	400.0	9.2	25	Iron Snake 	steel	ground	1000000	50.0	2	N
+209	Snubbull	['Intimidate', 'Run Away', 'Rattled']	80	50	30	60	40	40	300	5120	70	7.8	0.6	190	Fairy 	fairy	NULL	800000	24.6	2	N
+210	Granbull	['Intimidate', 'Quick Feet', 'Rattled']	120	75	45	90	60	60	450	5120	70	48.7	1.4	75	Fairy 	fairy	NULL	800000	24.6	2	N
+211	Qwilfish	['Poison Point', 'Swift Swim', 'Intimidate']	95	85	85	65	55	55	440	5120	70	3.9	0.5	45	Balloon 	water	poison	1000000	50.0	2	N
+212	Scizor	['Swarm', 'Technician', 'Light Metal']	150	140	75	70	65	100	600	6400	70	118.0	1.8	25	Pincer 	bug	steel	1000000	50.0	2	N
+213	Shuckle	['Sturdy', 'Gluttony', 'Contrary']	10	230	5	20	10	230	505	5120	70	20.5	0.6	190	Mold 	bug	rock	1059860	50.0	2	N
+214	Heracross	['Swarm', 'Guts', 'Moxie']	185	115	75	80	40	105	600	6400	70	54.0	1.5	45	Singlehorn 	bug	fighting	1250000	50.0	2	N
+215	Sneasel	['Inner Focus', 'Keen Eye', 'Pickpocket']	95	55	115	55	35	75	430	5120	35	28.0	0.9	60	Sharp Claw 	dark	ice	1059860	50.0	2	N
+216	Teddiursa	['Pickup', 'Quick Feet', 'Honey Gather']	80	50	40	60	50	50	330	5120	70	8.8	0.6	120	Little Bear 	normal	NULL	1000000	50.0	2	N
+217	Ursaring	['Guts', 'Quick Feet', 'Unnerve']	130	75	55	90	75	75	500	5120	70	125.8	1.8	60	Hibernator 	normal	NULL	1000000	50.0	2	N
+218	Slugma	['Magma Armor', 'Flame Body', 'Weak Armor']	40	40	20	40	70	40	250	5120	70	35.0	0.7	190	Lava 	fire	NULL	1000000	50.0	2	N
+219	Magcargo	['Magma Armor', 'Flame Body', 'Weak Armor']	50	120	30	60	90	80	430	5120	70	55.0	0.8	75	Lava 	fire	rock	1000000	50.0	2	N
+220	Swinub	['Oblivious', 'Snow Cloak', 'Thick Fat']	50	40	50	50	30	30	250	5120	70	6.5	0.4	225	Pig 	ice	ground	1250000	50.0	2	N
+221	Piloswine	['Oblivious', 'Snow Cloak', 'Thick Fat']	100	80	50	100	60	60	450	5120	70	55.8	1.1	75	Swine 	ice	ground	1250000	50.0	2	N
+222	Corsola	['Hustle', 'Natural Cure', 'Regenerator']	55	95	35	65	65	95	410	5120	70	5.0	0.6	60	Coral 	water	rock	800000	24.6	2	N
+223	Remoraid	['Hustle', 'Sniper', 'Moody']	65	35	65	35	65	35	300	5120	70	12.0	0.6	190	Jet 	water	NULL	1000000	50.0	2	N
+224	Octillery	['Suction Cups', 'Sniper', 'Moody']	105	75	45	75	105	75	480	5120	70	28.5	0.9	75	Jet 	water	NULL	1000000	50.0	2	N
+225	Delibird	['Vital Spirit', 'Hustle', 'Insomnia']	55	45	75	45	65	45	330	5120	70	16.0	0.9	45	Delivery 	ice	flying	800000	50.0	2	N
+226	Mantine	['Swift Swim', 'Water Absorb', 'Water Veil']	40	70	70	85	80	140	485	6400	70	220.0	2.1	25	Kite 	water	flying	1250000	50.0	2	N
+227	Skarmory	['Keen Eye', 'Sturdy', 'Weak Armor']	80	140	70	65	40	70	465	6400	70	50.5	1.7	25	Armor Bird 	steel	flying	1250000	50.0	2	N
+228	Houndour	['Early Bird', 'Flash Fire', 'Unnerve']	60	30	65	45	80	50	330	5120	35	10.8	0.6	120	Dark 	dark	fire	1250000	50.0	2	N
+229	Houndoom	['Early Bird', 'Flash Fire', 'Unnerve']	90	90	115	75	140	90	600	5120	35	35.0	1.4	45	Dark 	dark	fire	1250000	50.0	2	N
+230	Kingdra	['Swift Swim', 'Sniper', 'Damp']	95	95	85	75	95	95	540	5120	70	152.0	1.8	45	Dragon 	water	dragon	1000000	50.0	2	N
+231	Phanpy	['Pickup', 'Sand Veil']	60	60	40	90	40	40	330	5120	70	33.5	0.5	120	Long Nose 	ground	NULL	1000000	50.0	2	N
+232	Donphan	['Sturdy', 'Sand Veil']	120	120	50	90	60	60	500	5120	70	120.0	1.1	60	Armor 	ground	NULL	1000000	50.0	2	N
+233	Porygon2	['Trace', 'Download', 'Analytic']	80	90	60	85	105	95	515	5120	70	32.5	0.6	45	Virtual 	normal	NULL	1000000	NULL	2	N
+234	Stantler	['Intimidate', 'Frisk', 'Sap Sipper']	95	62	85	73	85	65	465	5120	70	71.2	1.4	45	Big Horn 	normal	NULL	1250000	50.0	2	N
+235	Smeargle	['Own Tempo', 'Technician', 'Moody']	20	35	75	55	20	45	250	5120	70	58.0	1.2	45	Painter 	normal	NULL	800000	50.0	2	N
+236	Tyrogue	['Guts', 'Steadfast', 'Vital Spirit']	35	35	35	35	35	35	210	6400	70	21.0	0.7	75	Scuffle 	fighting	NULL	1000000	100.0	2	N
+237	Hitmontop	['Intimidate', 'Technician', 'Steadfast']	95	95	70	50	35	110	455	6400	70	48.0	1.4	45	Handstand 	fighting	NULL	1000000	100.0	2	N
+238	Smoochum	['Oblivious', 'Forewarn', 'Hydration']	30	15	65	45	85	65	305	6400	70	6.0	0.4	45	Kiss 	ice	psychic	1000000	0.0	2	N
+239	Elekid	['Static', 'Vital Spirit']	63	37	95	45	65	55	360	6400	70	23.5	0.6	45	Electric 	electric	NULL	1000000	75.4	2	N
+240	Magby	['Flame Body', 'Vital Spirit']	75	37	83	45	70	55	365	6400	70	21.4	0.7	45	Live Coal 	fire	NULL	1000000	75.4	2	N
+241	Miltank	['Thick Fat', 'Scrappy', 'Sap Sipper']	80	105	100	95	40	70	490	5120	70	75.5	1.2	45	Milk Cow 	normal	NULL	1250000	0.0	2	N
+242	Blissey	['Natural Cure', 'Serene Grace', 'Healer']	10	10	55	255	75	135	540	10240	140	46.8	1.5	30	Happiness 	normal	NULL	800000	0.0	2	N
+243	Raikou	['Pressure', 'Inner Focus']	85	75	115	90	115	100	580	20480	35	178.0	1.9	3	Thunder 	electric	NULL	1250000	NULL	2	Y
+244	Entei	['Pressure', 'Inner Focus']	115	85	100	115	90	75	580	20480	35	198.0	2.1	3	Volcano 	fire	NULL	1250000	NULL	2	Y
+245	Suicune	['Pressure', 'Inner Focus']	75	115	85	100	90	115	580	20480	35	187.0	2.0	3	Aurora 	water	NULL	1250000	NULL	2	Y
+246	Larvitar	['Guts', 'Sand Veil']	64	50	41	50	45	50	300	10240	35	72.0	0.6	45	Rock Skin 	rock	ground	1250000	50.0	2	N
+247	Pupitar	['Shed Skin']	84	70	51	70	65	70	410	10240	35	152.0	1.2	45	Hard Shell 	rock	ground	1250000	50.0	2	N
+248	Tyranitar	['Sand Stream', 'Unnerve']	164	150	71	100	95	120	700	10240	35	202.0	2.0	45	Armor 	rock	dark	1250000	50.0	2	N
+249	Lugia	['Pressure', 'Multiscale']	90	130	110	106	90	154	680	30720	0	216.0	5.2	3	Diving 	psychic	flying	1250000	NULL	2	Y
+250	Ho-Oh	['Pressure', 'Regenerator']	130	90	90	106	110	154	680	30720	0	199.0	3.8	3	Rainbow 	fire	flying	1250000	NULL	2	Y
+251	Celebi	['Natural Cure']	100	100	100	100	100	100	600	30720	100	5.0	0.6	45	Time Travel 	psychic	grass	1059860	NULL	2	Y
+252	Treecko	['Overgrow', 'Unburden']	45	35	70	40	65	55	310	5120	70	5.0	0.5	45	Wood Gecko 	grass	NULL	1059860	88.1	3	N
+253	Grovyle	['Overgrow', 'Unburden']	65	45	95	50	85	65	405	5120	70	21.6	0.9	45	Wood Gecko 	grass	NULL	1059860	88.1	3	N
+254	Sceptile	['Overgrow', 'Unburden']	110	75	145	70	145	85	630	5120	70	52.2	1.7	45	Forest 	grass	NULL	1059860	88.1	3	N
+255	Torchic	['Blaze', 'Speed Boost']	60	40	45	45	70	50	310	5120	70	2.5	0.4	45	Chick 	fire	NULL	1059860	88.1	3	N
+256	Combusken	['Blaze', 'Speed Boost']	85	60	55	60	85	60	405	5120	70	19.5	0.9	45	Young Fowl 	fire	fighting	1059860	88.1	3	N
+257	Blaziken	['Blaze', 'Speed Boost']	160	80	100	80	130	80	630	5120	70	52.0	1.9	45	Blaze 	fire	fighting	1059860	88.1	3	N
+258	Mudkip	['Torrent', 'Damp']	70	50	40	50	50	50	310	5120	70	7.6	0.4	45	Mud Fish 	water	NULL	1059860	88.1	3	N
+259	Marshtomp	['Torrent', 'Damp']	85	70	50	70	60	70	405	5120	70	28.0	0.7	45	Mud Fish 	water	ground	1059860	88.1	3	N
+260	Swampert	['Torrent', 'Damp']	150	110	70	100	95	110	635	5120	70	81.9	1.5	45	Mud Fish 	water	ground	1059860	88.1	3	N
+261	Poochyena	['Run Away', 'Quick Feet', 'Rattled']	55	35	35	35	30	30	220	3840	70	13.6	0.5	255	Bite 	dark	NULL	1000000	50.0	3	N
+262	Mightyena	['Intimidate', 'Quick Feet', 'Moxie']	90	70	70	70	60	60	420	3840	70	37.0	1.0	127	Bite 	dark	NULL	1000000	50.0	3	N
+263	Zigzagoon	['Pickup', 'Gluttony', 'Quick Feet']	30	41	60	38	30	41	240	3840	70	17.5	0.4	255	Tiny Racoon 	normal	NULL	1000000	50.0	3	N
+264	Linoone	['Pickup', 'Gluttony', 'Quick Feet']	70	61	100	78	50	61	420	3840	70	32.5	0.5	90	Rush 	normal	NULL	1000000	50.0	3	N
+265	Wurmple	['Shield Dust', 'Run Away']	45	35	20	45	20	30	195	3840	70	3.6	0.3	255	Worm 	bug	NULL	1000000	50.0	3	N
+266	Silcoon	['Shed Skin']	35	55	15	50	25	25	205	3840	70	10.0	0.6	120	Cocoon 	bug	NULL	1000000	50.0	3	N
+267	Beautifly	['Swarm', 'Rivalry']	70	50	65	60	100	50	395	3840	70	28.4	1.0	45	Butterfly 	bug	flying	1000000	50.0	3	N
+268	Cascoon	['Shed Skin']	35	55	15	50	25	25	205	3840	70	11.5	0.7	120	Cocoon 	bug	NULL	1000000	50.0	3	N
+269	Dustox	['Shield Dust', 'Compoundeyes']	50	70	65	60	50	90	385	3840	70	31.6	1.2	45	Poison Moth 	bug	poison	1000000	50.0	3	N
+270	Lotad	['Swift Swim', 'Rain Dish', 'Own Tempo']	30	30	30	40	40	50	220	3840	70	2.6	0.5	255	Water Weed 	water	grass	1059860	50.0	3	N
+271	Lombre	['Swift Swim', 'Rain Dish', 'Own Tempo']	50	50	50	60	60	70	340	3840	70	32.5	1.2	120	Jolly 	water	grass	1059860	50.0	3	N
+272	Ludicolo	['Swift Swim', 'Rain Dish', 'Own Tempo']	70	70	70	80	90	100	480	3840	70	55.0	1.5	45	Carefree 	water	grass	1059860	50.0	3	N
+273	Seedot	['Chlorophyll', 'Early Bird', 'Pickpocket']	40	50	30	40	30	30	220	3840	70	4.0	0.5	255	Acorn 	grass	NULL	1059860	50.0	3	N
+274	Nuzleaf	['Chlorophyll', 'Early Bird', 'Pickpocket']	70	40	60	70	60	40	340	3840	70	28.0	1.0	120	Wily 	grass	dark	1059860	50.0	3	N
+275	Shiftry	['Chlorophyll', 'Early Bird', 'Pickpocket']	100	60	80	90	90	60	480	3840	70	59.6	1.3	45	Wickid 	grass	dark	1059860	50.0	3	N
+276	Taillow	['Guts', 'Scrappy']	55	30	85	40	30	30	270	3840	70	2.3	0.3	200	TinySwallow 	normal	flying	1059860	50.0	3	N
+277	Swellow	['Guts', 'Scrappy']	85	60	125	60	75	50	455	3840	70	19.8	0.7	45	Swallow 	normal	flying	1059860	50.0	3	N
+278	Wingull	['Keen Eye', 'Hydration', 'Rain Dish']	30	30	85	40	55	30	270	5120	70	9.5	0.6	190	Seagull 	water	flying	1000000	50.0	3	N
+279	Pelipper	['Keen Eye', 'Drizzle', 'Rain Dish']	50	100	65	60	95	70	440	5120	70	28.0	1.2	45	Water Bird 	water	flying	1000000	50.0	3	N
+280	Ralts	['Synchronize', 'Trace', 'Telepathy']	25	25	40	28	45	35	198	5120	35	6.6	0.4	235	Feeling 	psychic	fairy	1250000	50.0	3	N
+281	Kirlia	['Synchronize', 'Trace', 'Telepathy']	35	35	50	38	65	55	278	5120	35	20.2	0.8	120	Emotion 	psychic	fairy	1250000	50.0	3	N
+282	Gardevoir	['Synchronize', 'Trace', 'Telepathy']	85	65	100	68	165	135	618	5120	35	48.4	1.6	45	Embrace 	psychic	fairy	1250000	50.0	3	N
+283	Surskit	['Swift Swim', 'Rain Dish']	30	32	65	40	50	52	269	3840	70	1.7	0.5	200	Pond Skater 	bug	water	1000000	50.0	3	N
+284	Masquerain	['Intimidate', 'Unnerve']	60	62	80	70	100	82	454	3840	70	3.6	0.8	75	Eyeball 	bug	flying	1000000	50.0	3	N
+285	Shroomish	['Effect Spore', 'Poison Heal', 'Quick Feet']	40	60	35	60	40	60	295	3840	70	4.5	0.4	255	Mushroom 	grass	NULL	1640000	50.0	3	N
+286	Breloom	['Effect Spore', 'Poison Heal', 'Technician']	130	80	70	60	60	60	460	3840	70	39.2	1.2	90	Mushroom 	grass	fighting	1640000	50.0	3	N
+287	Slakoth	['Truant']	60	60	30	60	35	35	280	3840	70	24.0	0.8	255	Slacker 	normal	NULL	1250000	50.0	3	N
+288	Vigoroth	['Vital Spirit']	80	80	90	80	55	55	440	3840	70	46.5	1.4	120	Wild Monkey 	normal	NULL	1250000	50.0	3	N
+289	Slaking	['Truant']	160	100	100	150	95	65	670	3840	70	130.5	2.0	45	Lazy 	normal	NULL	1250000	50.0	3	N
+290	Nincada	['Compoundeyes', 'Run Away']	45	90	40	31	30	30	266	3840	70	5.5	0.5	255	Trainee 	bug	ground	600000	50.0	3	N
+291	Ninjask	['Speed Boost', 'Infiltrator']	90	45	160	61	50	50	456	3840	70	12.0	0.8	120	Ninja 	bug	flying	600000	50.0	3	N
+292	Shedinja	['Wonder Guard']	90	45	40	1	30	30	236	3840	70	1.2	0.8	45	Shed 	bug	ghost	600000	NULL	3	N
+293	Whismur	['Soundproof', 'Rattled']	51	23	28	64	51	23	240	5120	70	16.3	0.6	190	Whisper 	normal	NULL	1059860	50.0	3	N
+294	Loudred	['Soundproof', 'Scrappy']	71	43	48	84	71	43	360	5120	70	40.5	1.0	120	Big Voice 	normal	NULL	1059860	50.0	3	N
+295	Exploud	['Soundproof', 'Scrappy']	91	63	68	104	91	73	490	5120	70	84.0	1.5	45	Loud Noise 	normal	NULL	1059860	50.0	3	N
+296	Makuhita	['Thick Fat', 'Guts', 'Sheer Force']	60	30	25	72	20	30	237	5120	70	86.4	1.0	180	Guts 	fighting	NULL	1640000	75.4	3	N
+297	Hariyama	['Thick Fat', 'Guts', 'Sheer Force']	120	60	50	144	40	60	474	5120	70	253.8	2.3	200	Arm Thrust 	fighting	NULL	1640000	75.4	3	N
+298	Azurill	['Thick Fat', 'Huge Power', 'Sap Sipper']	20	40	20	50	20	40	190	2560	70	2.0	0.2	150	Polka Dot 	normal	fairy	800000	24.6	3	N
+299	Nosepass	['Sturdy', 'Magnet Pull', 'Sand Force']	45	135	30	30	45	90	375	5120	70	97.0	1.0	255	Compass 	rock	NULL	1000000	50.0	3	N
+300	Skitty	['Cute Charm', 'Normalize', 'Wonder Skin ']	45	45	50	50	35	35	260	3840	70	11.0	0.6	255	Kitten 	normal	NULL	800000	24.6	3	N
+301	Delcatty	['Cute Charm', 'Normalize', 'Wonder Skin ']	65	65	90	70	55	55	400	3840	70	32.6	1.1	60	Prim 	normal	NULL	800000	24.6	3	N
+302	Sableye	['Keen Eye', 'Stall', 'Prankster']	85	125	20	50	85	115	480	6400	35	11.0	0.5	45	Darkness 	dark	ghost	1059860	50.0	3	N
+303	Mawile	['Hyper Cutter', 'Intimidate', 'Sheer Force']	105	125	50	50	55	95	480	5120	70	11.5	0.6	45	Deceiver 	steel	fairy	800000	50.0	3	N
+304	Aron	['Sturdy', 'Rock Head', 'Heavy Metal']	70	100	30	50	40	40	330	8960	35	60.0	0.4	180	Iron Armor 	steel	rock	1250000	50.0	3	N
+305	Lairon	['Sturdy', 'Rock Head', 'Heavy Metal']	90	140	40	60	50	50	430	8960	35	120.0	0.9	90	Iron Armor 	steel	rock	1250000	50.0	3	N
+306	Aggron	['Sturdy', 'Rock Head', 'Heavy Metal']	140	230	50	70	60	80	630	8960	35	360.0	2.1	45	Iron Armor 	steel	rock	1250000	50.0	3	N
+307	Meditite	['Pure Power', 'Telepathy']	40	55	60	30	40	55	280	5120	70	11.2	0.6	180	Meditate 	fighting	psychic	1000000	50.0	3	N
+308	Medicham	['Pure Power', 'Telepathy']	100	85	100	60	80	85	510	5120	70	31.5	1.3	90	Meditate 	fighting	psychic	1000000	50.0	3	N
+309	Electrike	['Static', 'Lightningrod', 'Minus']	45	40	65	40	65	40	295	5120	70	15.2	0.6	120	Lightning 	electric	NULL	1250000	50.0	3	N
+310	Manectric	['Static', 'Lightningrod', 'Minus']	75	80	135	70	135	80	575	5120	70	40.2	1.5	45	Discharge 	electric	NULL	1250000	50.0	3	N
+311	Plusle	['Plus', 'Lightningrod']	50	40	95	60	85	75	405	5120	70	4.2	0.4	200	Cheering 	electric	NULL	1000000	50.0	3	N
+312	Minun	['Minus', 'Volt Absorb']	40	50	95	60	75	85	405	5120	70	4.2	0.4	200	Cheering 	electric	NULL	1000000	50.0	3	N
+313	Volbeat	['Illuminate', 'Swarm', 'Prankster']	73	75	85	65	47	85	430	3840	70	17.7	0.7	150	Firefly 	bug	NULL	600000	100.0	3	N
+314	Illumise	['Oblivious', 'Tinted Lens', 'Prankster']	47	75	85	65	73	85	430	3840	70	17.7	0.6	150	Firefly 	bug	NULL	1640000	0.0	3	N
+315	Roselia	['Natural Cure', 'Poison Point', 'Leaf Guard']	60	45	65	50	100	80	400	5120	70	2.0	0.3	150	Thorn 	grass	poison	1059860	50.0	3	N
+316	Gulpin	['Liquid Ooze', 'Sticky Hold', 'Gluttony']	43	53	40	70	43	53	302	5120	70	10.3	0.4	225	Stomach 	poison	NULL	1640000	50.0	3	N
+317	Swalot	['Liquid Ooze', 'Sticky Hold', 'Gluttony']	73	83	55	100	73	83	467	5120	70	80.0	1.7	75	Poison Bag 	poison	NULL	1640000	50.0	3	N
+318	Carvanha	['Rough Skin', 'Speed Boost']	90	20	65	45	65	20	305	5120	35	20.8	0.8	225	Savage 	water	dark	1250000	50.0	3	N
+319	Sharpedo	['Rough Skin', 'Speed Boost']	140	70	105	70	110	65	560	5120	35	88.8	1.8	60	Brutal 	water	dark	1250000	50.0	3	N
+320	Wailmer	['Water Veil', 'Oblivious', 'Pressure']	70	35	60	130	70	35	400	10240	70	130.0	2.0	125	Ball Whale 	water	NULL	1640000	50.0	3	N
+321	Wailord	['Water Veil', 'Oblivious', 'Pressure']	90	45	60	170	90	45	500	10240	70	398.0	14.5	60	Float Whale 	water	NULL	1640000	50.0	3	N
+322	Numel	['Oblivious', 'Simple', 'Own Tempo']	60	40	35	60	65	45	305	5120	70	24.0	0.7	255	Numb 	fire	ground	1000000	50.0	3	N
+323	Camerupt	['Magma Armor', 'Solid Rock', 'Anger Point']	120	100	20	70	145	105	560	5120	70	220.0	1.9	150	Eruption 	fire	ground	1000000	50.0	3	N
+324	Torkoal	['White Smoke', 'Drought', 'Shell Armor']	85	140	20	70	85	70	470	5120	70	80.4	0.5	90	Coal 	fire	NULL	1000000	50.0	3	N
+325	Spoink	['Thick Fat', 'Own Tempo', 'Gluttony']	25	35	60	60	70	80	330	5120	70	30.6	0.7	255	Bounce 	psychic	NULL	800000	50.0	3	N
+326	Grumpig	['Thick Fat', 'Own Tempo', 'Gluttony']	45	65	80	80	90	110	470	5120	70	71.5	0.9	60	Manipulate 	psychic	NULL	800000	50.0	3	N
+327	Spinda	['Own Tempo', 'Tangled Feet', 'Contrary']	60	60	60	60	60	60	360	3840	70	5.0	1.1	255	Spot Panda 	normal	NULL	800000	50.0	3	N
+328	Trapinch	['Hyper Cutter', 'Arena Trap', 'Sheer Force']	100	45	10	45	45	45	290	5120	70	15.0	0.7	255	Ant Pit 	ground	NULL	1059860	50.0	3	N
+329	Vibrava	['Levitate']	70	50	70	50	50	50	340	5120	70	15.3	1.1	120	Vibration 	ground	dragon	1059860	50.0	3	N
+330	Flygon	['Levitate']	100	80	100	80	80	80	520	5120	70	82.0	2.0	45	Mystic 	ground	dragon	1059860	50.0	3	N
+331	Cacnea	['Sand Veil', 'Water Absorb']	85	40	35	50	85	40	335	5120	35	51.3	0.4	190	Cactus 	grass	NULL	1059860	50.0	3	N
+332	Cacturne	['Sand Veil', 'Water Absorb']	115	60	55	70	115	60	475	5120	35	77.4	1.3	60	Scarecrow 	grass	dark	1059860	50.0	3	N
+333	Swablu	['Natural Cure', 'Cloud Nine']	40	60	50	45	40	75	310	5120	70	1.2	0.4	255	Cotton Bird 	normal	flying	600000	50.0	3	N
+334	Altaria	['Natural Cure', 'Cloud Nine']	110	110	80	75	110	105	590	5120	70	20.6	1.1	45	Humming 	dragon	flying	600000	50.0	3	N
+335	Zangoose	['Immunity', 'Toxic Boost']	115	60	90	73	60	60	458	5120	70	40.3	1.3	90	Cat Ferret 	normal	NULL	600000	50.0	3	N
+336	Seviper	['Shed Skin', 'Infiltrator']	100	60	65	73	100	60	458	5120	70	52.5	2.7	90	Fang Snake 	poison	NULL	1640000	50.0	3	N
+337	Lunatone	['Levitate']	55	65	70	90	95	85	460	6400	70	168.0	1.0	45	Meteorite 	rock	psychic	800000	NULL	3	N
+338	Solrock	['Levitate']	95	85	70	90	55	65	460	6400	70	154.0	1.2	45	Meteorite 	rock	psychic	800000	NULL	3	N
+339	Barboach	['Oblivious', 'Anticipation', 'Hydration']	48	43	60	50	46	41	288	5120	70	1.9	0.4	190	Whiskers 	water	ground	1000000	50.0	3	N
+340	Whiscash	['Oblivious', 'Anticipation', 'Hydration']	78	73	60	110	76	71	468	5120	70	23.6	0.9	75	Whiskers 	water	ground	1000000	50.0	3	N
+341	Corphish	['Hyper Cutter', 'Shell Armor', 'Adaptability']	80	65	35	43	50	35	308	3840	70	11.5	0.6	205	Ruffian 	water	NULL	1640000	50.0	3	N
+342	Crawdaunt	['Hyper Cutter', 'Shell Armor', 'Adaptability']	120	85	55	63	90	55	468	3840	70	32.8	1.1	155	Rogue 	water	dark	1640000	50.0	3	N
+343	Baltoy	['Levitate']	40	55	55	40	40	70	300	5120	70	21.5	0.5	255	Clay Doll 	ground	psychic	1000000	NULL	3	N
+344	Claydol	['Levitate']	70	105	75	60	70	120	500	5120	70	108.0	1.5	90	Clay Doll 	ground	psychic	1000000	NULL	3	N
+345	Lileep	['Suction Cups', 'Storm Drain']	41	77	23	66	61	87	355	7680	70	23.8	1.0	45	Sea Lily 	rock	grass	600000	88.1	3	N
+346	Cradily	['Suction Cups', 'Storm Drain']	81	97	43	86	81	107	495	7680	70	60.4	1.5	45	Barnacle 	rock	grass	600000	88.1	3	N
+347	Anorith	['Battle Armor', 'Swift Swim']	95	50	75	45	40	50	355	7680	70	12.5	0.7	45	Old Shrimp 	rock	bug	600000	88.1	3	N
+348	Armaldo	['Battle Armor', 'Swift Swim']	125	100	45	75	70	80	495	7680	70	68.2	1.5	45	Plate 	rock	bug	600000	88.1	3	N
+349	Feebas	['Swift Swim', 'Oblivious', 'Adaptability']	15	20	80	20	10	55	200	5120	70	7.4	0.6	255	Fish 	water	NULL	600000	50.0	3	N
+350	Milotic	['Marvel Scale', 'Competitive', 'Cute Charm']	60	79	81	95	100	125	540	5120	70	162.0	6.2	60	Tender 	water	NULL	600000	50.0	3	N
+351	Castform	['Forecast']	70	70	70	70	70	70	420	6400	70	0.8	0.3	45	Weather 	normal	NULL	1000000	50.0	3	N
+352	Kecleon	['Color Change', 'Protean']	90	70	40	60	60	120	440	5120	70	22.0	1.0	200	Color Swap 	normal	NULL	1059860	50.0	3	N
+353	Shuppet	['Insomnia', 'Frisk', 'Cursed Body']	75	35	45	44	63	33	295	6400	35	2.3	0.6	225	Puppet 	ghost	NULL	800000	50.0	3	N
+354	Banette	['Insomnia', 'Frisk', 'Cursed Body']	165	75	75	64	93	83	555	6400	35	12.5	1.1	45	Marionette 	ghost	NULL	800000	50.0	3	N
+355	Duskull	['Levitate', 'Frisk']	40	90	25	20	30	90	295	6400	35	15.0	0.8	190	Requiem 	ghost	NULL	800000	50.0	3	N
+356	Dusclops	['Pressure', 'Frisk']	70	130	25	40	60	130	455	6400	35	30.6	1.6	90	Beckon 	ghost	NULL	800000	50.0	3	N
+357	Tropius	['Chlorophyll', 'Solar Power', 'Harvest']	68	83	51	99	72	87	460	6400	70	100.0	2.0	200	Fruit 	grass	flying	1250000	50.0	3	N
+358	Chimecho	['Levitate']	50	80	65	75	95	90	455	6400	70	1.0	0.6	45	Wind Chime 	psychic	NULL	800000	50.0	3	N
+359	Absol	['Pressure', 'Super Luck', 'Justified']	150	60	115	65	115	60	565	6400	35	47.0	1.2	30	Disaster 	dark	NULL	1059860	50.0	3	N
+360	Wynaut	['Shadow Tag', 'Telepathy']	23	48	23	95	23	48	260	5120	70	14.0	0.6	125	Bright 	psychic	NULL	1000000	50.0	3	N
+361	Snorunt	['Inner Focus', 'Ice Body', 'Moody']	50	50	50	50	50	50	300	5120	70	16.8	0.7	190	Snow Hat 	ice	NULL	1000000	50.0	3	N
+362	Glalie	['Inner Focus', 'Ice Body', 'Moody']	120	80	100	80	120	80	580	5120	70	256.5	1.5	75	Face 	ice	NULL	1000000	50.0	3	N
+363	Spheal	['Thick Fat', 'Ice Body', 'Oblivious']	40	50	25	70	55	50	290	5120	70	39.5	0.8	255	Clap 	ice	water	1059860	50.0	3	N
+364	Sealeo	['Thick Fat', 'Ice Body', 'Oblivious']	60	70	45	90	75	70	410	5120	70	87.6	1.1	120	Ball Roll 	ice	water	1059860	50.0	3	N
+365	Walrein	['Thick Fat', 'Ice Body', 'Oblivious']	80	90	65	110	95	90	530	5120	70	150.6	1.4	45	Ice Break 	ice	water	1059860	50.0	3	N
+366	Clamperl	['Shell Armor', 'Rattled']	64	85	32	35	74	55	345	5120	70	52.5	0.4	255	Bivalve 	water	NULL	600000	50.0	3	N
+367	Huntail	['Swift Swim', 'Water Veil']	104	105	52	55	94	75	485	5120	70	27.0	1.7	60	Deep Sea 	water	NULL	600000	50.0	3	N
+368	Gorebyss	['Swift Swim', 'Hydration']	84	105	52	55	114	75	485	5120	70	22.6	1.8	60	South Sea 	water	NULL	600000	50.0	3	N
+369	Relicanth	['Swift Swim', 'Rock Head', 'Sturdy']	90	130	55	100	45	65	485	10240	70	23.4	1.0	25	Longevity 	water	rock	1250000	88.1	3	N
+370	Luvdisc	['Swift Swim', 'Hydration']	30	55	97	43	40	65	330	5120	70	8.7	0.6	225	Rendezvous 	water	NULL	800000	24.6	3	N
+371	Bagon	['Rock Head', 'Sheer Force']	75	60	50	45	40	30	300	10240	35	42.1	0.6	45	Rock Head 	dragon	NULL	1250000	50.0	3	N
+372	Shelgon	['Rock Head', 'Overcoat']	95	100	50	65	60	50	420	10240	35	110.5	1.1	45	Endurance 	dragon	NULL	1250000	50.0	3	N
+373	Salamence	['Intimidate', 'Moxie']	145	130	120	95	120	90	700	10240	35	102.6	1.5	45	Dragon 	dragon	flying	1250000	50.0	3	N
+374	Beldum	['Clear Body', 'Light Metal']	55	80	30	40	35	60	300	10240	35	95.2	0.6	3	Iron Ball 	steel	psychic	1250000	NULL	3	N
+375	Metang	['Clear Body', 'Light Metal']	75	100	50	60	55	80	420	10240	35	202.5	1.2	3	Iron Claw 	steel	psychic	1250000	NULL	3	N
+376	Metagross	['Clear Body', 'Light Metal']	145	150	110	80	105	110	700	10240	35	550.0	1.6	3	Iron Leg 	steel	psychic	1250000	NULL	3	N
+377	Regirock	['Clear Body', 'Sturdy']	100	200	50	80	50	100	580	20480	35	230.0	1.7	3	Rock Peak 	rock	NULL	1250000	NULL	3	Y
+378	Regice	['Clear Body', 'Ice Body']	50	100	50	80	100	200	580	20480	35	175.0	1.8	3	Iceberg 	ice	NULL	1250000	NULL	3	Y
+379	Registeel	['Clear Body', 'Light Metal']	75	150	50	80	75	150	580	20480	35	205.0	1.9	3	Iron 	steel	NULL	1250000	NULL	3	Y
+380	Latias	['Levitate']	100	120	110	80	140	150	700	30720	90	40.0	1.4	3	Eon 	dragon	psychic	1250000	0.0	3	Y
+381	Latios	['Levitate']	130	100	110	80	160	120	700	30720	90	60.0	2.0	3	Eon 	dragon	psychic	1250000	100.0	3	Y
+382	Kyogre	['Drizzle']	150	90	90	100	180	160	770	30720	0	352.0	4.5	3	Sea Basin 	water	NULL	1250000	NULL	3	Y
+383	Groudon	['Drought']	180	160	90	100	150	90	770	30720	0	950.0	3.5	3	Continent 	ground	NULL	1250000	NULL	3	Y
+384	Rayquaza	['Air Lock']	180	100	115	105	180	100	780	30720	0	206.5	7.0	45	Sky High 	dragon	flying	1250000	NULL	3	Y
+385	Jirachi	['Serene Grace']	100	100	100	100	100	100	600	30720	100	1.1	0.3	3	Wish 	steel	psychic	1250000	NULL	3	Y
+386	Deoxys	['Pressure']	95	90	180	50	95	90	600	30720	0	60.8	1.7	3	DNA 	psychic	NULL	1250000	NULL	3	Y
+387	Turtwig	['Overgrow', 'Shell Armor']	68	64	31	55	45	55	318	5120	70	10.2	0.4	45	Tiny Leaf 	grass	NULL	1059860	88.1	4	N
+388	Grotle	['Overgrow', 'Shell Armor']	89	85	36	75	55	65	405	5120	70	97.0	1.1	45	Grove 	grass	NULL	1059860	88.1	4	N
+389	Torterra	['Overgrow', 'Shell Armor']	109	105	56	95	75	85	525	5120	70	310.0	2.2	45	Continent 	grass	ground	1059860	88.1	4	N
+390	Chimchar	['Blaze', 'Iron Fist']	58	44	61	44	58	44	309	5120	70	6.2	0.5	45	Chimp 	fire	NULL	1059860	88.1	4	N
+391	Monferno	['Blaze', 'Iron Fist']	78	52	81	64	78	52	405	5120	70	22.0	0.9	45	Playful 	fire	fighting	1059860	88.1	4	N
+392	Infernape	['Blaze', 'Iron Fist']	104	71	108	76	104	71	534	5120	70	55.0	1.2	45	Flame 	fire	fighting	1059860	88.1	4	N
+393	Piplup	['Torrent', 'Defiant']	51	53	40	53	61	56	314	5120	70	5.2	0.4	45	Penguin 	water	NULL	1059860	88.1	4	N
+394	Prinplup	['Torrent', 'Defiant']	66	68	50	64	81	76	405	5120	70	23.0	0.8	45	Penguin 	water	NULL	1059860	88.1	4	N
+395	Empoleon	['Torrent', 'Defiant']	86	88	60	84	111	101	530	5120	70	84.5	1.7	45	Emperor 	water	steel	1059860	88.1	4	N
+396	Starly	['Keen Eye', 'Reckless']	55	30	60	40	30	30	245	3840	70	2.0	0.3	255	Starling 	normal	flying	1059860	50.0	4	N
+397	Staravia	['Intimidate', 'Reckless']	75	50	80	55	40	40	340	3840	70	15.5	0.6	120	Starling 	normal	flying	1059860	50.0	4	N
+398	Staraptor	['Intimidate', 'Reckless']	120	70	100	85	50	60	485	3840	70	24.9	1.2	45	Predator 	normal	flying	1059860	50.0	4	N
+399	Bidoof	['Simple', 'Unaware', 'Moody']	45	40	31	59	35	40	250	3840	70	20.0	0.5	255	Plump Mouse 	normal	NULL	1000000	50.0	4	N
+400	Bibarel	['Simple', 'Unaware', 'Moody']	85	60	71	79	55	60	410	3840	70	31.5	1.0	127	Beaver 	normal	water	1000000	50.0	4	N
+401	Kricketot	['Shed Skin', 'Run Away']	25	41	25	37	25	41	194	3840	70	2.2	0.3	255	Cricket 	bug	NULL	1059860	50.0	4	N
+402	Kricketune	['Swarm', 'Technician']	85	51	65	77	55	51	384	3840	70	25.5	1.0	45	Cricket 	bug	NULL	1059860	50.0	4	N
+403	Shinx	['Rivalry', 'Intimidate', 'Guts']	65	34	45	45	40	34	263	5120	70	9.5	0.5	235	Flash 	electric	NULL	1059860	50.0	4	N
+404	Luxio	['Rivalry', 'Intimidate', 'Guts']	85	49	60	60	60	49	363	5120	100	30.5	0.9	120	Spark 	electric	NULL	1059860	50.0	4	N
+405	Luxray	['Rivalry', 'Intimidate', 'Guts']	120	79	70	80	95	79	523	5120	70	42.0	1.4	45	Gleam Eyes 	electric	NULL	1059860	50.0	4	N
+406	Budew	['Natural Cure', 'Poison Point', 'Leaf Guard']	30	35	55	40	50	70	280	5120	70	1.2	0.2	255	Bud 	grass	poison	1059860	50.0	4	N
+407	Roserade	['Natural Cure', 'Poison Point', 'Technician']	70	65	90	60	125	105	515	5120	70	14.5	0.9	75	Bouquet 	grass	poison	1059860	50.0	4	N
+408	Cranidos	['Mold Breaker', 'Sheer Force']	125	40	58	67	30	30	350	7680	70	31.5	0.9	45	Head Butt 	rock	NULL	600000	88.1	4	N
+409	Rampardos	['Mold Breaker', 'Sheer Force']	165	60	58	97	65	50	495	7680	70	102.5	1.6	45	Head Butt 	rock	NULL	600000	88.1	4	N
+410	Shieldon	['Sturdy', 'Soundproof']	42	118	30	30	42	88	350	7680	70	57.0	0.5	45	Shield 	rock	steel	600000	88.1	4	N
+411	Bastiodon	['Sturdy', 'Soundproof']	52	168	30	60	47	138	495	7680	70	149.5	1.3	45	Shield 	rock	steel	600000	88.1	4	N
+412	Burmy	['Shed Skin', 'Overcoat']	29	45	36	40	29	45	224	3840	70	3.4	0.2	120	Bagworm 	bug	NULL	1000000	50.0	4	N
+413	Wormadam	['Anticipation', 'Overcoat']	69	95	36	60	69	95	424	3840	70	6.5	0.5	45	Bagworm 	bug	grass	1000000	0.0	4	N
+414	Mothim	['Swarm', 'Tinted Lens']	94	50	66	70	94	50	424	3840	70	23.3	0.9	45	Moth 	bug	flying	1000000	100.0	4	N
+415	Combee	['Honey Gather', 'Hustle']	30	42	70	30	30	42	244	3840	70	5.5	0.3	120	Tiny Bee 	bug	flying	1059860	88.1	4	N
+416	Vespiquen	['Pressure', 'Unnerve']	80	102	40	70	80	102	474	3840	70	38.5	1.2	45	Beehive 	bug	flying	1059860	0.0	4	N
+417	Pachirisu	['Run Away', 'Pickup', 'Volt Absorb']	45	70	95	60	45	90	405	2560	100	3.9	0.4	200	EleSquirrel 	electric	NULL	1000000	50.0	4	N
+418	Buizel	['Swift Swim', 'Water Veil']	65	35	85	55	60	30	330	5120	70	29.5	0.7	190	Sea Weasel 	water	NULL	1000000	50.0	4	N
+419	Floatzel	['Swift Swim', 'Water Veil']	105	55	115	85	85	50	495	5120	70	33.5	1.1	75	Sea Weasel 	water	NULL	1000000	50.0	4	N
+420	Cherubi	['Chlorophyll']	35	45	35	45	62	53	275	5120	70	3.3	0.4	190	Cherry 	grass	NULL	1000000	50.0	4	N
+421	Cherrim	['Flower Gift']	60	70	85	70	87	78	450	5120	70	9.3	0.5	75	Blossom 	grass	NULL	1000000	50.0	4	N
+422	Shellos	['Sticky Hold', 'Storm Drain', 'Sand Force']	48	48	34	76	57	62	325	5120	70	6.3	0.3	190	Sea Slug 	water	NULL	1000000	50.0	4	N
+423	Gastrodon	['Sticky Hold', 'Storm Drain', 'Sand Force']	83	68	39	111	92	82	475	5120	70	29.9	0.9	75	Sea Slug 	water	ground	1000000	50.0	4	N
+424	Ambipom	['Technician', 'Pickup', 'Skill Link']	100	66	115	75	60	66	482	5120	100	20.3	1.2	45	Long Tail 	normal	NULL	800000	50.0	4	N
+425	Drifloon	['Aftermath', 'Unburden', 'Flare Boost']	50	34	70	90	60	44	348	7680	70	1.2	0.4	125	Balloon 	ghost	flying	1640000	50.0	4	N
+426	Drifblim	['Aftermath', 'Unburden', 'Flare Boost']	80	44	80	150	90	54	498	7680	70	15.0	1.2	60	Blimp 	ghost	flying	1640000	50.0	4	N
+427	Buneary	['Run Away', 'Klutz', 'Limber']	66	44	85	55	44	56	350	5120	0	5.5	0.4	190	Rabbit 	normal	NULL	1000000	50.0	4	N
+428	Lopunny	['Cute Charm', 'Klutz', 'Limber']	136	94	135	65	54	96	580	5120	140	33.3	1.2	60	Rabbit 	normal	NULL	1000000	50.0	4	N
+429	Mismagius	['Levitate']	60	60	105	60	105	105	495	6400	35	4.4	0.9	45	Magical 	ghost	NULL	800000	50.0	4	N
+430	Honchkrow	['Insomnia', 'Super Luck', 'Moxie']	125	52	71	100	105	52	505	5120	35	27.3	0.9	30	Big Boss 	dark	flying	1059860	50.0	4	N
+431	Glameow	['Limber', 'Own Tempo', 'Keen Eye']	55	42	85	49	42	37	310	5120	70	3.9	0.5	190	Catty 	normal	NULL	800000	24.6	4	N
+432	Purugly	['Thick Fat', 'Own Tempo', 'Defiant']	82	64	112	71	64	59	452	5120	70	43.8	1.0	75	Tiger Cat 	normal	NULL	800000	24.6	4	N
+433	Chingling	['Levitate']	30	50	45	45	65	50	285	6400	70	0.6	0.2	120	Bell 	psychic	NULL	800000	50.0	4	N
+434	Stunky	['Stench', 'Aftermath', 'Keen Eye']	63	47	74	63	41	41	329	5120	70	19.2	0.4	225	Skunk 	poison	dark	1000000	50.0	4	N
+435	Skuntank	['Stench', 'Aftermath', 'Keen Eye']	93	67	84	103	71	61	479	5120	70	38.0	1.0	60	Skunk 	poison	dark	1000000	50.0	4	N
+436	Bronzor	['Levitate', 'Heatproof', 'Heavy Metal']	24	86	23	57	24	86	300	5120	70	60.5	0.5	255	Bronze 	steel	psychic	1000000	NULL	4	N
+437	Bronzong	['Levitate', 'Heatproof', 'Heavy Metal']	89	116	33	67	79	116	500	5120	70	187.0	1.3	90	Bronze Bell 	steel	psychic	1000000	NULL	4	N
+438	Bonsly	['Sturdy', 'Rock Head', 'Rattled']	80	95	10	50	10	45	290	5120	70	15.0	0.5	255	Bonsai 	rock	NULL	1000000	50.0	4	N
+439	Mime Jr.	['Soundproof', 'Filter', 'Technician']	25	45	60	20	70	90	310	6400	70	13.0	0.6	145	Mime 	psychic	fairy	1000000	50.0	4	N
+440	Happiny	['Natural Cure', 'Serene Grace', 'Friend Guard']	5	5	30	100	15	65	220	10240	140	24.4	0.6	130	Playhouse 	normal	NULL	800000	0.0	4	N
+441	Chatot	['Keen Eye', 'Tangled Feet', 'Big Pecks']	65	45	91	76	92	42	411	5120	35	1.9	0.5	30	Music Note 	normal	flying	1059860	50.0	4	N
+442	Spiritomb	['Pressure', 'Infiltrator']	92	108	35	50	92	108	485	7680	70	108.0	1.0	100	Forbidden 	ghost	dark	1000000	50.0	4	N
+443	Gible	['Sand Veil', 'Rough Skin']	70	45	42	58	40	45	300	10240	70	20.5	0.7	45	Land Shark 	dragon	ground	1250000	50.0	4	N
+444	Gabite	['Sand Veil', 'Rough Skin']	90	65	82	68	50	55	410	10240	70	56.0	1.4	45	Cave 	dragon	ground	1250000	50.0	4	N
+445	Garchomp	['Sand Veil', 'Rough Skin']	170	115	92	108	120	95	700	10240	70	95.0	1.9	45	Mach 	dragon	ground	1250000	50.0	4	N
+446	Munchlax	['Pickup', 'Thick Fat', 'Gluttony']	85	40	5	135	40	85	390	10240	70	105.0	0.6	50	Big Eater 	normal	NULL	1250000	88.1	4	N
+447	Riolu	['Steadfast', 'Inner Focus', 'Prankster']	70	40	60	40	35	40	285	6400	70	20.2	0.7	75	Emanation 	fighting	NULL	1059860	88.1	4	N
+448	Lucario	['Steadfast', 'Inner Focus', 'Justified']	145	88	112	70	140	70	625	6400	70	54.0	1.2	45	Aura 	fighting	steel	1059860	88.1	4	N
+449	Hippopotas	['Sand Stream', 'Sand Force']	72	78	32	68	38	42	330	7680	70	49.5	0.8	140	Hippo 	ground	NULL	1250000	50.0	4	N
+450	Hippowdon	['Sand Stream', 'Sand Force']	112	118	47	108	68	72	525	7680	70	300.0	2.0	60	Heavyweight 	ground	NULL	1250000	50.0	4	N
+451	Skorupi	['Battle Armor', 'Sniper', 'Keen Eye']	50	90	65	40	30	55	330	5120	70	12.0	0.8	120	Scorpion 	poison	bug	1250000	50.0	4	N
+452	Drapion	['Battle Armor', 'Sniper', 'Keen Eye']	90	110	95	70	60	75	500	5120	70	61.5	1.3	45	Ogre Scorp 	poison	dark	1250000	50.0	4	N
+453	Croagunk	['Anticipation', 'Dry Skin', 'Poison Touch']	61	40	50	48	61	40	300	2560	100	23.0	0.7	140	Toxic Mouth 	poison	fighting	1000000	50.0	4	N
+454	Toxicroak	['Anticipation', 'Dry Skin', 'Poison Touch']	106	65	85	83	86	65	490	5120	70	44.4	1.3	75	Toxic Mouth 	poison	fighting	1000000	50.0	4	N
+455	Carnivine	['Levitate']	100	72	46	74	90	72	454	6400	70	27.0	1.4	200	Bug Catcher 	grass	NULL	1250000	50.0	4	N
+456	Finneon	['Swift Swim', 'Storm Drain', 'Water Veil']	49	56	66	49	49	61	330	5120	70	7.0	0.4	190	Wing Fish 	water	NULL	600000	50.0	4	N
+457	Lumineon	['Swift Swim', 'Storm Drain', 'Water Veil']	69	76	91	69	69	86	460	5120	70	24.0	1.2	75	Neon 	water	NULL	600000	50.0	4	N
+458	Mantyke	['Swift Swim', 'Water Absorb', 'Water Veil']	20	50	50	45	60	120	345	6400	70	65.0	1.0	25	Kite 	water	flying	1250000	50.0	4	N
+459	Snover	['Snow Warning', 'Soundproof']	62	50	40	60	62	60	334	5120	70	50.5	1.0	120	Frosted Tree 	grass	ice	1250000	50.0	4	N
+460	Abomasnow	['Snow Warning', 'Soundproof']	132	105	30	90	132	105	594	5120	70	135.5	2.2	60	Frosted Tree 	grass	ice	1250000	50.0	4	N
+461	Weavile	['Pressure', 'Pickpocket']	120	65	125	70	45	85	510	5120	35	34.0	1.1	45	Sharp Claw 	dark	ice	1059860	50.0	4	N
+462	Magnezone	['Magnet Pull', 'Sturdy', 'Analytic']	70	115	60	70	130	90	535	5120	70	180.0	1.2	30	Magnet Area 	electric	steel	1000000	NULL	4	N
+463	Lickilicky	['Own Tempo', 'Oblivious', 'Cloud Nine']	85	95	50	110	80	95	515	5120	70	140.0	1.7	30	Licking 	normal	NULL	1000000	50.0	4	N
+464	Rhyperior	['Lightningrod', 'Solid Rock', 'Reckless']	140	130	40	115	55	55	535	5120	70	282.8	2.4	30	Drill 	ground	rock	1250000	50.0	4	N
+465	Tangrowth	['Chlorophyll', 'Leaf Guard', 'Regenerator']	100	125	50	100	110	50	535	5120	70	128.6	2.0	30	Vine 	grass	NULL	1000000	50.0	4	N
+466	Electivire	['Motor Drive', 'Vital Spirit']	123	67	95	75	95	85	540	6400	70	138.6	1.8	30	Thunderbolt 	electric	NULL	1000000	75.4	4	N
+467	Magmortar	['Flame Body', 'Vital Spirit']	95	67	83	75	125	95	540	6400	70	68.0	1.6	30	Blast 	fire	NULL	1000000	75.4	4	N
+468	Togekiss	['Hustle', 'Serene Grace', 'Super Luck']	50	95	80	85	120	115	545	2560	70	38.0	1.5	30	Jubilee 	fairy	flying	800000	88.1	4	N
+469	Yanmega	['Speed Boost', 'Tinted Lens', 'Frisk']	76	86	95	86	116	56	515	5120	70	51.5	1.9	30	Ogre Darner 	bug	flying	1000000	50.0	4	N
+470	Leafeon	['Leaf Guard', 'Chlorophyll']	110	130	95	65	60	65	525	8960	35	25.5	1.0	45	Verdant 	grass	NULL	1000000	88.1	4	N
+471	Glaceon	['Snow Cloak', 'Ice Body']	60	110	65	65	130	95	525	8960	35	25.9	0.8	45	Fresh Snow 	ice	NULL	1000000	88.1	4	N
+472	Gliscor	['Hyper Cutter', 'Sand Veil', 'Poison Heal']	95	125	95	75	45	75	510	5120	70	42.5	2.0	30	Fang Scorp 	ground	flying	1059860	50.0	4	N
+473	Mamoswine	['Oblivious', 'Snow Cloak', 'Thick Fat']	130	80	80	110	70	60	530	5120	70	291.0	2.5	50	Twin Tusk 	ice	ground	1250000	50.0	4	N
+474	Porygon-Z	['Adaptability', 'Download', 'Analytic']	80	70	90	85	135	75	535	5120	70	34.0	0.9	30	Virtual 	normal	NULL	1000000	NULL	4	N
+475	Gallade	['Steadfast', 'Justified']	165	95	110	68	65	115	618	5120	35	52.0	1.6	45	Blade 	psychic	fighting	1250000	100.0	4	N
+476	Probopass	['Sturdy', 'Magnet Pull', 'Sand Force']	55	145	40	60	75	150	525	5120	70	340.0	1.4	60	Compass 	rock	steel	1000000	50.0	4	N
+477	Dusknoir	['Pressure', 'Frisk']	100	135	45	45	65	135	525	6400	35	106.6	2.2	45	Gripper 	ghost	NULL	800000	50.0	4	N
+478	Froslass	['Snow Cloak', 'Cursed Body']	80	70	110	70	80	70	480	5120	70	26.6	1.3	75	Snow Land 	ice	ghost	1000000	0.0	4	N
+479	Rotom	['Levitate']	65	107	86	50	105	107	520	5120	70	0.3	0.3	45	Plasma 	electric	ghost	1000000	NULL	4	N
+480	Uxie	['Levitate']	75	130	95	75	75	130	580	20480	140	0.3	0.3	3	Knowledge 	psychic	NULL	1250000	NULL	4	Y
+481	Mesprit	['Levitate']	105	105	80	80	105	105	580	20480	140	0.3	0.3	3	Emotion 	psychic	NULL	1250000	NULL	4	Y
+482	Azelf	['Levitate']	125	70	115	75	125	70	580	20480	140	0.3	0.3	3	Willpower 	psychic	NULL	1250000	NULL	4	Y
+483	Dialga	['Pressure', 'Telepathy']	120	120	90	100	150	100	680	30720	0	683.0	5.4	3	Temporal 	steel	dragon	1250000	NULL	4	Y
+484	Palkia	['Pressure', 'Telepathy']	120	100	100	90	150	120	680	30720	0	336.0	4.2	3	Spatial 	water	dragon	1250000	NULL	4	Y
+485	Heatran	['Flash Fire', 'Flame Body']	90	106	77	91	130	106	600	2560	100	430.0	1.7	3	Lava Dome 	fire	steel	1250000	50.0	4	Y
+486	Regigigas	['Slow Start']	160	110	100	110	80	110	670	30720	0	420.0	3.7	3	Colossal 	normal	NULL	1250000	NULL	4	Y
+487	Giratina	['Pressure', 'Telepathy', 'Levitate']	120	100	90	150	120	100	680	30720	0	750.0	4.5	3	Renegade 	ghost	dragon	1250000	NULL	4	Y
+488	Cresselia	['Levitate']	70	120	85	120	75	130	600	30720	100	85.6	1.5	3	Lunar 	psychic	NULL	1250000	0.0	4	Y
+489	Phione	['Hydration']	80	80	80	80	80	80	480	10240	70	3.1	0.4	30	Sea Drifter 	water	NULL	1250000	NULL	4	N
+490	Manaphy	['Hydration']	100	100	100	100	100	100	600	2560	70	1.4	0.3	3	Seafaring 	water	NULL	1250000	NULL	4	Y
+491	Darkrai	['Bad Dreams']	90	90	125	70	135	90	600	30720	0	50.5	1.5	3	Pitch-Black 	dark	NULL	1250000	NULL	4	Y
+492	Shaymin	['Natural Cure', 'Serene Grace']	103	75	127	100	120	75	600	30720	100	2.1	0.2	45	Gratitude 	grass	grass	1059860	NULL	4	Y
+493	Arceus	['Multitype']	120	120	120	120	120	120	720	30720	0	320.0	3.2	3	Alpha 	normal	NULL	1250000	NULL	4	Y
+494	Victini	['Victory Star']	100	100	100	100	100	100	600	30720	100	4.0	0.4	3	Victory 	psychic	fire	1250000	NULL	5	Y
+495	Snivy	['Overgrow', 'Contrary']	45	55	63	45	45	55	308	5120	70	8.1	0.6	45	Grass Snake 	grass	NULL	1059860	88.1	5	N
+496	Servine	['Overgrow', 'Contrary']	60	75	83	60	60	75	413	5120	70	16.0	0.8	45	Grass Snake 	grass	NULL	1059860	88.1	5	N
+497	Serperior	['Overgrow', 'Contrary']	75	95	113	75	75	95	528	5120	70	63.0	3.3	45	Regal 	grass	NULL	1059860	88.1	5	N
+498	Tepig	['Blaze', 'Thick Fat']	63	45	45	65	45	45	308	5120	70	9.9	0.5	45	Fire Pig 	fire	NULL	1059860	88.1	5	N
+499	Pignite	['Blaze', 'Thick Fat']	93	55	55	90	70	55	418	5120	70	55.5	1.0	45	Fire Pig 	fire	fighting	1059860	88.1	5	N
+500	Emboar	['Blaze', 'Reckless']	123	65	65	110	100	65	528	5120	70	150.0	1.6	45	Mega Fire Pig 	fire	fighting	1059860	88.1	5	N
+501	Oshawott	['Torrent', 'Shell Armor']	55	45	45	55	63	45	308	5120	70	5.9	0.5	45	Sea Otter 	water	NULL	1059860	88.1	5	N
+502	Dewott	['Torrent', 'Shell Armor']	75	60	60	75	83	60	413	5120	70	24.5	0.8	45	Discipline 	water	NULL	1059860	88.1	5	N
+503	Samurott	['Torrent', 'Shell Armor']	100	85	70	95	108	70	528	5120	70	94.6	1.5	45	Formidable 	water	NULL	1059860	88.1	5	N
+504	Patrat	['Run Away', 'Keen Eye', 'Analytic']	55	39	42	45	35	39	255	3840	70	11.6	0.5	255	Scout 	normal	NULL	1000000	50.0	5	N
+505	Watchog	['Illuminate', 'Keen Eye', 'Analytic']	85	69	77	60	60	69	420	5120	70	27.0	1.1	255	Lookout 	normal	NULL	1000000	50.0	5	N
+506	Lillipup	['Vital Spirit', 'Pickup', 'Run Away']	60	45	55	45	25	45	275	3840	70	4.1	0.4	255	Puppy 	normal	NULL	1059860	50.0	5	N
+507	Herdier	['Intimidate', 'Sand Rush', 'Scrappy']	80	65	60	65	35	65	370	3840	70	14.7	0.9	120	Loyal Dog 	normal	NULL	1059860	50.0	5	N
+508	Stoutland	['Intimidate', 'Sand Rush', 'Scrappy']	110	90	80	85	45	90	500	3840	70	61.0	1.2	45	Big-Hearted 	normal	NULL	1059860	50.0	5	N
+509	Purrloin	['Limber', 'Unburden', 'Prankster']	50	37	66	41	50	37	281	5120	70	10.1	0.4	255	Devious 	dark	NULL	1000000	50.0	5	N
+510	Liepard	['Limber', 'Unburden', 'Prankster']	88	50	106	64	88	50	446	5120	70	37.5	1.1	90	Cruel 	dark	NULL	1000000	50.0	5	N
+511	Pansage	['Gluttony', 'Overgrow']	53	48	64	50	53	48	316	5120	70	10.5	0.6	190	Grass Monkey 	grass	NULL	1000000	88.1	5	N
+512	Simisage	['Gluttony', 'Overgrow']	98	63	101	75	98	63	498	5120	70	30.5	1.1	75	Thorn Monkey 	grass	NULL	1000000	88.1	5	N
+513	Pansear	['Gluttony', 'Blaze']	53	48	64	50	53	48	316	5120	70	11.0	0.6	190	High Temp 	fire	NULL	1000000	88.1	5	N
+514	Simisear	['Gluttony', 'Blaze']	98	63	101	75	98	63	498	5120	70	28.0	1.0	75	Ember 	fire	NULL	1000000	88.1	5	N
+515	Panpour	['Gluttony', 'Torrent']	53	48	64	50	53	48	316	5120	70	13.5	0.6	190	Spray 	water	NULL	1000000	88.1	5	N
+516	Simipour	['Gluttony', 'Torrent']	98	63	101	75	98	63	498	5120	70	29.0	1.0	75	Geyser 	water	NULL	1000000	88.1	5	N
+517	Munna	['Forewarn', 'Synchronize', 'Telepathy']	25	45	24	76	67	55	292	2560	70	23.3	0.6	190	Dream Eater 	psychic	NULL	800000	50.0	5	N
+518	Musharna	['Forewarn', 'Synchronize', 'Telepathy']	55	85	29	116	107	95	487	2560	70	60.5	1.1	75	Drowsing 	psychic	NULL	800000	50.0	5	N
+519	Pidove	['Big Pecks', 'Super Luck', 'Rivalry']	55	50	43	50	36	30	264	3840	70	2.1	0.3	255	Tiny Pigeon 	normal	flying	1059860	50.0	5	N
+520	Tranquill	['Big Pecks', 'Super Luck', 'Rivalry']	77	62	65	62	50	42	358	3840	70	15.0	0.6	120	Wild Pigeon 	normal	flying	1059860	50.0	5	N
+521	Unfezant	['Big Pecks', 'Super Luck', 'Rivalry']	115	80	93	80	65	55	488	3840	70	29.0	1.2	45	Proud 	normal	flying	1059860	50.0	5	N
+522	Blitzle	['Lightningrod', 'Motor Drive', 'Sap Sipper']	60	32	76	45	50	32	295	5120	70	29.8	0.8	190	Electrified 	electric	NULL	1000000	50.0	5	N
+523	Zebstrika	['Lightningrod', 'Motor Drive', 'Sap Sipper']	100	63	116	75	80	63	497	5120	70	79.5	1.6	75	Thunderbolt 	electric	NULL	1000000	50.0	5	N
+524	Roggenrola	['Sturdy', 'Weak Armor', 'Sand Force']	75	85	15	55	25	25	280	3840	70	18.0	0.4	255	Mantle 	rock	NULL	1059860	50.0	5	N
+525	Boldore	['Sturdy', 'Weak Armor', 'Sand Force']	105	105	20	70	50	40	390	3840	70	102.0	0.9	120	Ore 	rock	NULL	1059860	50.0	5	N
+526	Gigalith	['Sturdy', 'Sand Stream', 'Sand Force']	135	130	25	85	60	80	515	3840	70	260.0	1.7	45	Compressed 	rock	NULL	1059860	50.0	5	N
+527	Woobat	['Unaware', 'Klutz', 'Simple']	45	43	72	65	55	43	323	3840	70	2.1	0.4	190	Bat 	psychic	flying	1000000	50.0	5	N
+528	Swoobat	['Unaware', 'Klutz', 'Simple']	57	55	114	67	77	55	425	3840	70	10.5	0.9	45	Courting 	psychic	flying	1000000	50.0	5	N
+529	Drilbur	['Sand Rush', 'Sand Force', 'Mold Breaker']	85	40	68	60	30	45	328	5120	70	8.5	0.3	120	Mole 	ground	NULL	1000000	50.0	5	N
+530	Excadrill	['Sand Rush', 'Sand Force', 'Mold Breaker']	135	60	88	110	50	65	508	5120	70	40.4	0.7	60	Subterrene 	ground	steel	1000000	50.0	5	N
+531	Audino	['Healer', 'Regenerator', 'Klutz']	60	126	50	103	80	126	545	5120	70	31.0	1.1	255	Hearing 	normal	NULL	800000	50.0	5	N
+532	Timburr	['Guts', 'Sheer Force', 'Iron Fist']	80	55	35	75	25	35	305	5120	70	12.5	0.6	180	Muscular 	fighting	NULL	1059860	75.4	5	N
+533	Gurdurr	['Guts', 'Sheer Force', 'Iron Fist']	105	85	40	85	40	50	405	5120	70	40.0	1.2	90	Muscular 	fighting	NULL	1059860	75.4	5	N
+534	Conkeldurr	['Guts', 'Sheer Force', 'Iron Fist']	140	95	45	105	55	65	505	5120	70	87.0	1.4	45	Muscular 	fighting	NULL	1059860	75.4	5	N
+535	Tympole	['Swift Swim', 'Hydration', 'Water Absorb']	50	40	64	50	50	40	294	5120	70	4.5	0.5	255	Tadpole 	water	NULL	1059860	50.0	5	N
+536	Palpitoad	['Swift Swim', 'Hydration', 'Water Absorb']	65	55	69	75	65	55	384	5120	70	17.0	0.8	120	Vibration 	water	ground	1059860	50.0	5	N
+537	Seismitoad	['Swift Swim', 'Poison Touch', 'Water Absorb']	95	75	74	105	85	75	509	5120	70	62.0	1.5	45	Vibration 	water	ground	1059860	50.0	5	N
+538	Throh	['Guts', 'Inner Focus', 'Mold Breaker']	100	85	45	120	30	85	465	5120	70	55.5	1.3	45	Judo 	fighting	NULL	1000000	100.0	5	N
+539	Sawk	['Sturdy', 'Inner Focus', 'Mold Breaker']	125	75	85	75	30	75	465	5120	70	51.0	1.4	45	Karate 	fighting	NULL	1000000	100.0	5	N
+540	Sewaddle	['Swarm', 'Chlorophyll', 'Overcoat']	53	70	42	45	40	60	310	3840	70	2.5	0.3	255	Sewing 	bug	grass	1059860	50.0	5	N
+541	Swadloon	['Leaf Guard', 'Chlorophyll', 'Overcoat']	63	90	42	55	50	80	380	3840	70	7.3	0.5	120	Leaf-Wrapped 	bug	grass	1059860	50.0	5	N
+542	Leavanny	['Swarm', 'Chlorophyll', 'Overcoat']	103	80	92	75	70	80	500	3840	70	20.5	1.2	45	Nurturing 	bug	grass	1059860	50.0	5	N
+543	Venipede	['Poison Point', 'Swarm', 'Speed Boost']	45	59	57	30	30	39	260	3840	70	5.3	0.4	255	Centipede 	bug	poison	1059860	50.0	5	N
+544	Whirlipede	['Poison Point', 'Swarm', 'Speed Boost']	55	99	47	40	40	79	360	3840	70	58.5	1.2	120	Curlipede 	bug	poison	1059860	50.0	5	N
+545	Scolipede	['Poison Point', 'Swarm', 'Speed Boost']	100	89	112	60	55	69	485	5120	70	200.5	2.5	45	Megapede 	bug	poison	1059860	50.0	5	N
+546	Cottonee	['Prankster', 'Infiltrator', 'Chlorophyll']	27	60	66	40	37	50	280	5120	70	0.6	0.3	190	Cotton Puff 	grass	fairy	1000000	50.0	5	N
+547	Whimsicott	['Prankster', 'Infiltrator', 'Chlorophyll']	67	85	116	60	77	75	480	5120	70	6.6	0.7	75	Windveiled 	grass	fairy	1000000	50.0	5	N
+548	Petilil	['Chlorophyll', 'Own Tempo', 'Leaf Guard']	35	50	30	45	70	50	280	5120	70	6.6	0.5	190	Bulb 	grass	NULL	1000000	0.0	5	N
+549	Lilligant	['Chlorophyll', 'Own Tempo', 'Leaf Guard']	60	75	90	70	110	75	480	5120	70	16.3	1.1	75	Flowering 	grass	NULL	1000000	0.0	5	N
+550	Basculin	['Reckless', 'Rock Head', 'Adaptability', 'Mold Breaker']	92	65	98	70	80	55	460	10240	70	18.0	1.0	25	Hostile 	water	NULL	1000000	50.0	5	N
+551	Sandile	['Intimidate', 'Moxie', 'Anger Point']	72	35	65	50	35	35	292	5120	70	15.2	0.7	180	Desert Croc 	ground	dark	1059860	50.0	5	N
+552	Krokorok	['Intimidate', 'Moxie', 'Anger Point']	82	45	74	60	45	45	351	5120	70	33.4	1.0	90	Desert Croc 	ground	dark	1059860	50.0	5	N
+553	Krookodile	['Intimidate', 'Moxie', 'Anger Point']	117	80	92	95	65	70	519	5120	70	96.3	1.5	45	Intimidation 	ground	dark	1059860	50.0	5	N
+554	Darumaka	['Hustle', 'Inner Focus']	90	45	50	70	15	45	315	5120	70	37.5	0.6	120	Zen Charm 	fire	NULL	1059860	50.0	5	N
+555	Darmanitan	['Sheer Force', 'Zen Mode']	30	105	55	105	140	105	540	5120	70	92.9	1.3	60	Blazing 	fire	fire	1059860	50.0	5	N
+556	Maractus	['Water Absorb', 'Chlorophyll', 'Storm Drain']	86	67	60	75	106	67	461	5120	70	28.0	1.0	255	Cactus 	grass	NULL	1000000	50.0	5	N
+557	Dwebble	['Sturdy', 'Shell Armor', 'Weak Armor']	65	85	55	50	35	35	325	5120	70	14.5	0.3	190	Rock Inn 	bug	rock	1000000	50.0	5	N
+558	Crustle	['Sturdy', 'Shell Armor', 'Weak Armor']	105	125	45	70	65	75	485	5120	70	200.0	1.4	75	Stone Home 	bug	rock	1000000	50.0	5	N
+559	Scraggy	['Shed Skin', 'Moxie', 'Intimidate']	75	70	48	50	35	70	348	3840	35	11.8	0.6	180	Shedding 	dark	fighting	1000000	50.0	5	N
+560	Scrafty	['Shed Skin', 'Moxie', 'Intimidate']	90	115	58	65	45	115	488	3840	70	30.0	1.1	90	Hoodlum 	dark	fighting	1000000	50.0	5	N
+561	Sigilyph	['Wonder Skin ', 'Magic Guard', 'Tinted Lens']	58	80	97	72	103	80	490	5120	70	14.0	1.4	45	Avianoid 	psychic	flying	1000000	50.0	5	N
+562	Yamask	['Mummy']	30	85	30	38	55	65	303	6400	70	1.5	0.5	190	Spirit 	ghost	NULL	1000000	50.0	5	N
+563	Cofagrigus	['Mummy']	50	145	30	58	95	105	483	6400	70	76.5	1.7	90	Coffin 	ghost	NULL	1000000	50.0	5	N
+564	Tirtouga	['Solid Rock', 'Sturdy', 'Swift Swim']	78	103	22	54	53	45	355	7680	70	16.5	0.7	45	Prototurtle 	water	rock	1000000	88.1	5	N
+565	Carracosta	['Solid Rock', 'Sturdy', 'Swift Swim']	108	133	32	74	83	65	495	7680	70	81.0	1.2	45	Prototurtle 	water	rock	1000000	88.1	5	N
+566	Archen	['Defeatist']	112	45	70	55	74	45	401	7680	70	9.5	0.5	45	First Bird 	rock	flying	1000000	88.1	5	N
+567	Archeops	['Defeatist']	140	65	110	75	112	65	567	7680	70	32.0	1.4	45	First Bird 	rock	flying	1000000	88.1	5	N
+568	Trubbish	['Stench', 'Sticky Hold', 'Aftermath']	50	62	65	50	40	62	329	5120	70	31.0	0.6	190	Trash Bag 	poison	NULL	1000000	50.0	5	N
+569	Garbodor	['Stench', 'Weak Armor', 'Aftermath']	95	82	75	80	60	82	474	5120	70	107.3	1.9	60	Trash Heap 	poison	NULL	1000000	50.0	5	N
+570	Zorua	['Illusion']	65	40	65	40	80	40	330	6400	70	12.5	0.7	75	Tricky Fox 	dark	NULL	1059860	88.1	5	N
+571	Zoroark	['Illusion']	105	60	105	60	120	60	510	5120	70	81.1	1.6	45	Illusion Fox 	dark	NULL	1059860	88.1	5	N
+572	Minccino	['Cute Charm', 'Technician', 'Skill Link']	50	40	75	55	40	40	300	3840	70	5.8	0.4	255	Chinchilla 	normal	NULL	800000	24.6	5	N
+573	Cinccino	['Cute Charm', 'Technician', 'Skill Link']	95	60	115	75	65	60	470	3840	70	7.5	0.5	60	Scarf 	normal	NULL	800000	24.6	5	N
+574	Gothita	['Frisk', 'Competitive', 'Shadow Tag']	30	50	45	45	55	65	290	5120	70	5.8	0.4	200	Fixation 	psychic	NULL	1059860	24.6	5	N
+575	Gothorita	['Frisk', 'Competitive', 'Shadow Tag']	45	70	55	60	75	85	390	5120	70	18.0	0.7	100	Manipulate 	psychic	NULL	1059860	24.6	5	N
+576	Gothitelle	['Frisk', 'Competitive', 'Shadow Tag']	55	95	65	70	95	110	490	5120	70	44.0	1.5	50	Astral Body 	psychic	NULL	1059860	24.6	5	N
+577	Solosis	['Overcoat', 'Magic Guard', 'Regenerator']	30	40	20	45	105	50	290	5120	70	1.0	0.3	200	Cell 	psychic	NULL	1059860	50.0	5	N
+578	Duosion	['Overcoat', 'Magic Guard', 'Regenerator']	40	50	30	65	125	60	370	5120	70	8.0	0.6	100	Mitosis 	psychic	NULL	1059860	50.0	5	N
+579	Reuniclus	['Overcoat', 'Magic Guard', 'Regenerator']	65	75	30	110	125	85	490	5120	70	20.1	1.0	50	Multiplying 	psychic	NULL	1059860	50.0	5	N
+580	Ducklett	['Keen Eye', 'Big Pecks', 'Hydration']	44	50	55	62	44	50	305	5120	70	5.5	0.5	190	Water Bird 	water	flying	1000000	50.0	5	N
+581	Swanna	['Keen Eye', 'Big Pecks', 'Hydration']	87	63	98	75	87	63	473	5120	70	24.2	1.3	45	White Bird 	water	flying	1000000	50.0	5	N
+582	Vanillite	['Ice Body', 'Snow Cloak', 'Weak Armor']	50	50	44	36	65	60	305	5120	70	5.7	0.4	255	Fresh Snow 	ice	NULL	1250000	50.0	5	N
+583	Vanillish	['Ice Body', 'Snow Cloak', 'Weak Armor']	65	65	59	51	80	75	395	5120	70	41.0	1.1	120	Icy Snow 	ice	NULL	1250000	50.0	5	N
+584	Vanilluxe	['Ice Body', 'Snow Warning', 'Weak Armor']	95	85	79	71	110	95	535	5120	70	57.5	1.3	45	Snowstorm 	ice	NULL	1250000	50.0	5	N
+585	Deerling	['Chlorophyll', 'Sap Sipper', 'Serene Grace']	60	50	75	60	40	50	335	5120	70	19.5	0.6	190	Season 	normal	grass	1000000	50.0	5	N
+586	Sawsbuck	['Chlorophyll', 'Sap Sipper', 'Serene Grace']	100	70	95	80	60	70	475	5120	70	92.5	1.9	75	Season 	normal	grass	1000000	50.0	5	N
+587	Emolga	['Static', 'Motor Drive']	75	60	103	55	75	60	428	5120	70	5.0	0.4	200	Sky Squirrel 	electric	flying	1000000	50.0	5	N
+588	Karrablast	['Swarm', 'Shed Skin', 'No Guard']	75	45	60	50	40	45	315	3840	70	5.9	0.5	200	Clamping 	bug	NULL	1000000	50.0	5	N
+589	Escavalier	['Swarm', 'Shell Armor', 'Overcoat']	135	105	20	70	60	105	495	3840	70	33.0	1.0	75	Cavalry 	bug	steel	1000000	50.0	5	N
+590	Foongus	['Effect Spore', 'Regenerator']	55	45	15	69	55	55	294	5120	70	1.0	0.2	190	Mushroom 	grass	poison	1000000	50.0	5	N
+591	Amoonguss	['Effect Spore', 'Regenerator']	85	70	30	114	85	80	464	5120	70	10.5	0.6	75	Mushroom 	grass	poison	1000000	50.0	5	N
+592	Frillish	['Water Absorb', 'Cursed Body', 'Damp']	40	50	40	55	65	85	335	5120	70	33.0	1.2	190	Floating 	water	ghost	1000000	50.0	5	N
+593	Jellicent	['Water Absorb', 'Cursed Body', 'Damp']	60	70	60	100	85	105	480	5120	70	135.0	2.2	60	Floating 	water	ghost	1000000	50.0	5	N
+594	Alomomola	['Healer', 'Hydration', 'Regenerator']	75	80	65	165	40	45	470	10240	70	31.6	1.2	75	Caring 	water	NULL	800000	50.0	5	N
+595	Joltik	['Compoundeyes', 'Unnerve', 'Swarm']	47	50	65	50	57	50	319	5120	70	0.6	0.1	190	Attaching 	bug	electric	1000000	50.0	5	N
+596	Galvantula	['Compoundeyes', 'Unnerve', 'Swarm']	77	60	108	70	97	60	472	5120	70	14.3	0.8	75	EleSpider 	bug	electric	1000000	50.0	5	N
+597	Ferroseed	['Iron Barbs']	50	91	10	44	24	86	305	5120	70	18.8	0.6	255	Thorn Seed 	grass	steel	1000000	50.0	5	N
+598	Ferrothorn	['Iron Barbs', 'Anticipation']	94	131	20	74	54	116	489	5120	70	110.0	1.0	90	Thorn Pod 	grass	steel	1000000	50.0	5	N
+599	Klink	['Plus', 'Minus', 'Clear Body']	55	70	30	40	45	60	300	5120	70	21.0	0.3	130	Gear 	steel	NULL	1059860	NULL	5	N
+600	Klang	['Plus', 'Minus', 'Clear Body']	80	95	50	60	70	85	440	5120	70	51.0	0.6	60	Gear 	steel	NULL	1059860	NULL	5	N
+601	Klinklang	['Plus', 'Minus', 'Clear Body']	100	115	90	60	70	85	520	5120	70	81.0	0.6	30	Gear 	steel	NULL	1059860	NULL	5	N
+602	Tynamo	['Levitate']	55	40	60	35	45	40	275	5120	70	0.3	0.2	190	EleFish 	electric	NULL	1250000	50.0	5	N
+603	Eelektrik	['Levitate']	85	70	40	65	75	70	405	5120	70	22.0	1.2	60	EleFish 	electric	NULL	1250000	50.0	5	N
+604	Eelektross	['Levitate']	115	80	50	85	105	80	515	5120	70	80.5	2.1	30	EleFish 	electric	NULL	1250000	50.0	5	N
+605	Elgyem	['Telepathy', 'Synchronize', 'Analytic']	55	55	30	55	85	55	335	5120	70	9.0	0.5	255	Cerebral 	psychic	NULL	1000000	50.0	5	N
+606	Beheeyem	['Telepathy', 'Synchronize', 'Analytic']	75	75	40	75	125	95	485	5120	70	34.5	1.0	90	Cerebral 	psychic	NULL	1000000	50.0	5	N
+607	Litwick	['Flash Fire', 'Flame Body', 'Infiltrator']	30	55	20	50	65	55	275	5120	70	3.1	0.3	190	Candle 	ghost	fire	1059860	50.0	5	N
+608	Lampent	['Flash Fire', 'Flame Body', 'Infiltrator']	40	60	55	60	95	60	370	5120	70	13.0	0.6	90	Lamp 	ghost	fire	1059860	50.0	5	N
+609	Chandelure	['Flash Fire', 'Flame Body', 'Infiltrator']	55	90	80	60	145	90	520	5120	70	34.3	1.0	45	Luring 	ghost	fire	1059860	50.0	5	N
+610	Axew	['Rivalry', 'Mold Breaker', 'Unnerve']	87	60	57	46	30	40	320	10240	35	18.0	0.6	75	Tusk 	dragon	NULL	1250000	50.0	5	N
+611	Fraxure	['Rivalry', 'Mold Breaker', 'Unnerve']	117	70	67	66	40	50	410	10240	35	36.0	1.0	60	Axe Jaw 	dragon	NULL	1250000	50.0	5	N
+612	Haxorus	['Rivalry', 'Mold Breaker', 'Unnerve']	147	90	97	76	60	70	540	10240	35	105.5	1.8	45	Axe Jaw 	dragon	NULL	1250000	50.0	5	N
+613	Cubchoo	['Snow Cloak', 'Slush Rush', 'Rattled']	70	40	40	55	60	40	305	5120	70	8.5	0.5	120	Chill 	ice	NULL	1000000	50.0	5	N
+614	Beartic	['Snow Cloak', 'Slush Rush', 'Swift Swim']	130	80	50	95	70	80	505	5120	70	260.0	2.6	60	Freezing 	ice	NULL	1000000	50.0	5	N
+615	Cryogonal	['Levitate']	50	50	105	80	95	135	515	6400	70	148.0	1.1	25	Crystallizing 	ice	NULL	1000000	NULL	5	N
+616	Shelmet	['Hydration', 'Shell Armor', 'Overcoat']	40	85	25	50	40	65	305	3840	70	7.7	0.4	200	Snail 	bug	NULL	1000000	50.0	5	N
+617	Accelgor	['Hydration', 'Sticky Hold', 'Unburden']	70	40	145	80	100	60	495	3840	70	25.3	0.8	75	Shell Out 	bug	NULL	1000000	50.0	5	N
+618	Stunfisk	['Static', 'Limber', 'Sand Veil']	66	84	32	109	81	99	471	5120	70	11.0	0.7	75	Trap 	ground	electric	1000000	50.0	5	N
+619	Mienfoo	['Inner Focus', 'Regenerator', 'Reckless']	85	50	65	45	55	50	350	6400	70	20.0	0.9	180	Martial Arts 	fighting	NULL	1059860	50.0	5	N
+620	Mienshao	['Inner Focus', 'Regenerator', 'Reckless']	125	60	105	65	95	60	510	6400	70	35.5	1.4	45	Martial Arts 	fighting	NULL	1059860	50.0	5	N
+621	Druddigon	['Rough Skin', 'Sheer Force', 'Mold Breaker']	120	90	48	77	60	90	485	7680	70	139.0	1.6	45	Cave 	dragon	NULL	1000000	50.0	5	N
+622	Golett	['Iron Fist', 'Klutz', 'No Guard']	74	50	35	59	35	50	303	6400	70	92.0	1.0	190	Automaton 	ground	ghost	1000000	NULL	5	N
+623	Golurk	['Iron Fist', 'Klutz', 'No Guard']	124	80	55	89	55	80	483	6400	70	330.0	2.8	90	Automaton 	ground	ghost	1000000	NULL	5	N
+624	Pawniard	['Defiant', 'Inner Focus', 'Pressure']	85	70	60	45	40	40	340	5120	35	10.2	0.5	120	Sharp Blade 	dark	steel	1000000	50.0	5	N
+625	Bisharp	['Defiant', 'Inner Focus', 'Pressure']	125	100	70	65	60	70	490	5120	35	70.0	1.6	45	Sword Blade 	dark	steel	1000000	50.0	5	N
+626	Bouffalant	['Reckless', 'Sap Sipper', 'Soundproof']	110	95	55	95	40	95	490	5120	70	94.6	1.6	45	Bash Buffalo 	normal	NULL	1000000	50.0	5	N
+627	Rufflet	['Keen Eye', 'Sheer Force', 'Hustle']	83	50	60	70	37	50	350	5120	70	10.5	0.5	190	Eaglet 	normal	flying	1250000	100.0	5	N
+628	Braviary	['Keen Eye', 'Sheer Force', 'Defiant']	123	75	80	100	57	75	510	5120	70	41.0	1.5	60	Valiant 	normal	flying	1250000	100.0	5	N
+629	Vullaby	['Big Pecks', 'Overcoat', 'Weak Armor']	55	75	60	70	45	65	370	5120	35	9.0	0.5	190	Diapered 	dark	flying	1250000	0.0	5	N
+630	Mandibuzz	['Big Pecks', 'Overcoat', 'Weak Armor']	65	105	80	110	55	95	510	5120	35	39.5	1.2	60	Bone Vulture 	dark	flying	1250000	0.0	5	N
+631	Heatmor	['Gluttony', 'Flash Fire', 'White Smoke']	97	66	65	85	105	66	484	5120	70	58.0	1.4	90	Anteater 	fire	NULL	1000000	50.0	5	N
+632	Durant	['Swarm', 'Hustle', 'Truant']	109	112	109	58	48	48	484	5120	70	33.0	0.3	90	Iron Ant 	bug	steel	1000000	50.0	5	N
+633	Deino	['Hustle']	65	50	38	52	45	50	300	10240	35	17.3	0.8	45	Irate 	dark	dragon	1250000	50.0	5	N
+634	Zweilous	['Hustle']	85	70	58	72	65	70	420	10240	35	50.0	1.4	45	Hostile 	dark	dragon	1250000	50.0	5	N
+635	Hydreigon	['Levitate']	105	90	98	92	125	90	600	10240	35	160.0	1.8	45	Brutal 	dark	dragon	1250000	50.0	5	N
+636	Larvesta	['Flame Body', 'Swarm']	85	55	60	55	50	55	360	10240	70	28.8	1.1	45	Torch 	bug	fire	1250000	50.0	5	N
+637	Volcarona	['Flame Body', 'Swarm']	60	65	100	85	135	105	550	10240	70	46.0	1.6	15	Sun 	bug	fire	1250000	50.0	5	N
+638	Cobalion	['Justified']	90	129	108	91	90	72	580	20480	35	250.0	2.1	3	Iron Will 	steel	fighting	1250000	NULL	5	Y
+639	Terrakion	['Justified']	129	90	108	91	72	90	580	20480	35	260.0	1.9	3	Cavern 	rock	fighting	1250000	NULL	5	Y
+640	Virizion	['Justified']	90	72	108	91	90	129	580	20480	35	200.0	2.0	3	Grassland 	grass	fighting	1250000	NULL	5	Y
+641	Tornadus	['Prankster', 'Defiant', 'Regenerator']	100	80	121	79	110	90	580	30720	90	63.0	1.5	3	Cyclone 	flying	NULL	1250000	100.0	5	Y
+642	Thundurus	['Prankster', 'Defiant', 'Volt Absorb']	105	70	101	79	145	80	580	30720	90	61.0	1.5	3	Bolt Strike 	electric	flying	1250000	100.0	5	Y
+643	Reshiram	['Turboblaze']	120	100	90	100	150	120	680	30720	0	330.0	3.2	3	Vast White 	dragon	fire	1250000	NULL	5	Y
+644	Zekrom	['Teravolt']	150	120	90	100	120	100	680	30720	0	345.0	2.9	3	Deep Black 	dragon	electric	1250000	NULL	5	Y
+645	Landorus	['Sand Force', 'Sheer Force', 'Intimidate']	145	90	91	89	105	80	600	30720	90	68.0	1.5	3	Abundance 	ground	flying	1250000	100.0	5	Y
+646	Kyurem	['Pressure', 'Teravolt', 'Turboblaze']	120	90	95	125	170	100	700	30720	0	325.0	3.0	3	Boundary 	dragon	ice	1250000	NULL	5	Y
+647	Keldeo	['Justified']	72	90	108	91	129	90	580	20480	35	48.5	1.4	3	Colt 	water	fighting	1250000	NULL	5	Y
+648	Meloetta	['Serene Grace']	128	90	128	100	77	77	600	30720	100	6.5	0.6	3	Melody 	normal	psychic	1250000	NULL	5	Y
+649	Genesect	['Download']	120	95	99	71	120	95	600	30720	0	82.5	1.5	3	Paleozoic 	bug	steel	1250000	NULL	5	Y
+650	Chespin	['Overgrow', 'Bulletproof']	61	65	38	56	48	45	313	5120	70	9.0	0.4	45	Spiky Nut 	grass	NULL	1059860	88.1	6	N
+651	Quilladin	['Overgrow', 'Bulletproof']	78	95	57	61	56	58	405	5120	70	29.0	0.7	45	Spiny Armor 	grass	NULL	1059860	88.1	6	N
+652	Chesnaught	['Overgrow', 'Bulletproof']	107	122	64	88	74	75	530	5120	70	90.0	1.6	45	Spiny Armor 	grass	fighting	1059860	88.1	6	N
+653	Fennekin	['Blaze', 'Magician']	45	40	60	40	62	60	307	5120	70	9.4	0.4	45	Fox 	fire	NULL	1059860	88.1	6	N
+654	Braixen	['Blaze', 'Magician']	59	58	73	59	90	70	409	5120	70	14.5	1.0	45	Fox 	fire	NULL	1059860	88.1	6	N
+655	Delphox	['Blaze', 'Magician']	69	72	104	75	114	100	534	5120	70	39.0	1.5	45	Fox 	fire	psychic	1059860	88.1	6	N
+656	Froakie	['Torrent', 'Protean']	56	40	71	41	62	44	314	5120	70	7.0	0.3	45	Bubble Frog 	water	NULL	1059860	88.1	6	N
+657	Frogadier	['Torrent', 'Protean']	63	52	97	54	83	56	405	5120	70	10.9	0.6	45	Bubble Frog 	water	NULL	1059860	88.1	6	N
+658	Greninja	['Torrent', 'Protean', 'Battle Bond']	145	67	132	72	153	71	640	5120	70	40.0	1.5	45	Ninja 	water	dark	1059860	88.1	6	N
+659	Bunnelby	['Pickup', 'Cheek Pouch', 'Huge Power']	36	38	57	38	32	36	237	3840	70	5.0	0.4	255	Digging 	normal	NULL	1000000	50.0	6	N
+660	Diggersby	['Pickup', 'Cheek Pouch', 'Huge Power']	56	77	78	85	50	77	423	3840	70	42.4	1.0	127	Digging 	normal	ground	1000000	50.0	6	N
+661	Fletchling	['Big Pecks', 'Gale Wings']	50	43	62	45	40	38	278	3840	70	1.7	0.3	255	Tiny Robin 	normal	flying	1059860	50.0	6	N
+662	Fletchinder	['Flame Body', 'Gale Wings']	73	55	84	62	56	52	382	3840	70	16.0	0.7	120	Ember 	fire	flying	1059860	50.0	6	N
+663	Talonflame	['Flame Body', 'Gale Wings']	81	71	126	78	74	69	499	3840	70	24.5	1.2	45	Scorching 	fire	flying	1059860	50.0	6	N
+664	Scatterbug	['Shield Dust', 'Compoundeyes', 'Friend Guard']	35	40	35	38	27	25	200	3840	70	2.5	0.3	255	Scatterdust 	bug	NULL	1000000	50.0	6	N
+665	Spewpa	['Shed Skin', 'Friend Guard']	22	60	29	45	27	30	213	3840	70	8.4	0.3	120	Scatterdust 	bug	NULL	1000000	50.0	6	N
+666	Vivillon	['Shield Dust', 'Compoundeyes', 'Friend Guard']	52	50	89	80	90	50	411	3840	70	17.0	1.2	45	Scale 	bug	flying	1000000	50.0	6	N
+667	Litleo	['Rivalry', 'Unnerve', 'Moxie']	50	58	72	62	73	54	369	5120	70	13.5	0.6	220	Lion Cub 	fire	normal	1059860	11.2	6	N
+668	Pyroar	['Rivalry', 'Unnerve', 'Moxie']	68	72	106	86	109	66	507	5120	70	81.5	1.5	65	Royal 	fire	normal	1059860	11.2	6	N
+669	Flabébé	['Flower Veil', 'Symbiosis']	38	39	42	44	61	79	303	5120	70	0.1	0.1	225	Single Bloom 	fairy	NULL	1000000	0.0	6	N
+670	Floette	['Flower Veil', 'Symbiosis']	65	67	92	74	125	128	551	5120	70	0.9	0.2	120	Fairy 	fairy	NULL	1000000	0.0	6	N
+671	Florges	['Flower Veil', 'Symbiosis']	65	68	75	78	112	154	552	5120	70	10.0	1.1	45	Garden 	fairy	NULL	1000000	0.0	6	N
+672	Skiddo	['Sap Sipper', 'Grass Pelt']	65	48	52	66	62	57	350	5120	70	31.0	0.9	200	Mount 	grass	NULL	1000000	50.0	6	N
+673	Gogoat	['Sap Sipper', 'Grass Pelt']	100	62	68	123	97	81	531	5120	70	91.0	1.7	45	Mount 	grass	NULL	1000000	50.0	6	N
+674	Pancham	['Iron Fist', 'Mold Breaker', 'Scrappy']	82	62	43	67	46	48	348	6400	70	8.0	0.6	220	Playful 	fighting	NULL	1000000	50.0	6	N
+675	Pangoro	['Iron Fist', 'Mold Breaker', 'Scrappy']	124	78	58	95	69	71	495	6400	70	136.0	2.1	65	Daunting 	fighting	dark	1000000	50.0	6	N
+676	Furfrou	['Fur Coat']	80	60	102	75	65	90	472	5120	70	28.0	1.2	160	Poodle 	normal	NULL	1000000	50.0	6	N
+677	Espurr	['Keen Eye', 'Infiltrator', 'Own Tempo']	48	54	68	62	63	60	355	5120	70	3.5	0.3	190	Restraint 	psychic	NULL	1000000	50.0	6	N
+678	Meowstic	['Keen Eye', 'Infiltrator', 'Prankster', 'Competitive']	48	76	104	74	83	81	466	5120	70	8.5	0.6	75	Constraint 	psychic	NULL	1000000	50.0	6	N
+679	Honedge	['No Guard']	80	100	28	45	35	37	325	5120	70	2.0	0.8	180	Sword 	steel	ghost	1000000	50.0	6	N
+680	Doublade	['No Guard']	110	150	35	59	45	49	448	5120	70	4.5	0.8	90	Sword 	steel	ghost	1000000	50.0	6	N
+681	Aegislash	['Stance Change']	150	50	60	60	150	50	520	5120	70	53.0	1.7	45	Royal Sword 	steel	ghost	1000000	50.0	6	N
+682	Spritzee	['Healer', 'Aroma Veil']	52	60	23	78	63	65	341	5120	70	0.5	0.2	200	Perfume 	fairy	NULL	1000000	50.0	6	N
+683	Aromatisse	['Healer', 'Aroma Veil']	72	72	29	101	99	89	462	5120	70	15.5	0.8	140	Fragrance 	fairy	NULL	1000000	50.0	6	N
+684	Swirlix	['Sweet Veil', 'Unburden']	48	66	49	62	59	57	341	5120	70	3.5	0.4	200	Cotton Candy 	fairy	NULL	1000000	50.0	6	N
+685	Slurpuff	['Sweet Veil', 'Unburden']	80	86	72	82	85	75	480	5120	70	5.0	0.8	140	Meringue 	fairy	NULL	1000000	50.0	6	N
+686	Inkay	['Contrary', 'Suction Cups', 'Infiltrator']	54	53	45	53	37	46	288	5120	70	3.5	0.4	190	Revolving 	dark	psychic	1000000	50.0	6	N
+687	Malamar	['Contrary', 'Suction Cups', 'Infiltrator']	92	88	73	86	68	75	482	5120	70	47.0	1.5	80	Overturning 	dark	psychic	1000000	50.0	6	N
+688	Binacle	['Tough Claws', 'Sniper', 'Pickpocket']	52	67	50	42	39	56	306	5120	70	31.0	0.5	120	Two-Handed 	rock	water	1000000	50.0	6	N
+689	Barbaracle	['Tough Claws', 'Sniper', 'Pickpocket']	105	115	68	72	54	86	500	5120	70	96.0	1.3	45	Collective 	rock	water	1000000	50.0	6	N
+690	Skrelp	['Poison Point', 'Poison Touch', 'Adaptability']	60	60	30	50	60	60	320	5120	70	7.3	0.5	225	Mock Kelp 	poison	water	1000000	50.0	6	N
+691	Dragalge	['Poison Point', 'Poison Touch', 'Adaptability']	75	90	44	65	97	123	494	5120	70	81.5	1.8	55	Mock Kelp 	poison	dragon	1000000	50.0	6	N
+692	Clauncher	['Mega Launcher']	53	62	44	50	58	63	330	3840	70	8.3	0.5	225	Water Gun 	water	NULL	1250000	50.0	6	N
+693	Clawitzer	['Mega Launcher']	73	88	59	71	120	89	500	3840	70	35.3	1.3	55	Howitzer 	water	NULL	1250000	50.0	6	N
+694	Helioptile	['Dry Skin', 'Sand Veil', 'Solar Power']	38	33	70	44	61	43	289	5120	70	6.0	0.5	190	Generator 	electric	normal	1000000	50.0	6	N
+695	Heliolisk	['Dry Skin', 'Sand Veil', 'Solar Power']	55	52	109	62	109	94	481	5120	70	21.0	1.0	75	Generator 	electric	normal	1000000	50.0	6	N
+696	Tyrunt	['Strong Jaw', 'Sturdy']	89	77	48	58	45	45	362	7680	70	26.0	0.8	45	Royal Heir 	rock	dragon	1000000	88.1	6	N
+697	Tyrantrum	['Strong Jaw', 'Rock Head']	121	119	71	82	69	59	521	7680	70	270.0	2.5	45	Despot 	rock	dragon	1000000	88.1	6	N
+698	Amaura	['Refrigerate', 'Snow Warning']	59	50	46	77	67	63	362	7680	70	25.2	1.3	45	Tundra 	rock	ice	1000000	88.1	6	N
+699	Aurorus	['Refrigerate', 'Snow Warning']	77	72	58	123	99	92	521	7680	70	225.0	2.7	45	Tundra 	rock	ice	1000000	88.1	6	N
+700	Sylveon	['Cute Charm', 'Pixilate']	65	65	60	95	110	130	525	8960	70	23.5	1.0	45	Intertwining 	fairy	NULL	1000000	88.1	6	N
+701	Hawlucha	['Limber', 'Unburden', 'Mold Breaker']	92	75	118	78	74	63	500	5120	70	21.5	0.8	100	Wrestling 	fighting	flying	1000000	50.0	6	N
+702	Dedenne	['Cheek Pouch', 'Pickup', 'Plus']	58	57	101	67	81	67	431	5120	70	2.2	0.2	180	Antenna 	electric	fairy	1000000	50.0	6	N
+703	Carbink	['Clear Body', 'Sturdy']	50	150	50	50	50	150	500	6400	70	5.7	0.3	60	Jewel 	rock	fairy	1250000	NULL	6	N
+704	Goomy	['Sap Sipper', 'Hydration', 'Gooey']	50	35	40	45	55	75	300	10240	35	2.8	0.3	45	Soft Tissue 	dragon	NULL	1250000	50.0	6	N
+705	Sliggoo	['Sap Sipper', 'Hydration', 'Gooey']	75	53	60	68	83	113	452	10240	35	17.5	0.8	45	Soft Tissue 	dragon	NULL	1250000	50.0	6	N
+706	Goodra	['Sap Sipper', 'Hydration', 'Gooey']	100	70	80	90	110	150	600	10240	35	150.5	2.0	45	Dragon 	dragon	NULL	1250000	50.0	6	N
+707	Klefki	['Prankster', 'Magician']	80	91	75	57	80	87	470	5120	70	3.0	0.2	75	Key Ring 	steel	fairy	800000	50.0	6	N
+708	Phantump	['Natural Cure', 'Frisk', 'Harvest']	70	48	38	43	50	60	309	5120	70	7.0	0.4	120	Stump 	ghost	grass	1000000	50.0	6	N
+709	Trevenant	['Natural Cure', 'Frisk', 'Harvest']	110	76	56	85	65	82	474	5120	70	71.0	1.5	60	Elder Tree 	ghost	grass	1000000	50.0	6	N
+710	Pumpkaboo	['Pickup', 'Frisk', 'Insomnia']	66	70	41	59	44	55	335	5120	70	15.0	0.8	120	Pumpkin 	ghost	grass	1000000	50.0	6	N
+711	Gourgeist	['Pickup', 'Frisk', 'Insomnia']	100	122	54	85	58	75	494	5120	70	39.0	1.7	60	Pumpkin 	ghost	grass	1000000	50.0	6	N
+712	Bergmite	['Own Tempo', 'Ice Body', 'Sturdy']	69	85	28	55	32	35	304	5120	70	99.5	1.0	190	Ice Chunk 	ice	NULL	1000000	50.0	6	N
+713	Avalugg	['Own Tempo', 'Ice Body', 'Sturdy']	117	184	28	95	44	46	514	5120	70	505.0	2.0	55	Iceberg 	ice	NULL	1000000	50.0	6	N
+714	Noibat	['Frisk', 'Infiltrator', 'Telepathy']	30	35	55	40	45	40	245	5120	70	8.0	0.5	190	Sound Wave 	flying	dragon	1000000	50.0	6	N
+715	Noivern	['Frisk', 'Infiltrator', 'Telepathy']	70	80	123	85	97	80	535	5120	70	85.0	1.5	45	Sound Wave 	flying	dragon	1000000	50.0	6	N
+716	Xerneas	['Fairy Aura']	131	95	99	126	131	98	680	30720	0	215.0	3.0	45	Life 	fairy	NULL	1250000	NULL	6	Y
+717	Yveltal	['Dark Aura']	131	95	99	126	131	98	680	30720	0	203.0	5.8	45	Destruction 	dark	flying	1250000	NULL	6	Y
+718	Zygarde	['Aura Break', 'Power Construct']	100	121	85	216	91	95	708	30720	0	284.6	5.0	3	Order 	dragon	ground	1250000	NULL	6	Y
+719	Diancie	['Clear Body']	160	110	110	50	160	110	700	6400	70	8.8	0.7	3	Jewel 	rock	fairy	1250000	NULL	6	Y
+720	Hoopa	['Magician']	160	60	80	80	170	130	680	30720	100	NULL	NULL	3	Mischief  (Confined)Djinn n (Unbound)	psychic	ghost	1250000	NULL	6	Y
+721	Volcanion	['Water Absorb']	110	120	70	80	130	90	600	30720	100	195.0	1.7	3	Steam 	fire	water	1250000	NULL	6	Y
+722	Rowlet	['Overgrow', 'Long Reach']	55	55	42	68	50	50	320	3840	70	1.5	0.3	45	Grass Quill 	grass	flying	1059860	88.1	7	N
+723	Dartrix	['Overgrow', 'Long Reach']	75	75	52	78	70	70	420	3840	70	16.0	0.7	45	Blade Quill 	grass	flying	1059860	88.1	7	N
+724	Decidueye	['Overgrow', 'Long Reach']	107	75	70	78	100	100	530	3840	70	36.6	1.6	45	Arrow Quill 	grass	ghost	1059860	88.1	7	N
+725	Litten	['Blaze', 'Intimidate']	65	40	70	45	60	40	320	3840	70	4.3	0.4	45	Fire Cat 	fire	NULL	1059860	88.1	7	N
+726	Torracat	['Blaze', 'Intimidate']	85	50	90	65	80	50	420	3840	70	25.0	0.7	45	Fire Cat 	fire	NULL	1059860	88.1	7	N
+727	Incineroar	['Blaze', 'Intimidate']	115	90	60	95	80	90	530	3840	70	83.0	1.8	45	Heel 	fire	dark	1059860	88.1	7	N
+728	Popplio	['Torrent', 'Liquid Voice']	54	54	40	50	66	56	320	3840	70	7.5	0.4	45	Sea Lion 	water	NULL	1059860	88.1	7	N
+729	Brionne	['Torrent', 'Liquid Voice']	69	69	50	60	91	81	420	3840	70	17.5	0.6	45	Pop Star 	water	NULL	1059860	88.1	7	N
+730	Primarina	['Torrent', 'Liquid Voice']	74	74	60	80	126	116	530	3840	70	44.0	1.8	45	Soloist 	water	fairy	1059860	88.1	7	N
+731	Pikipek	['Keen Eye', 'Skill Link', 'Pickup']	75	30	65	35	30	30	265	3840	70	1.2	0.3	255	Woodpecker 	normal	flying	1000000	50.0	7	N
+732	Trumbeak	['Keen Eye', 'Skill Link', 'Pickup']	85	50	75	55	40	50	355	3840	70	14.8	0.6	120	Bugle Beak 	normal	flying	1000000	50.0	7	N
+733	Toucannon	['Keen Eye', 'Skill Link', 'Sheer Force']	120	75	60	80	75	75	485	3840	70	26.0	1.1	45	Cannon 	normal	flying	1000000	50.0	7	N
+734	Yungoos	['Stakeout', 'Strong Jaw', 'Adaptability']	70	30	45	48	30	30	253	3840	70	6.0	0.4	255	Loitering 	normal	NULL	1000000	50.0	7	N
+735	Gumshoos	['Stakeout', 'Strong Jaw', 'Adaptability']	110	60	45	88	55	60	418	3840	70	14.2	0.7	127	Stakeout 	normal	NULL	1000000	50.0	7	N
+736	Grubbin	['Swarm']	62	45	46	47	55	45	300	3840	70	4.4	0.4	255	Larva 	bug	NULL	1000000	50.0	7	N
+737	Charjabug	['Battery']	82	95	36	57	55	75	400	3840	70	10.5	0.5	120	Battery 	bug	electric	1000000	50.0	7	N
+738	Vikavolt	['Levitate']	70	90	43	77	145	75	500	3840	70	45.0	1.5	45	Stag Beetle 	bug	electric	1000000	50.0	7	N
+739	Crabrawler	['Hyper Cutter', 'Iron Fist', 'Anger Point']	82	57	63	47	42	47	338	5120	70	7.0	0.6	225	Boxing 	fighting	NULL	1000000	50.0	7	N
+740	Crabominable	['Hyper Cutter', 'Iron Fist', 'Anger Point']	132	77	43	97	62	67	478	5120	70	180.0	1.7	60	Woolly Crab 	fighting	ice	1000000	50.0	7	N
+741	Oricorio	['Dancer']	70	70	93	75	98	70	476	5120	70	3.4	0.6	45	Dancing 	fire	flying	1000000	24.6	7	N
+742	Cutiefly	['Honey Gather', 'Shield Dust', 'Sweet Veil']	45	40	84	40	55	40	304	5120	70	0.2	0.1	190	Bee Fly 	bug	fairy	1000000	50.0	7	N
+743	Ribombee	['Honey Gather', 'Shield Dust', 'Sweet Veil']	55	60	124	60	95	70	464	5120	70	0.5	0.2	75	Bee Fly 	bug	fairy	1000000	50.0	7	N
+744	Rockruff	['Keen Eye', 'Vital Spirit', 'Steadfast']	65	40	60	45	30	40	280	3840	70	9.2	0.5	190	Puppy 	rock	NULL	1000000	50.0	7	N
+745	Lycanroc	['Keen Eye', 'Sand Rush', 'Steadfast', 'Keen Eye', 'Vital Spirit', 'No Guard']	115	75	82	85	55	75	487	3840	70	NULL	NULL	90	Wolf 	rock	NULL	1000000	50.0	7	N
+746	Wishiwashi	['Schooling']	140	130	30	45	140	135	620	3840	70	0.3	0.2	60	Small Fry 	water	NULL	800000	50.0	7	N
+747	Mareanie	['Merciless', 'Limber', 'Regenerator']	53	62	45	50	43	52	305	5120	70	8.0	0.4	190	Brutal Star 	poison	water	1000000	50.0	7	N
+748	Toxapex	['Merciless', 'Limber', 'Regenerator']	63	152	35	50	53	142	495	5120	70	14.5	0.7	75	Brutal Star 	poison	water	1000000	50.0	7	N
+749	Mudbray	['Own Tempo', 'Stamina', 'Inner Focus']	100	70	45	70	45	55	385	5120	70	110.0	1.0	190	Donkey 	ground	NULL	1000000	50.0	7	N
+750	Mudsdale	['Own Tempo', 'Stamina', 'Inner Focus']	125	100	35	100	55	85	500	5120	70	920.0	2.5	60	Draft Horse 	ground	NULL	1000000	50.0	7	N
+751	Dewpider	['Water Bubble', 'Water Absorb']	40	52	27	38	40	72	269	3840	70	4.0	0.3	200	Water Bubble 	water	bug	1000000	50.0	7	N
+752	Araquanid	['Water Bubble', 'Water Absorb']	70	92	42	68	50	132	454	3840	70	82.0	1.8	100	Water Bubble 	water	bug	1000000	50.0	7	N
+753	Fomantis	['Leaf Guard', 'Contrary']	55	35	35	40	50	35	250	5120	70	1.5	0.3	190	Sickle Grass 	grass	NULL	1000000	50.0	7	N
+754	Lurantis	['Leaf Guard', 'Contrary']	105	90	45	70	80	90	480	5120	70	18.5	0.9	75	Bloom Sickle 	grass	NULL	1000000	50.0	7	N
+755	Morelull	['Illuminate', 'Effect Spore', 'Rain Dish']	35	55	15	40	65	75	285	5120	70	1.5	0.2	190	Illuminating 	grass	fairy	1000000	50.0	7	N
+756	Shiinotic	['Illuminate', 'Effect Spore', 'Rain Dish']	45	80	30	60	90	100	405	5120	70	11.5	1.0	75	Illuminating 	grass	fairy	1000000	50.0	7	N
+757	Salandit	['Corrosion', 'Oblivious']	44	40	77	48	71	40	320	5120	70	4.8	0.6	120	Toxic Lizard 	poison	fire	1000000	88.1	7	N
+758	Salazzle	['Corrosion', 'Oblivious']	64	60	117	68	111	60	480	5120	70	22.2	1.2	45	Toxic Lizard 	poison	fire	1000000	0.0	7	N
+759	Stufful	['Fluffy', 'Klutz', 'Cute Charm']	75	50	50	70	45	50	340	3840	70	6.8	0.5	140	Flailing 	normal	fighting	1000000	50.0	7	N
+760	Bewear	['Fluffy', 'Klutz', 'Unnerve']	125	80	60	120	55	60	500	3840	70	135.0	2.1	70	Strong Arm 	normal	fighting	1000000	50.0	7	N
+761	Bounsweet	['Leaf Guard', 'Oblivious', 'Sweet Veil']	30	38	32	42	30	38	210	5120	70	3.2	0.3	235	Fruit 	grass	NULL	1059860	0.0	7	N
+762	Steenee	['Leaf Guard', 'Oblivious', 'Sweet Veil']	40	48	62	52	40	48	290	5120	70	8.2	0.7	120	Fruit 	grass	NULL	1059860	0.0	7	N
+763	Tsareena	['Leaf Guard', 'Queenly Majesty', 'Sweet Veil']	120	98	72	72	50	98	510	5120	70	21.4	1.2	45	Fruit 	grass	NULL	1059860	0.0	7	N
+764	Comfey	['Flower Veil', 'Triage', 'Natural Cure']	52	90	100	51	82	110	485	5120	70	0.3	0.1	60	Posy Picker 	fairy	NULL	800000	24.6	7	N
+765	Oranguru	['Inner Focus', 'Telepathy', 'Symbiosis']	60	80	60	90	90	110	490	5120	70	76.0	1.5	45	Sage 	normal	psychic	1250000	50.0	7	N
+766	Passimian	['Receiver', 'Defiant']	120	90	80	100	40	60	490	5120	70	82.8	2.0	45	Teamwork 	fighting	NULL	1250000	50.0	7	N
+767	Wimpod	['Wimp Out']	35	40	80	25	20	30	230	5120	70	12.0	0.5	90	Turn Tail 	bug	water	1000000	50.0	7	N
+768	Golisopod	['Emergency Exit']	125	140	40	75	60	90	530	5120	70	108.0	2.0	45	Hard Scale 	bug	water	1000000	50.0	7	N
+769	Sandygast	['Water Compaction', 'Sand Veil']	55	80	15	55	70	45	320	3840	70	70.0	0.5	140	Sand Heap 	ghost	ground	1000000	50.0	7	N
+770	Palossand	['Water Compaction', 'Sand Veil']	75	110	35	85	100	75	480	3840	70	250.0	1.3	60	Sand Castle 	ghost	ground	1000000	50.0	7	N
+771	Pyukumuku	['Innards Out', 'Unaware']	60	130	5	55	30	130	410	3840	70	1.2	0.3	60	Sea Cucumber 	water	NULL	800000	50.0	7	N
+772	Type: Null	['Battle Armor']	95	95	59	95	95	95	534	30720	0	120.5	1.9	3	Synthetic 	normal	NULL	1250000	NULL	7	N
+773	Silvally	['RKS System']	95	95	95	95	95	95	570	30720	0	100.5	2.3	3	Synthetic 	normal	NULL	1250000	NULL	7	N
+774	Minior	['Shields Down']	100	60	120	60	100	60	500	6400	70	40.0	0.3	255	Meteor 	rock	flying	1059860	NULL	7	N
+775	Komala	['Comatose']	115	65	65	65	75	95	480	5120	70	19.9	0.4	45	Drowsing 	normal	NULL	1250000	50.0	7	N
+776	Turtonator	['Shell Armor']	78	135	36	60	91	85	485	5120	70	212.0	2.0	70	Blast Turtle 	fire	dragon	1000000	50.0	7	N
+777	Togedemaru	['Iron Barbs', 'Lightningrod', 'Sturdy']	98	63	96	65	40	73	435	2560	70	3.3	0.3	180	Roly-Poly 	electric	steel	1000000	50.0	7	N
+778	Mimikyu	['Disguise']	90	80	96	55	50	105	476	5120	70	0.7	0.2	45	Disguise 	ghost	fairy	1000000	50.0	7	N
+779	Bruxish	['Dazzling', 'Strong Jaw', 'Wonder Skin ']	105	70	92	68	70	70	475	3840	70	19.0	0.9	80	Gnash Teeth 	water	psychic	1000000	50.0	7	N
+780	Drampa	['Berserk', 'Sap Sipper', 'Cloud Nine']	60	85	36	78	135	91	485	5120	70	185.0	3.0	70	Placid 	normal	dragon	1000000	50.0	7	N
+781	Dhelmise	['Steelworker']	131	100	40	70	86	90	517	6400	70	210.0	3.9	25	Sea Creeper 	ghost	grass	1000000	NULL	7	N
+782	Jangmo-o	['Bulletproof', 'Soundproof', 'Overcoat']	55	65	45	45	45	45	300	10240	70	29.7	0.6	45	Scaly 	dragon	NULL	1250000	50.0	7	N
+783	Hakamo-o	['Bulletproof', 'Soundproof', 'Overcoat']	75	90	65	55	65	70	420	10240	70	47.0	1.2	45	Scaly 	dragon	fighting	1250000	50.0	7	N
+784	Kommo-o	['Bulletproof', 'Soundproof', 'Overcoat']	110	125	85	75	100	105	600	10240	70	78.2	1.6	45	Scaly 	dragon	fighting	1250000	50.0	7	N
+785	Tapu Koko	['Electric Surge', 'Telepathy']	115	85	130	70	95	75	570	3840	70	20.5	1.8	3	Land Spirit 	electric	fairy	1250000	NULL	7	Y
+786	Tapu Lele	['Psychic Surge', 'Telepathy']	85	75	95	70	130	115	570	3840	70	18.6	1.2	3	Land Spirit 	psychic	fairy	1250000	NULL	7	Y
+787	Tapu Bulu	['Grassy Surge', 'Telepathy']	130	115	75	70	85	95	570	3840	70	45.5	1.9	3	Land Spirit 	grass	fairy	1250000	NULL	7	Y
+788	Tapu Fini	['Misty Surge', 'Telepathy']	75	115	85	70	95	130	570	3840	70	21.2	1.3	3	Land Spirit 	water	fairy	1250000	NULL	7	Y
+789	Cosmog	['Unaware']	29	31	37	43	29	31	200	30720	0	0.1	0.2	45	Nebula 	psychic	NULL	1250000	NULL	7	Y
+790	Cosmoem	['Sturdy']	29	131	37	43	29	131	400	30720	0	999.9	0.1	45	Protostar 	psychic	NULL	1250000	NULL	7	Y
+791	Solgaleo	['Full Metal Body']	137	107	97	137	113	89	680	30720	0	230.0	3.4	45	Sunne 	psychic	steel	1250000	NULL	7	Y
+792	Lunala	['Shadow Shield']	113	89	97	137	137	107	680	30720	0	120.0	4.0	45	Moone 	psychic	ghost	1250000	NULL	7	Y
+793	Nihilego	['Beast Boost']	53	47	103	109	127	131	570	30720	0	55.5	1.2	45	Parasite 	rock	poison	1250000	NULL	7	Y
+794	Buzzwole	['Beast Boost']	139	139	79	107	53	53	570	30720	0	333.6	2.4	25	Swollen 	bug	fighting	1250000	NULL	7	Y
+795	Pheromosa	['Beast Boost']	137	37	151	71	137	37	570	30720	0	25.0	1.8	255	Lissome 	bug	fighting	1250000	NULL	7	Y
+796	Xurkitree	['Beast Boost']	89	71	83	83	173	71	570	30720	0	100.0	3.8	30	Glowing 	electric	NULL	1250000	NULL	7	Y
+797	Celesteela	['Beast Boost']	101	103	61	97	107	101	570	30720	0	999.9	9.2	25	Launch 	steel	flying	1250000	NULL	7	Y
+798	Kartana	['Beast Boost']	181	131	109	59	59	31	570	30720	0	0.1	0.3	255	Drawn Sword 	grass	steel	1250000	NULL	7	Y
+799	Guzzlord	['Beast Boost']	101	53	43	223	97	53	570	30720	0	888.0	5.5	15	Junkivore 	dark	dragon	1250000	NULL	7	Y
+800	Necrozma	['Prism Armor']	107	101	79	97	127	89	600	30720	0	230.0	2.4	3	Prism 	psychic	NULL	1250000	NULL	7	Y
+801	Magearna	['Soul-Heart']	95	115	65	80	130	115	600	30720	0	80.5	1.0	3	Artificial 	steel	fairy	1250000	NULL	7	Y

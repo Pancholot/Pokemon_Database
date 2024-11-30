@@ -32,11 +32,16 @@ def login_trainer():
         )
     trainer = Trainer.login(mail, password)
     if trainer["success"]:
-        access_token: str = create_access_token(identity=trainer.get("_id"), expires_delta=timedelta(hours=1), fresh=True)
-        refresh_token: str = create_refresh_token(identity=trainer.get("_id"), expires_delta=timedelta(days=7))
+        access_token: str = create_access_token(
+            identity=trainer.get("_id"), expires_delta=timedelta(hours=1), fresh=True
+        )
+        refresh_token: str = create_refresh_token(
+            identity=trainer.get("_id"), expires_delta=timedelta(days=7)
+        )
         return jsonify(access_token=access_token, refresh_token=refresh_token), 200
     else:
         return jsonify({"message": "Invalid credentials", "success": False}), 401
+
 
 @trainer_bp.route("/trainer/refresh", methods=["POST"])
 @jwt_required(refresh=True, verify_type=True)
@@ -55,12 +60,15 @@ def refresh():
 
     return jsonify(access_token=access_token)
 
+
 @trainer_bp.route("/trainer", methods=["GET"])
 @jwt_required()
 def get_trainer():
-    identity : str = get_jwt_identity()
-    trainer : dict = Trainer.get_trainer_by_id(identity)   
-    return jsonify(
+    identity: str = get_jwt_identity()
+    trainer: dict | None = Trainer.get_trainer_by_id(identity)
+    if trainer:
+        return (
+            jsonify(
                 {
                     "trainer": {
                         "_id": trainer["_id"],
@@ -69,4 +77,8 @@ def get_trainer():
                         "pokemon_team": trainer["pokemon_team"],
                     },
                 }
-            ),200
+            ),
+            200,
+        )
+    else:
+        return jsonify({"message": "Trainer not found", "success": False}), 404

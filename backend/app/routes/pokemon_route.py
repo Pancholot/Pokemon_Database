@@ -25,13 +25,6 @@ def get_pokemon_pkx_num(pkx_num: str):
 
 @pokemon_bp.route("/pokemon/rand", methods=["GET"])
 def get_pokemon_pkx_num_rand():
-    listafake = [1, 5, 97, 301, 4]
     num_random: int = random.randint(1, 801)
-    while num_random in listafake:
-        print("CAYO")
-        num_random = random.randint(1, 801)
-
-    listafake.append(num_random)
-    print(listafake)
     pokemon = Pokemon.get_one_by_pkx_num(str(num_random))
     return jsonify(pokemon), 200
