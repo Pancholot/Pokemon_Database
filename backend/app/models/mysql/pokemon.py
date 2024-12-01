@@ -1,3 +1,4 @@
+from typing import Any
 from app import mysql
 from pymysql.cursors import Cursor
 
@@ -80,21 +81,32 @@ class Pokemon:
 
     @staticmethod
     def get_all():
-        cursor: Cursor = mysql.get_db().cursor()
+        database: Any | None = mysql.get_db()
+        if database is None:
+            return []
+        cursor: Cursor = database.cursor()
         cursor.execute("SELECT * FROM pokemon")
         rows = cursor.fetchall()
         return [Pokemon(*row).to_dict() for row in rows]
 
     @staticmethod
     def get_all_even():
-        cursor: Cursor = mysql.get_db().cursor()
+        database: Any | None = mysql.get_db()
+        if database is None:
+            return []
+        cursor: Cursor = database.cursor()
         cursor.execute("SELECT * FROM pokemon WHERE MOD(pokedex_number,2) = 0 ")
-        rows = cursor.fetchall()
+        rows: tuple[tuple[Any, ...], ...] = cursor.fetchall()
         return [Pokemon(*row).to_dict() for row in rows]
 
     @staticmethod
     def get_one_by_pkx_num(pkx_num: str) -> dict:
-        cursor: Cursor = mysql.get_db().cursor()
+        database: Any | None = mysql.get_db()
+        if database is None:
+            return {}
+        cursor: Cursor = database.cursor()
         cursor.execute(f"SELECT * FROM pokemon WHERE  pokedex_number = {pkx_num}")
-        row = cursor.fetchone()
+        row: tuple | None = cursor.fetchone()
+        if row is None:
+            return {}
         return Pokemon(*row).to_dict()
