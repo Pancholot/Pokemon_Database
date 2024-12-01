@@ -1,11 +1,11 @@
 export const saveData = (key: string, value: any) => {
-  localStorage.setItem(key, value);
+  sessionStorage.setItem(key, value);
 };
 
 export const getData = (key: string) => {
-  return localStorage.getItem(key);
+  return sessionStorage.getItem(key);
 };
 
 export const deleteData = (key: string) => {
-  localStorage.removeItem(key);
+  sessionStorage.removeItem(key);
 };

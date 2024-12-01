@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import LoginScreen from "./components/LoginScreen/LoginScreen.tsx";
 import Home from "./components/Home/Home.tsx";
 import Register from "./components/RegisterScreen/Register.tsx";
+import CaptureScreen from "./components/CaptureScreen/CaptureScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/" element={<Home />} />
       <Route path="login" element={<LoginScreen />} />
       <Route path="register" element={<Register />} />
+      <Route path="capturescreen" element={<CaptureScreen />} />
     </Routes>
   </BrowserRouter>
 );
