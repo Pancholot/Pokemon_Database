@@ -1,11 +1,11 @@
 import axios from "axios";
 import { deleteData, getData, saveData } from "./userKey";
 
-const api = axios.create({
-  baseURL: "http://backend:5000",
+const apiClient = axios.create({
+  baseURL: "/api",
 });
 
-api.interceptors.request.use(
+apiClient.interceptors.request.use(
   async (config) => {
     if (
       config.url === "/trainer/login" ||
@@ -41,7 +41,7 @@ export const refreshToken = async (refresh_token: string) => {
     if (isTokenExpired(refresh)) {
       throw new Error("Refresh token expired");
     }
-    const response = await api.post(
+    const response = await apiClient.post(
       "/trainer/refresh",
       { refresh: true },
       {
@@ -68,7 +68,7 @@ export const refreshToken = async (refresh_token: string) => {
 };
 
 export const loginTrainer = async (data: unknown) => {
-  const response = await api.post("/trainer/login", data);
+  const response = await apiClient.post("/trainer/login", data);
   const { access_token, refresh_token } = response.data;
   saveData("access_token", access_token);
   saveData("refresh_token", refresh_token);
@@ -87,7 +87,7 @@ export const logOut = async () => {
 
 export const retrieveData = async (route: string) => {
   try {
-    const response = await api.get(route);
+    const response = await apiClient.get(route);
     return response.data;
   } catch (error) {
     console.error("Error al obtener datos:", error, route);
@@ -96,11 +96,11 @@ export const retrieveData = async (route: string) => {
 };
 
 export const postData = async (route: string, data: unknown) => {
-  const response = await api.post(route, data);
+  const response = await apiClient.post(route, data);
   return response.data;
 };
 
 export const putData = async (route: string, data: unknown) => {
-  const response = await api.put(route, data);
+  const response = await apiClient.put(route, data);
   return response.data;
 };
