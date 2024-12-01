@@ -1,32 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { putData, retrieveData } from "@/funcs/api";
-import { Pokemon } from "@/types/Pokemon";
+import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
-import PokeCard from "../Cards/PokeCard";
+
+const PrimaryButtonStyle = "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
 
 const Home = ({ children }: any) => {
   const navigate = useNavigate();
   const [trainerData, setTrainerData] = useState<Trainer | null>(null);
-  const [toCatch, setToCatch] = useState<Pokemon[]>([]);
-  const [numToCatch, setNumToCatch] = useState<number[]>([]);
-  const [caught, setCaught] = useState<boolean>(false);
 
   /*SI NO ESTÁS INICIADO SESIÓN, TE MANDA A INICIAR SESIÓN XD */
   useEffect(() => {
     const getData = async () => {
       try {
         const { trainer } = await retrieveData("/trainer");
-        const { pokemones_to_catch, lista_pokemon_to_catch } =
-          await retrieveData("/capture");
-
-        // Convierte los pokemones a instancias de la clase Pokemon
-        const pokemonList = pokemones_to_catch.map(
-          (pokemon: Pokemon) => new Pokemon(pokemon)
-        );
-        setToCatch(pokemonList);
-        setNumToCatch(lista_pokemon_to_catch);
         setTrainerData(trainer);
       } catch (error) {
         console.error(error);
@@ -39,44 +27,31 @@ const Home = ({ children }: any) => {
   if (!trainerData) {
     return <div>NO ESTÁS INICIADO SESIÓN</div>;
   }
-  if (toCatch.length === 0) {
-    return <div>No hay pokemones para capturar</div>;
-  }
-
-  const handleCatch = async (pokemon_id: number) => {
-    try {
-      const response = await putData("/capture", {
-        pokemon_id: pokemon_id,
-        lista_pokemon_to_catch: numToCatch,
-      });
-      setCaught(response.success);
-    } catch {
-      console.error("Error al capturar el pokemon");
-    }
-  };
 
   const { name } = trainerData;
 
   return (
     <div className="bg-slate-100 min-h-screen min-w-fit flex-row space-x-7 justify-evenly">
-      <h2>Hola, {name}</h2>
-      {!caught &&
-        toCatch.map((pokemon, index) => {
-          return (
-            <button
-              key={index}
-              onClick={(event: any) => {
-                event.preventDefault();
-                handleCatch(pokemon.pokedex_number);
-              }}
-            >
-              <PokeCard pokemon={pokemon} />
-            </button>
-          );
-        })}
-      {caught && <div>¡Has capturado todos los pokemones!</div>}
-
+      <h2 className="text-center text-xl font-bold mb-4">Hola, {name}</h2>
       {children}
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => navigate("/login")}
+          className={PrimaryButtonStyle}
+        >
+          Log Out
+        </button>
+      </div>
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => navigate("/capturescreen")}
+          className={PrimaryButtonStyle}
+        >
+          Capture
+        </button>
+      </div>
     </div>
   );
 };

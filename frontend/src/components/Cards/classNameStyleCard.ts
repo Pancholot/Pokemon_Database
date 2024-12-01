@@ -1,9 +1,14 @@
 export const PokeCardStyle = `
-  w-[340px] h-[400px] p-2 border border-gray-400 rounded-lg shadow-[3px_3px_3px_-2px_gray] flex flex-col
+  p-2 border border-gray-400 rounded-lg shadow-[3px_3px_3px_-2px_gray] flex flex-col
   bg-gradient-to-br from-[#D0B9FF] via-[#A4E1FF] to-[#FFB9FF] opacity-95 
   animate-gradient bg-[linear-gradient(45deg,_#D0B9FF,_#A4E1FF,_#FFB9FF)] 
   hover:scale-105 hover:opacity-100 transition-all
+  w-full h-auto
+  sm:w-[250px] sm:h-[350px] 
+  md:w-[280px] md:h-[370px] 
+  lg:w-[300px] lg:h-[400px]
 `;
+
 
 export const PokeCardTitleStyle = `
   m-0 border border-gray-400 p-2 bg-[#364958] text-white rounded-lg shadow-[0px_2px_3px_-1px_white]

@@ -76,7 +76,7 @@ const Register = () => {
                         <option
                             value="unova">Unova</option>
                         <option
-                            value="hoenn">Hoenn</option>
+                            value="kalos">Kalos</option>
                     </select>
                     {/*<input required type='text' name='region' placeholder='Type your region...' className={InputStyle} onChange={(event: any) => {
                         setRegion(event.target.value)
