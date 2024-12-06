@@ -35,6 +35,11 @@ const Register = () => {
     }
   };
 
+  function capitalizeFirstLetter(string: string) {
+    if (!string) return ""; // Check for empty strings or null
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  }
+
   return (
     <div className="font-sans w-screen min-h-screen bg-bgRegister text-white bg-cover bg-position flex justify-center items-center bg-fixed">
       <section className="self-center bg-gray-600 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 min-h-[70%] p-4 w-2/3 md:w-[45%] border border-gray-100">
@@ -54,7 +59,7 @@ const Register = () => {
           placeholder="Type your name..."
           className={InputStyle}
           onChange={(event: any) => {
-            setName(event.target.value);
+            setName(capitalizeFirstLetter(event.target.value));
           }}
         />
 
