@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
+import { PrimaryButtonStyle } from "../LoginScreen/classnameStyles";
+import { Vortex } from 'react-loader-spinner';
 
-const PrimaryButtonStyle = "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
-
-const Home = ({ children }: any) => {
+const Home = () => {
   const navigate = useNavigate();
   const [trainerData, setTrainerData] = useState<Trainer | null>(null);
 
@@ -25,31 +25,45 @@ const Home = ({ children }: any) => {
   }, [navigate]);
 
   if (!trainerData) {
-    return <div>NO ESTÁS INICIADO SESIÓN</div>;
+    return <div className="flex justify-center items-center h-screen"><Vortex
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="vortex-loading"
+      wrapperStyle={{}}
+      wrapperClass="vortex-wrapper"
+      colors={['red', 'red', 'black', 'black', 'gray', 'gray']}
+    /> </div>
   }
 
-  const { name } = trainerData;
+  const { name, pokemon_team } = trainerData;
+  console.log(pokemon_team);
 
   return (
-    <div className="bg-slate-100 min-h-screen min-w-fit flex-row space-x-7 justify-evenly">
-      <h2 className="text-center text-xl font-bold mb-4">Hola, {name}</h2>
-      {children}
-      <div className="mt-6 flex justify-center">
-        <button
-          type="button"
-          onClick={() => navigate("/login")}
-          className={PrimaryButtonStyle}
-        >
-          Log Out
-        </button>
-      </div>
-      <div className="mt-6 flex justify-center">
+    <div className="bg-slate-200 min-h-screen text-center flex flex-col px-8 items-center justify-center">
+      <h2 className="">Hola, {name}</h2>
+
+      <div className="flex flex-col">
         <button
           type="button"
           onClick={() => navigate("/capturescreen")}
           className={PrimaryButtonStyle}
         >
           Capture
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate("/profilescreen")}
+          className={PrimaryButtonStyle}
+        >
+          Profile
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate("/login")}
+          className={PrimaryButtonStyle}
+        >
+          Log Out
         </button>
       </div>
     </div>
