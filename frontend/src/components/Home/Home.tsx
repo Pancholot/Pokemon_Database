@@ -4,7 +4,8 @@ import { useNavigate } from "react-router";
 import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
 
-const PrimaryButtonStyle = "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
+const PrimaryButtonStyle =
+  "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
 
 const Home = ({ children }: any) => {
   const navigate = useNavigate();
@@ -28,7 +29,8 @@ const Home = ({ children }: any) => {
     return <div>NO ESTÁS INICIADO SESIÓN</div>;
   }
 
-  const { name } = trainerData;
+  const { name, pokemon_team } = trainerData;
+  console.log(pokemon_team);
 
   return (
     <div className="bg-slate-100 min-h-screen min-w-fit flex-row space-x-7 justify-evenly">

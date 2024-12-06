@@ -21,6 +21,7 @@ def create_app() -> Flask:
     mongo.init_app(app)
     bcrypt.init_app(app)
     jwt.init_app(app)
+
     from app.routes.pokemon_route import pokemon_bp
 
     app.register_blueprint(pokemon_bp)
@@ -30,5 +31,4 @@ def create_app() -> Flask:
     from app.routes.captures_route import capture_bp
 
     app.register_blueprint(capture_bp)
-
     return app
