@@ -75,7 +75,7 @@ const ProfileScreen = () => {
                         </button></span>
                     <div className='flex gap-4'>
                         <button className={PrimaryButtonStyle}>Friends</button>
-                        <button className={PrimaryButtonStyle} onClick={() => navigate("/")}>Settings</button>
+                        <button className={PrimaryButtonStyle} onClick={() => navigate("/")}>Pokemon Team</button>
                     </div>
                 </div>
             </section >

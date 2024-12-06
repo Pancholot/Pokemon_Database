@@ -28,7 +28,7 @@ const Register = () => {
         password,
       });
       if (response.success) {
-        navigate("/registerUser");
+        navigate("/login");
       }
     } catch (error) {
       console.log(error);
@@ -134,7 +134,7 @@ const Register = () => {
                         setRegion(event.target.value)
                     }} />*/}
           <div className="w-full flex items-center justify-between">
-            <a href="/registerUser" className="underline text-white font-mono">
+            <a href="/login" className="underline text-white font-mono">
               Log In
             </a>
             <input
