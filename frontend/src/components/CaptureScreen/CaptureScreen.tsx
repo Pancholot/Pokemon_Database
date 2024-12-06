@@ -74,7 +74,7 @@ const Capture = ({ children }: any) => {
             {/* Mensaje cuando todos están capturados */}
             {caught && (
                 <div className="text-center text-green-600 text-lg mt-4">
-                    ¡Has capturado todos los pokemones!
+                    ¡Has capturado todos los pokemones del día!
                 </div>
             )}
 
