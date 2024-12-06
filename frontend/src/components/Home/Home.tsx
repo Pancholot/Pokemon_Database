@@ -40,7 +40,7 @@ const Home = () => {
   console.log(pokemon_team);
 
   return (
-    <div className="min-h-screen text-center flex flex-col px-8 items-center justify-center">
+    <div className="bg-slate-200 min-h-screen text-center flex flex-col px-8 items-center justify-center">
       <h2 className="">Hola, {name}</h2>
 
       <div className="flex flex-col">

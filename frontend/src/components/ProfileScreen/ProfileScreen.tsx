@@ -50,8 +50,8 @@ const ProfileScreen = () => {
             });
     }
     return (
-        <section className='flex flex-col px-8 gap-4 min-h-screen bg-slate-100'>
-            <div className='flex self-end'>
+        <>
+            <div className='absolute top-0 left-2'>
                 <button
                     type="button"
                     onClick={() => navigate("/")}
@@ -59,26 +59,27 @@ const ProfileScreen = () => {
                 >
                     Home
                 </button>
-            </div >
-            <div className='flex items-center justify-center flex-col'>
-                <img className='rounded-full object-cover h-40 w-40 shadow-lg' src="https://wallpapers.com/images/high/pokemon-sun-and-moon-honeqpuatqt4sj3k.webp" alt='Profile photo'></img>
-                <p className='mt-6'>{capitalizeFirstLetter(name)}</p>
-                <span className='flex gap-4 items-center justify-center'>
-                    ID: {_id}<button
-                        onClick={() => copyToClipboard()}
-                        className="text-white bg-slate-50 hover:bg-red-600 font-bold flex justify-center items-center p-1 rounded-lg shadow-xl hover:shadow-xl transition-colors focus:outline-none focus:ring-2  focus:ring-offset-2 max-w-24 "
-                    >
-                        <img src="https://img.icons8.com/material-outlined/24/copy.png" className='h-5 w-5 ' />
-                    </button></span>
             </div>
-            <div className='mt-6 md:grid md:grid-cols-12 flex self-center md:gap-8 gap-4'>
-                <div className='flex flex-col justify-evenly self-start col-span-4'>
-                    <button className={PrimaryButtonStyle}>Add A Friend</button>
-                    <button className={PrimaryButtonStyle} onClick={() => navigate("/")}>Settings</button>
+            <section className='bg-slate-200 min-h-screen min-w-screen md:grid md:grid-cols-12 shadow-xl'>
+
+                <img src="https://wallpapers.com/images/high/pokemon-sun-and-moon-1920-x-1080-2vi6q4whjn9g5y1m.webp" className='col-span-6 md:h-screen md:object-cover md:rounded-r-3xl md:rounded-bl-none rounded-b-3xl' />
+                <div className='md:col-span-6 flex flex-col items-center justify-center'>
+                    <img className='mt-4 rounded-full object-cover h-40 w-40 shadow-lg' src="https://wallpapers.com/images/high/pokemon-sun-and-moon-honeqpuatqt4sj3k.webp" alt='Profile photo'></img>
+                    <p className='mt-6'>{capitalizeFirstLetter(name)}</p>
+                    <span className='flex gap-4 items-center justify-center'>
+                        ID: {_id}<button
+                            onClick={() => copyToClipboard()}
+                            className="text-white bg-slate-50 hover:bg-red-600 font-bold flex justify-center items-center p-1 rounded-lg shadow-xl hover:shadow-xl transition-colors focus:outline-none focus:ring-2  focus:ring-offset-2 max-w-24 "
+                        >
+                            <img src="https://img.icons8.com/material-outlined/24/copy.png" className='h-5 w-5 ' />
+                        </button></span>
+                    <div className='flex gap-4'>
+                        <button className={PrimaryButtonStyle}>Friends</button>
+                        <button className={PrimaryButtonStyle} onClick={() => navigate("/")}>Settings</button>
+                    </div>
                 </div>
-                <img src="https://wallpapers.com/images/high/pokemon-sun-and-moon-1920-x-1080-2vi6q4whjn9g5y1m.webp" className='max-h-48 max-w-56  md:max-h-86 rounded-xl md:col-span-8 shadow-lg' />
-            </div>
-        </section >
+            </section >
+        </>
     )
 }
 
