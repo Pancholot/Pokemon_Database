@@ -124,6 +124,6 @@ def monitor_trades():
     except KeyboardInterrupt:
         print("Deteniendo...")
     finally:
-        if mongo.cx and mongo.db is not None:
+        if not mongo.cx or mongo.db is None:
             mongo.db.client.close()
             mongo.cx.close()

@@ -136,6 +136,20 @@ class Trainer:
         result2 = mongo.db.trainers.update_one(filtro2, update2).acknowledged
         return result and result2
 
+    @staticmethod
+    def find_friend(_id: str, index: int) -> dict | None:
+        if mongo.db is None:
+            return
+        filtro: dict = {"_id": ObjectId(_id)}
+        trainer: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer:
+            return
+        friends: list = trainer["friends"]
+        if index < 0 or index >= len(friends):
+            return
+        friend: dict = friends[index]
+        return friend
+
 
 def monitor_trainers():
     try:
@@ -144,13 +158,30 @@ def monitor_trainers():
         with mongo.db.trainers.watch() as change_stream:
             print("Escuchando cambios en la colección 'trainers'...")
             for change in change_stream:
-                if change["operationType"] == "update":
-                    fullDocument: dict = change["fullDocument"]
+
+                if change["operationType"] != "update":
+                    continue
+                print(change["documentKey"])
+                updateDescription: dict = change["updateDescription"]
+                for key, value in updateDescription["updatedFields"].items():
+                    if "friend" in key:
+                        path: list = key.split(".")
+                        index_friends: int = int(path[1])
+                        if path[2] == "status":
+                            if value == "confirmed":
+                                friend: dict = Trainer.find_friend(
+                                    str(change["documentKey"]["_id"]), index_friends
+                                )
+
                     print("Documento actualizado:", change["updateDescription"])
+                    friends: list | None = updateDescription.get("friends")
+                    if friends is None:
+                        continue
+                print("Documento actualizado:", change["updateDescription"])
 
     except KeyboardInterrupt:
         print("Deteniendo...")
     finally:
-        if mongo.cx and mongo.db is not None:
+        if not mongo.cx or mongo.db is None:
             mongo.db.client.close()
             mongo.cx.close()

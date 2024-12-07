@@ -1,47 +1,57 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Trainer } from '@/types/Trainer';
 import { putData, retrieveData } from "@/funcs/api";
-
-const PrimaryButtonStyle =
-  "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
+import { Vortex } from 'react-loader-spinner';
+import { PrimaryButtonStyle } from '../LoginScreen/classnameStyles'
+import { capitalizeFirstLetter } from '@/funcs/CapitalizeLetter';
 
 const Friends = () => {
   const navigate = useNavigate();
-
-  const [friendsIds, setFriendsIds] = useState<Array<string>>([]);
-  const [id, setId] = useState<string>("");
-  const [username, setUsername] = useState<string>("");
-
+  const [trainerData, setTrainerData] = React.useState<Trainer | null>(null)
   useEffect(() => {
-    const getData = async () => {
+    const getTrainer = async () => {
       try {
-        const { _id, name, friends } = await retrieveData("/trainer");
-        setId(_id);
-        setUsername(name);
-        setFriendsIds(friends);
+        const { trainer } = await retrieveData("/trainer")
+        if (trainer) {
+          setTrainerData(trainer)
+        }
       } catch (error) {
-        console.error(error);
-        navigate("/login");
+        navigate("/login")
       }
-    };
-    getData();
-  }, [navigate]);
+    }
+    getTrainer()
+  }, [])
+
+  if (!trainerData) {
+    return <div className="flex justify-center items-center h-screen"><Vortex
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="vortex-loading"
+      wrapperStyle={{}}
+      wrapperClass="vortex-wrapper"
+      colors={['red', 'red', 'black', 'black', 'gray', 'gray']}
+    /> </div>
+  }
+  const { _id, name } = trainerData
 
   return (
-    <div className="bg-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
-      <h2 className="text-center text-xl font-bold mb-4">
-        Quieres nuevos amigos {username} ?
+    <div className="bg-bgFriendScreen bg-cover min-h-screen flex flex-col items-center p-4">
+      {/* Texto principal colocado en la parte superior */}
+      <h2 className="text-xl font-bold text-black mb-4 mt-8">
+        ¿Quieres nuevos amigos, {capitalizeFirstLetter(name)}?
       </h2>
 
-      {/* Botón para volver al Home */}
-      <div className="mt-6">
+      {/* Botón para ir al perfil */}
+      <div className="mt-auto">
         <button
           type="button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/profilescreen")}
           className={PrimaryButtonStyle}
         >
-          Home
+          Profile
         </button>
       </div>
     </div>

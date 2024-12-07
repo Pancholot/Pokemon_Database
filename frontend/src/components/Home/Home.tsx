@@ -5,7 +5,6 @@ import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
 import { PrimaryButtonStyle } from "../LoginScreen/classnameStyles";
 import { Vortex } from "react-loader-spinner";
-import { Vortex } from 'react-loader-spinner';
 import { capitalizeFirstLetter } from "@/funcs/CapitalizeLetter";
 
 const Home = () => {
@@ -24,7 +23,7 @@ const Home = () => {
       }
     };
     getData();
-  }, [navigate]);
+  }, []);
 
   if (!trainerData) {
     return (
@@ -72,24 +71,7 @@ const Home = () => {
           Log Out
         </button>
       </div>
-      <div className="mt-6 flex justify-center">
-        <button
-          type="button"
-          onClick={() => navigate("/capturescreen")}
-          className={PrimaryButtonStyle}
-        >
-          Capture
-        </button>
-      </div>
-      <div className="mt-6 flex justify-center">
-        <button
-          type="button"
-          onClick={() => navigate("/friendscreen")}
-          className={PrimaryButtonStyle}
-        >
-          Friends
-        </button>
-      </div>
+
     </div>
   );
 };

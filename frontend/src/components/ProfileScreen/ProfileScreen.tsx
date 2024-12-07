@@ -71,7 +71,14 @@ const ProfileScreen = () => {
                             <img src="https://img.icons8.com/material-outlined/24/copy.png" className='h-5 w-5 ' />
                         </button></span>
                     <div className='flex gap-4'>
-                        <button className={PrimaryButtonStyle}>Friends</button>
+
+                        <button
+                            type="button"
+                            onClick={() => navigate("/friendscreen")}
+                            className={PrimaryButtonStyle}
+                        >
+                            Friends
+                        </button>
                         <button className={PrimaryButtonStyle} onClick={() => navigate("/TeamScreen")}>Pokemon Team</button>
                     </div>
                 </div>
