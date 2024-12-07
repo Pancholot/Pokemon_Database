@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import App from "./App.tsx";
+
 import LoginScreen from "./components/LoginScreen/LoginScreen.tsx";
 import Home from "./components/Home/Home.tsx";
 import Register from "./components/RegisterScreen/Register.tsx";
@@ -10,6 +10,7 @@ import CaptureScreen from "./components/CaptureScreen/CaptureScreen.tsx";
 import NavBar from "./components/MainScreenTabs/NavBar.tsx";
 import ProfileScreen from "./components/ProfileScreen/ProfileScreen.tsx";
 import TeamScreen from "./components/ProfileScreen/TeamScreen.tsx";
+import FriendScreen from "./components/FriendScreen/FriendScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="capturescreen" element={<CaptureScreen />} />
       <Route path="profilescreen" element={<ProfileScreen />} />
       <Route path="teamscreen" element={<TeamScreen />} />
+      <Route path="friendscreen" element={<FriendScreen />} />
     </Routes>
   </BrowserRouter>
 );

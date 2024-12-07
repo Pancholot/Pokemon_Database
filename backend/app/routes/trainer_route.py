@@ -75,6 +75,7 @@ def get_trainer():
                         "name": trainer["name"],
                         "region": trainer["region"],
                         "pokemon_team": trainer["pokemon_team"],
+                        "friends": trainer["friends"],
                     },
                 }
             ),
@@ -82,3 +83,16 @@ def get_trainer():
         )
     else:
         return jsonify({"message": "Trainer not found", "success": False}), 404
+
+
+@trainer_bp.route("/trainer/add_friend", methods=["PUT"])
+@jwt_required()
+def add_friend():
+    identity: str = get_jwt_identity()
+    data: dict = request.get_json()
+    friend_id: str | None = data.get("friend_id")
+    if not friend_id:
+        return jsonify({"message": "Friend ID is required", "success": False}), 400
+
+    result: bool = Trainer.add_friend(identity, friend_id)
+    return {"message": "Action completed", "success": result}, 200

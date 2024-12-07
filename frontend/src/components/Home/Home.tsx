@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
 import { PrimaryButtonStyle } from "../LoginScreen/classnameStyles";
+import { Vortex } from "react-loader-spinner";
 import { Vortex } from 'react-loader-spinner';
 import { capitalizeFirstLetter } from "@/funcs/CapitalizeLetter";
 
@@ -26,15 +27,19 @@ const Home = () => {
   }, [navigate]);
 
   if (!trainerData) {
-    return <div className="flex justify-center items-center h-screen"><Vortex
-      visible={true}
-      height="80"
-      width="80"
-      ariaLabel="vortex-loading"
-      wrapperStyle={{}}
-      wrapperClass="vortex-wrapper"
-      colors={['red', 'red', 'black', 'black', 'gray', 'gray']}
-    /> </div>
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Vortex
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={["red", "red", "black", "black", "gray", "gray"]}
+        />{" "}
+      </div>
+    );
   }
 
   const { name, pokemon_team } = trainerData;
@@ -65,6 +70,24 @@ const Home = () => {
           className={PrimaryButtonStyle}
         >
           Log Out
+        </button>
+      </div>
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => navigate("/capturescreen")}
+          className={PrimaryButtonStyle}
+        >
+          Capture
+        </button>
+      </div>
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => navigate("/friendscreen")}
+          className={PrimaryButtonStyle}
+        >
+          Friends
         </button>
       </div>
     </div>
