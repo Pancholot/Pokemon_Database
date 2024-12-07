@@ -2,11 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import App from "./App.tsx";
+
 import LoginScreen from "./components/LoginScreen/LoginScreen.tsx";
 import Home from "./components/Home/Home.tsx";
 import Register from "./components/RegisterScreen/Register.tsx";
 import CaptureScreen from "./components/CaptureScreen/CaptureScreen.tsx";
+import FriendScreen from "./components/FriendScreen/FriendScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="login" element={<LoginScreen />} />
       <Route path="register" element={<Register />} />
       <Route path="capturescreen" element={<CaptureScreen />} />
+      <Route path="friendscreen" element={<FriendScreen />} />
     </Routes>
   </BrowserRouter>
 );

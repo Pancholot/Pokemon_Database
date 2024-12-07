@@ -54,6 +54,15 @@ const Home = ({ children }: any) => {
           Capture
         </button>
       </div>
+      <div className="mt-6 flex justify-center">
+        <button
+          type="button"
+          onClick={() => navigate("/friendscreen")}
+          className={PrimaryButtonStyle}
+        >
+          Friends
+        </button>
+      </div>
     </div>
   );
 };
