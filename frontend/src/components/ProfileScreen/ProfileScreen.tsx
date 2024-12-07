@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { retrieveData } from '@/funcs/api';
 import { Vortex } from 'react-loader-spinner';
 import { Trainer } from '@/types/Trainer';
-
+import { capitalizeFirstLetter } from '@/funcs/CapitalizeLetter';
 
 const ProfileScreen = () => {
     const navigate = useNavigate()
@@ -22,10 +22,7 @@ const ProfileScreen = () => {
         }
         getTrainer()
     }, [])
-    function capitalizeFirstLetter(string: string) {
-        if (!string) return "";
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-    }
+
     if (!trainerData) {
         return <div className="flex justify-center items-center h-screen"><Vortex
             visible={true}
@@ -75,7 +72,7 @@ const ProfileScreen = () => {
                         </button></span>
                     <div className='flex gap-4'>
                         <button className={PrimaryButtonStyle}>Friends</button>
-                        <button className={PrimaryButtonStyle} onClick={() => navigate("/")}>Pokemon Team</button>
+                        <button className={PrimaryButtonStyle} onClick={() => navigate("/TeamScreen")}>Pokemon Team</button>
                     </div>
                 </div>
             </section >

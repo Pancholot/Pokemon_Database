@@ -9,6 +9,7 @@ import Register from "./components/RegisterScreen/Register.tsx";
 import CaptureScreen from "./components/CaptureScreen/CaptureScreen.tsx";
 import NavBar from "./components/MainScreenTabs/NavBar.tsx";
 import ProfileScreen from "./components/ProfileScreen/ProfileScreen.tsx";
+import TeamScreen from "./components/ProfileScreen/TeamScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -18,7 +19,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="register" element={<Register />} />
       <Route path="capturescreen" element={<CaptureScreen />} />
       <Route path="profilescreen" element={<ProfileScreen />} />
-
+      <Route path="teamscreen" element={<TeamScreen />} />
     </Routes>
   </BrowserRouter>
 );

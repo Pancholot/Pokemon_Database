@@ -11,6 +11,7 @@ export default {
       backgroundImage: {
         bgLogin: 'url("https://wallpapercave.com/wp/wp13129046.png")',
         bgRegister: 'url("https://images5.alphacoders.com/135/1351897.png")',
+        bgHome: 'url("https://preview.redd.it/i-made-a-cool-pokemon-koi-pond-wallpaper-v0-zipswqk1ztva1.png?auto=webp&s=fdf174c9c6d009638b40f8ede42fc2bfe00f0800")',
       },
 
       borderRadius: {

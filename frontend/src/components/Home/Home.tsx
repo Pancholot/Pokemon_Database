@@ -5,6 +5,7 @@ import { retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
 import { PrimaryButtonStyle } from "../LoginScreen/classnameStyles";
 import { Vortex } from 'react-loader-spinner';
+import { capitalizeFirstLetter } from "@/funcs/CapitalizeLetter";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -40,8 +41,8 @@ const Home = () => {
   console.log(pokemon_team);
 
   return (
-    <div className="bg-slate-200 min-h-screen text-center flex flex-col px-8 items-center justify-center">
-      <h2 className="">Hola, {name}</h2>
+    <div className="bg-bgHome bg-cover min-h-screen text-center flex flex-col px-8 items-center justify-center">
+      <h2 className="text-white">Hola, {capitalizeFirstLetter(name)}</h2>
 
       <div className="flex flex-col">
         <button
