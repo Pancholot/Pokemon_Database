@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { putData, retrieveData } from "@/funcs/api";
 import { Pokemon } from "@/types/Pokemon";
+import { Vortex } from 'react-loader-spinner';
 import PokeCard from "../Cards/PokeCard";
 
 const PrimaryButtonStyle = "self-end px-6 py-2 bg-slate-800 hover:bg-red-600 focus:bg-red-400 cursor-pointer rounded-md text-white mt-4 transition-colors";
@@ -34,7 +35,15 @@ const Capture = ({ children }: any) => {
     }, [navigate]);
 
     if (toCatch.length === 0) {
-        return <div>No hay pokemones para capturar</div>;
+        return <div className="flex justify-center items-center h-screen"><Vortex
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="vortex-loading"
+            wrapperStyle={{}}
+            wrapperClass="vortex-wrapper"
+            colors={['red', 'red', 'black', 'black', 'gray', 'gray']}
+        /> </div>
     }
 
     const handleCatch = async (pokemon_id: number) => {
@@ -74,7 +83,7 @@ const Capture = ({ children }: any) => {
             {/* Mensaje cuando todos están capturados */}
             {caught && (
                 <div className="text-center text-green-600 text-lg mt-4">
-                    ¡Has capturado todos los pokemones!
+                    ¡Has capturado todos los pokemones del día!
                 </div>
             )}
 

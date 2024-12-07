@@ -28,12 +28,17 @@ const Register = () => {
         password,
       });
       if (response.success) {
-        navigate("/registerUser");
+        navigate("/login");
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  function capitalizeFirstLetter(string: string) {
+    if (!string) return ""; // Check for empty strings or null
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  }
 
   return (
     <div className="font-sans w-screen min-h-screen bg-bgRegister text-white bg-cover bg-position flex justify-center items-center bg-fixed">
@@ -54,7 +59,7 @@ const Register = () => {
           placeholder="Type your name..."
           className={InputStyle}
           onChange={(event: any) => {
-            setName(event.target.value);
+            setName(capitalizeFirstLetter(event.target.value));
           }}
         />
 
@@ -129,7 +134,7 @@ const Register = () => {
                         setRegion(event.target.value)
                     }} />*/}
           <div className="w-full flex items-center justify-between">
-            <a href="/registerUser" className="underline text-white font-mono">
+            <a href="/login" className="underline text-white font-mono">
               Log In
             </a>
             <input

@@ -7,6 +7,8 @@ import LoginScreen from "./components/LoginScreen/LoginScreen.tsx";
 import Home from "./components/Home/Home.tsx";
 import Register from "./components/RegisterScreen/Register.tsx";
 import CaptureScreen from "./components/CaptureScreen/CaptureScreen.tsx";
+import NavBar from "./components/MainScreenTabs/NavBar.tsx";
+import ProfileScreen from "./components/ProfileScreen/ProfileScreen.tsx";
 import FriendScreen from "./components/FriendScreen/FriendScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
