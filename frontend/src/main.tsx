@@ -11,6 +11,7 @@ import NavBar from "./components/MainScreenTabs/NavBar.tsx";
 import ProfileScreen from "./components/ProfileScreen/ProfileScreen.tsx";
 import TeamScreen from "./components/ProfileScreen/TeamScreen.tsx";
 import FriendScreen from "./components/FriendScreen/FriendScreen.tsx";
+import TradesScreen from "./components/TradesScreen/TradesScreen.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -22,6 +23,8 @@ createRoot(document.getElementById("root")!).render(
       <Route path="profilescreen" element={<ProfileScreen />} />
       <Route path="teamscreen" element={<TeamScreen />} />
       <Route path="friendscreen" element={<FriendScreen />} />
+      <Route path="tradescreen" element={<TradesScreen />} />
+
     </Routes>
   </BrowserRouter>
 );

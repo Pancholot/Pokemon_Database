@@ -5,10 +5,12 @@ import { putData, retrieveData } from "@/funcs/api";
 import { Vortex } from 'react-loader-spinner';
 import { PrimaryButtonStyle } from '../LoginScreen/classnameStyles';
 import { capitalizeFirstLetter } from '@/funcs/CapitalizeLetter';
+import FriendRow from "./FriendRow";
 
 const Friends = () => {
   const navigate = useNavigate();
   const [trainerData, setTrainerData] = React.useState<Trainer | null>(null);
+
 
   useEffect(() => {
     const getTrainer = async () => {
@@ -54,18 +56,13 @@ const Friends = () => {
         </button>
       </div>
 
-      <div className="absolute top-0 right-0 m-2">
-        <button
-          type="button"
-          onClick={() => navigate("/")}
-          className={PrimaryButtonStyle}
-        >
-          Friend Requests
-        </button>
+      <div className="text-white p-3 rounded-lg text-center absolute top-0 right-0 m-2">
+        <button className={PrimaryButtonStyle}>Friend Requests</button>
+
       </div>
 
       <div className="text-center my-4">
-        <h1 className="text-3xl font-bold text-black">Find Trainers</h1>
+        <h1 className="text-3xl text-black font-bold text-">Find Trainers</h1>
       </div>
 
       <div className="flex justify-center mb-8">
@@ -77,48 +74,12 @@ const Friends = () => {
         <button className="bg-black text-white hover:bg-red-600 px-4 rounded-r-md">
           Search
         </button>
+
       </div>
+      <h2 className="text-center text-2xl text-black font-bold mb-4">Friends</h2>
 
-      <div>
-        <h2 className="text-center text-2xl text-black font-bold mb-4">Friends</h2>
-        <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center bg-gray-800 p-4 rounded-md w-2/3">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <img
-                src="https://i.redd.it/c8z5m7o3osk81.jpg"
-                alt="Ash"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-lg font-medium">Ash Ketchum</span>
-          </div>
-
-          <div className="flex items-center bg-gray-800 p-4 rounded-md w-2/3">
-            <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <img
-                src="https://i.pinimg.com/1200x/c0/34/08/c0340871f5861bd23f88e92211d9aadc.jpg"
-                alt="Ash"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-lg font-medium">Misty</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div className="mt-8">
-        <h2 className="text-center text-black-700 text-2xl font-bold">Trade Pokemon</h2>
-        <div className="flex justify-center mt-4">
-          <input
-            type="text"
-            placeholder="Enter the Friend's ID"
-            className="p-2 text-black rounded-l-md w-64"
-          />
-          <button className="bg-black text-white px-4 hover:bg-red-600 rounded-r-md">
-            Trade
-          </button>
-        </div>
+      <div className="flex flex-col items-center space-y-4">
+        <FriendRow />
       </div>
     </div>
   );
