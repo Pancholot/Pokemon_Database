@@ -123,7 +123,7 @@ def monitor_trades():
                         print("Documento actualizado:", change["updateDescription"])
     except KeyboardInterrupt:
         print("Deteniendo...")
-    finally:
-        if not mongo.cx or mongo.db is None:
-            mongo.db.client.close()
+        if mongo.cx:
             mongo.cx.close()
+        if mongo.db is not None:
+            mongo.db.client.close()

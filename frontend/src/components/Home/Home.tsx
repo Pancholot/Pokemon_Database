@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { retrieveData } from "@/funcs/api";
@@ -23,7 +22,7 @@ const Home = () => {
       }
     };
     getData();
-  }, []);
+  }, [navigate]);
 
   if (!trainerData) {
     return (
@@ -41,8 +40,7 @@ const Home = () => {
     );
   }
 
-  const { name, pokemon_team } = trainerData;
-  console.log(pokemon_team);
+  const { name } = trainerData;
 
   return (
     <div className="bg-bgHome bg-cover min-h-screen text-center flex flex-col px-8 items-center justify-center">
@@ -71,7 +69,6 @@ const Home = () => {
           Log Out
         </button>
       </div>
-
     </div>
   );
 };

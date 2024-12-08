@@ -23,6 +23,7 @@ class Trainer:
         self.password: str = password
         self.mail: str = mail
         self.friends: list = []
+        self.requests: list = []
 
     def to_dict(self) -> dict:
         """Función que permite representar al objeto trainer como diccionario
@@ -39,6 +40,7 @@ class Trainer:
             "password": self.password,
             "mail": self.mail,
             "friends": self.friends,
+            "requests": self.requests,
         }
 
     @staticmethod
@@ -95,27 +97,29 @@ class Trainer:
         return result
 
     @staticmethod
-    def add_friend(_id: str, _id_friend) -> bool:
+    def add_friend(_id: str, _id_friend: str) -> bool:
         if mongo.db is None:
             return False
         filtro: dict = {"_id": ObjectId(_id)}
-
+        filtro2: dict = {"_id": ObjectId(_id_friend)}
         trainer: dict | None = mongo.db.trainers.find_one(filtro)
-
-        if not trainer:
+        trainer_friend: dict | None = mongo.db.trainers.find_one(filtro2)
+        if not trainer or not trainer_friend:
             return False
 
         friend_list: list = trainer.get("friends")
+        friends_friend_list: list = trainer_friend.get("friends")
 
         friend_list.append(_id_friend)
-
+        friends_friend_list.append(_id)
         update: dict = {"$set": {"friends": friend_list}}
         result = mongo.db.trainers.update_one(filtro, update).acknowledged
-
-        return result
+        update2: dict = {"$set": {"friends": friends_friend_list}}
+        result2 = mongo.db.trainers.update_one(filtro2, update2).acknowledged
+        return result and result2
 
     @staticmethod
-    def remove_friend(_id: str, _id_friend) -> bool:
+    def remove_friend(_id: str, _id_friend: str) -> bool:
         if mongo.db is None:
             return False
         filtro: dict = {"_id": ObjectId(_id)}
@@ -137,18 +141,100 @@ class Trainer:
         return result and result2
 
     @staticmethod
-    def find_friend(_id: str, index: int) -> dict | None:
+    def find_request(_id: str, index: int) -> dict | None:
         if mongo.db is None:
             return
         filtro: dict = {"_id": ObjectId(_id)}
         trainer: dict | None = mongo.db.trainers.find_one(filtro)
         if not trainer:
             return
-        friends: list = trainer["friends"]
-        if index < 0 or index >= len(friends):
+        requests: list = trainer["requests"]
+        if index < 0 or index >= len(requests):
             return
-        friend: dict = friends[index]
-        return friend
+        request: dict = requests[index]
+        return request
+
+    @staticmethod
+    def send_friend_request(_id: str, _id_friend: str) -> bool:
+        if mongo.db is None:
+            return False
+
+        filtro: dict = {"_id": ObjectId(_id_friend)}
+
+        trainer_friend: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer_friend:
+            return False
+
+        friends_requests_list: list = trainer_friend.get("requests")
+        if friends_requests_list is None:
+            return False
+        friends_requests_list.append({"sender": _id, "status": "pending"})
+        update: dict = {"$set": {"requests": friends_requests_list}}
+        result = mongo.db.trainers.update_one(filtro, update).acknowledged
+        return result
+
+    @staticmethod
+    def accept_friend_request(_id: str, index: int) -> bool:
+        if mongo.db is None:
+            return False
+        filtro: dict = {"_id": ObjectId(_id)}
+        trainer: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer:
+            return False
+        friends_requests_list: list = trainer.get("requests")
+        request: dict = friends_requests_list[index]
+        if request["status"] != "pending":
+            return False
+        friends_requests_list[index]["status"] = "accepted"
+        update: dict = {"$set": {"requests": friends_requests_list}}
+        result = mongo.db.trainers.update_one(filtro, update).acknowledged
+        done: bool = False
+        if result:
+            update: dict = {"$set": {"requests": friends_requests_list}}
+            done = mongo.db.trainers.update_one(filtro, update).acknowledged
+        return done
+
+    @staticmethod
+    def deny_friend_request(_id: str, index: int) -> bool:
+        if mongo.db is None:
+            return False
+        filtro: dict = {"_id": ObjectId(_id)}
+        trainer: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer:
+            return False
+        friends_requests_list: list = trainer.get("requests")
+        request: dict = friends_requests_list[index]
+        friends_requests_list.remove(request)
+        update: dict = {"$set": {"requests": friends_requests_list}}
+        result = mongo.db.trainers.update_one(filtro, update).acknowledged
+        return result
+
+    @staticmethod
+    def get_friend_requests(_id: str) -> list | None:
+        if mongo.db is None:
+            return
+        filtro: dict = {"_id": ObjectId(_id)}
+        trainer: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer:
+            return
+        friend_requests: list = trainer.get("requests")
+        return friend_requests
+
+    @staticmethod
+    def update_request(friend_added: str, _id: str) -> None:
+        if mongo.db is None:
+            return
+        filtro: dict = {"_id": ObjectId(_id)}
+        trainer: dict | None = mongo.db.trainers.find_one(filtro)
+        if not trainer:
+            return
+        friend_requests_list: list = trainer.get("requests")
+        for i, request in enumerate(friend_requests_list):
+            if request["sender"] == friend_added:
+                friend_requests_list.remove(request)
+                update: dict = {"$set": {"requests": friend_requests_list}}
+                mongo.db.trainers.update_one(filtro, update)
+                return
 
 
 def monitor_trainers():
@@ -161,27 +247,32 @@ def monitor_trainers():
 
                 if change["operationType"] != "update":
                     continue
-                print(change["documentKey"])
-                updateDescription: dict = change["updateDescription"]
-                for key, value in updateDescription["updatedFields"].items():
-                    if "friend" in key:
-                        path: list = key.split(".")
-                        index_friends: int = int(path[1])
-                        if path[2] == "status":
-                            if value == "confirmed":
-                                friend: dict = Trainer.find_friend(
-                                    str(change["documentKey"]["_id"]), index_friends
-                                )
 
-                    print("Documento actualizado:", change["updateDescription"])
-                    friends: list | None = updateDescription.get("friends")
-                    if friends is None:
-                        continue
+                updateDescription: dict = change["updateDescription"]
+
+                for key, value in updateDescription["updatedFields"].items():
+                    if "requests" in key:
+                        path: list = key.split(".")
+                        if len(path) <= 2:
+                            continue
+                        index = path[1]
+                        request_status = value
+                        if request_status == "accepted":
+                            id: str = str(change["documentKey"]["_id"])
+                            print(id)
+                            request: dict | None = Trainer.find_request(id, int(index))
+                            if request:
+                                print(request)
+                                Trainer.add_friend(request["sender"], id)
+                                Trainer.update_request(id, request["sender"])
+
                 print("Documento actualizado:", change["updateDescription"])
 
+    except IndexError:
+        print("Error de índice")
     except KeyboardInterrupt:
         print("Deteniendo...")
-    finally:
-        if not mongo.cx or mongo.db is None:
-            mongo.db.client.close()
+        if mongo.cx:
             mongo.cx.close()
+        if mongo.db is not None:
+            mongo.db.client.close()
