@@ -10,6 +10,8 @@ import FriendRow from "./FriendRow";
 const Friends = () => {
   const navigate = useNavigate();
   const [trainerData, setTrainerData] = React.useState<Trainer | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
 
   useEffect(() => {
