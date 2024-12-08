@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { retrieveData } from '@/funcs/api';
 import { Pokemon } from '@/types/Pokemon';
