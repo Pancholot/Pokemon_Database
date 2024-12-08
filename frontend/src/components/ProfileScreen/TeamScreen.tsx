@@ -46,7 +46,15 @@ const TeamScreen = () => {
     }, [current, team]);
 
     // Renderizar cuando no hay datos aún
-    if (!team || team.length === 0) return <div>No hay equipo Pokémon disponible.</div>;
+    if (!team || team.length === 0) return <div className="flex justify-center items-center h-screen"><Vortex
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="vortex-loading"
+        wrapperStyle={{}}
+        wrapperClass="vortex-wrapper"
+        colors={['red', 'red', 'black', 'black', 'gray', 'gray']}
+    /> </div>;
     if (!pokemon) return <div>Cargando Pokémon...</div>;
 
     const handleNext = () => {
