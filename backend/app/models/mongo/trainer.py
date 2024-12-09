@@ -165,16 +165,19 @@ class Trainer:
         except:
             return False
         trainer_friend: dict | None = mongo.db.trainers.find_one(filtro)
+
         if not trainer_friend:
             return False
 
         friends_requests_list: list = trainer_friend.get("requests")
         if friends_requests_list is None:
             return False
+
         check: list = [
-            req["sender"] for req in trainer_friend["requests"] if req["sender"] == _id
+            req["sender"] for req in friends_requests_list if req["sender"] == _id
         ]
-        if len(check) > 0 or _id in friends_requests_list:
+
+        if len(check) > 0 or _id in trainer_friend["friends"]:
             return False
 
         friends_requests_list.append({"sender": _id, "status": "pending"})

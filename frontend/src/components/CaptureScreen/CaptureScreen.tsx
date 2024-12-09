@@ -63,7 +63,7 @@ const Capture = ({ children }: any) => {
     };
 
     return (
-        <div className="bg-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+        <div className="bg-bgCaptureScreen bg-cover min-h-screen flex flex-col items-center justify-center p-4">
             <h2 className="text-center text-xl font-bold mb-4">
                 Bienvenido a tu Equipo Pokémon
             </h2>
@@ -85,7 +85,7 @@ const Capture = ({ children }: any) => {
             </div>
 
             {caught && (
-                <div className="text-center text-green-600 text-lg mt-4">
+                <div className="text-center text-black text-lg mt-4">
                     ¡Has capturado el pokemon!
                 </div>
             )}

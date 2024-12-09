@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { PrimaryButtonStyle } from "../LoginScreen/classnameStyles";
 import { putData, retrieveData } from "@/funcs/api";
 import { Trainer } from "@/types/Trainer";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 interface FriendRowRequestProps {
     friend_id: string;
@@ -38,6 +41,21 @@ const FriendRowRequest: React.FC<FriendRowRequestProps> = ({ friend_id, index })
         }
     }
 
+    const handleDeny = async () => {
+        try {
+            const response = await putData(`/trainer/deny_friend_request`, { index: index });
+            console.log(response);
+            setSuccess(response.success);
+        } catch (e) {
+            console.error("Error denying friend request:", e);
+            setError("No se pudo eliminar la solicitud de amistad.");
+        }
+
+        toast("You've denied a Friend Request.")
+
+    };
+
+
     return (
         !success ? <div className="flex-col w-full bg-slate-800 p-2 items-center justify-between rounded-lg shadow-md">
             <div className="flex items-center space-x-3">
@@ -59,11 +77,15 @@ const FriendRowRequest: React.FC<FriendRowRequestProps> = ({ friend_id, index })
                         className={`${PrimaryButtonStyle} bg-white !text-black px-3 py-1 text-sm`}>
                         Accept
                     </button>
-                    <button className={`${PrimaryButtonStyle} bg-red-600 hover:bg-red-700 px-3 py-1 text-sm`}>
+                    <button
+                        onClick={handleDeny}
+                        className={`${PrimaryButtonStyle} !bg-black hover:!bg-red-700 px-3 py-1 text-sm`}>
                         x
                     </button>
                 </div>
+
             )}
+            <ToastContainer position="top-center" draggable theme="colored" />
         </div> : null
     );
 };

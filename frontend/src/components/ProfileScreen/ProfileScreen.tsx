@@ -59,9 +59,9 @@ const ProfileScreen = () => {
             </div>
             <section className='bg-slate-200 min-h-screen min-w-screen md:grid md:grid-cols-12 shadow-xl'>
 
-                <img src="https://wallpapers.com/images/high/pokemon-sun-and-moon-1920-x-1080-2vi6q4whjn9g5y1m.webp" className='col-span-6 md:h-screen md:object-cover md:rounded-r-3xl md:rounded-bl-none rounded-b-3xl' />
+                <img src="https://wallpaper.dog/large/10881125.jpg" className='col-span-6 md:h-screen md:object-cover md:rounded-r-3xl md:rounded-bl-none rounded-b-3xl' />
                 <div className='md:col-span-6 flex flex-col items-center justify-center'>
-                    <img className='mt-4 rounded-full object-cover h-40 w-40 shadow-lg' src="https://wallpapers.com/images/high/pokemon-sun-and-moon-honeqpuatqt4sj3k.webp" alt='Profile photo'></img>
+                    <img className='mt-4 rounded-full object-cover h-40 w-40 shadow-lg' src="https://images4.alphacoders.com/127/thumb-1920-1274987.png" alt='Profile photo'></img>
                     <p className='mt-6'>{capitalizeFirstLetter(name)}</p>
                     <span className='flex gap-4 items-center justify-center'>
                         ID: {_id}<button

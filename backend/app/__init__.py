@@ -23,12 +23,15 @@ def create_app() -> Flask:
     jwt.init_app(app)
 
     from app.routes.pokemon_route import pokemon_bp
+    from app.routes.trade_route import trade_bp
 
     app.register_blueprint(pokemon_bp)
     from app.routes.trainer_route import trainer_bp
 
     app.register_blueprint(trainer_bp)
     from app.routes.captures_route import capture_bp
+
+    app.register_blueprint(trade_bp)
 
     app.register_blueprint(capture_bp)
     return app

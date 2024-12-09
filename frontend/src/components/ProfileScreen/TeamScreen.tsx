@@ -13,7 +13,6 @@ const TeamScreen = () => {
     const [current, setCurrent] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
-
     useEffect(() => {
         const getTrainerData = async () => {
             try {
@@ -27,6 +26,8 @@ const TeamScreen = () => {
         };
         getTrainerData();
     }, [navigate]);
+
+
 
 
     // Cargar datos del Pokémon actual

@@ -15,6 +15,7 @@ export default {
         bgFriendScreen: 'url("https://wallpapercave.com/wp/wp9805173.png")',
         bgPokemonTeam: 'url("https://images.alphacoders.com/135/thumb-1920-1357289.png")',
         bgTradeScreen: 'url("https://images8.alphacoders.com/135/1351987.jpeg")',
+        bgCaptureScreen: 'url("https://wallpapercave.com/wp/wp2285427.jpg")',
       },
 
       borderRadius: {

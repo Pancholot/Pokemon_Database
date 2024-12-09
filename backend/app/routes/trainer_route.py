@@ -129,3 +129,22 @@ def accept_friend_request():
     print(i)
     result: bool = Trainer.accept_friend_request(identity, i)
     return {"message": "Action completed", "success": result}, 200
+
+
+@trainer_bp.route("/trainer/deny_friend_request", methods=["PUT"])
+@jwt_required()
+def deny_friend_request():
+    identity: str = get_jwt_identity()
+    data: dict = request.get_json()
+    i: int | None = data.get("index")
+    if i is None:
+        return {"message": "Index not provided", "success": False}, 400
+    print(f"Denying friend request at index {i} for user {identity}")
+    result: bool = Trainer.deny_friend_request(identity, i)
+    if result:
+        return {"message": "Friend request denied", "success": True}, 200
+    else:
+        return {
+            "message": "Failed to deny friend request",
+            "success": False,
+        }, 500

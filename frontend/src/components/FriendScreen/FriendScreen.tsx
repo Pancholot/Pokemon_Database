@@ -7,14 +7,20 @@ import { PrimaryButtonStyle } from '../LoginScreen/classnameStyles';
 import { capitalizeFirstLetter } from '@/funcs/CapitalizeLetter';
 import FriendRow from "./FriendRow";
 import FriendRowRequest from "./FriendRowRequest";
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import { TradeRequest } from "@/types/TradeRequest";
 
 const Friends = () => {
   const navigate = useNavigate();
   const [trainerData, setTrainerData] = React.useState<Trainer | null>(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarFriendsOpen, setIsSidebarFriendsOpen] = useState(false);
+
   const [error, setError] = useState<string>("");
   const [friend, setFriend] = useState<string>("");
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const [requestTrades, setRequestTrades] = useState<TradeRequest[]>([]);
+
+  const toggleSidebarFriend = () => setIsSidebarFriendsOpen(!isSidebarFriendsOpen);
 
 
   useEffect(() => {
@@ -30,6 +36,20 @@ const Friends = () => {
     };
     getTrainer();
 
+  }, []);
+
+  useEffect(() => {
+    const getRequests = async () => {
+      try {
+        const { trades } = await retrieveData("/trades");
+        console.log(trades)
+        setRequestTrades(trades)
+      } catch (error) {
+        console.error(error);
+
+      }
+    };
+    getRequests();
   }, []);
 
   if (!trainerData) {
@@ -53,6 +73,9 @@ const Friends = () => {
       const response = await putData("/trainer/send_friend_request", { friend_id: friend });
       if (!response.success) {
         setError("Hubo un error al mandar solicitud");
+      } else {
+        toast("You've sent a friend request.")
+
       }
       setFriend("")
     } catch {
@@ -67,9 +90,7 @@ const Friends = () => {
     setError("");
   }
 
-
   const { name, friends, requests } = trainerData;
-
 
   return (
     <>
@@ -84,11 +105,11 @@ const Friends = () => {
           </button>
         </div>
 
-        <div className="text-white p-3 rounded-lg text-center absolute top-0 right-0 m-2">
+        <div className="flex flex-col text-white p-3 rounded-lg text-center absolute top-0 right-0 m-2 mb-2">
 
           <button
-            onClick={toggleSidebar}
-            className={PrimaryButtonStyle}><Vortex
+            onClick={toggleSidebarFriend}
+            className={`${PrimaryButtonStyle} mb-2`}><Vortex
               visible={requests.length > 0}
               height="10"
               width="10"
@@ -99,22 +120,24 @@ const Friends = () => {
             />
             Friend Requests
           </button>
+
         </div>
 
-        {/* Sidebar */}
+
+        {/* Sidebar Friends*/}
         <div
-          className={`fixed top-0 right-0 h-full bg-gray-800 text-white shadow-lg transform transition-transform ${isSidebarOpen ? "translate-x-0" : "translate-x-full"} w-64`}
+          className={`fixed top-0 right-0 h-full bg-gray-800 text-white shadow-lg transform transition-transform ${isSidebarFriendsOpen ? "translate-x-0" : "translate-x-full"} w-64`}
         >
           <button
             className="absolute top-4 right-4 bg-red-600 hover:bg-red-800 text-white rounded-full w-8 h-8 flex items-center justify-center"
-            onClick={toggleSidebar}
+            onClick={toggleSidebarFriend}
             aria-label="Cerrar menú lateral"
           >
             &times;
           </button>
 
           <div className="p-4 text-xl font-bold border-b border-gray-700">
-            Requests
+            Friend Requests
           </div>
 
           <nav className="p-4">
@@ -147,9 +170,6 @@ const Friends = () => {
             Send Friend Request
           </button>
 
-
-
-
         </div>
         {error && <div className="text-red-500 text-center">{error}</div>}<div className="flex justify-center">
 
@@ -160,8 +180,9 @@ const Friends = () => {
 
 
         <div className="flex flex-col items-center space-y-4">
-          {friends.map((friend_id, key) => <FriendRow key={key} friend_id={friend_id} />)}
+          {friends.map((friend_id, key) => <FriendRow key={key} friend_id={friend_id} hasPendingTrade={requestTrades.some((req) => req.trainer_id === friend_id)} />)}
         </div>
+        <ToastContainer />
 
       </div></>
 

@@ -39,16 +39,31 @@ class Trade:
         return result
 
     @staticmethod
+    def get_request(trade_id) -> dict:
+        if mongo.db is None:
+            return False
+        filtro: dict = {"_id": ObjectId(trade_id)}
+        trade: dict = mongo.db.trades.find_one(filtro)
+        return trade
+
+    @staticmethod
     def confirm_trade(data: dict) -> bool:
         if mongo.db is None:
             return False
-        confirm: str | None = data.get("trade_status")
         trade_id: str | None = data.get("trade_id")
         filtro: dict = {"_id": ObjectId(trade_id)}
-        new_value: dict = {"$set": {"trade_status": confirm}}
-        result: bool = mongo.db.trades.find_one_and_update(
-            filtro, new_value
-        ).acknowledged
+        new_value: dict = {"$set": {"trade_status": "confirmed"}}
+        result: bool = mongo.db.trades.update_one(filtro, new_value).acknowledged
+        return result
+
+    @staticmethod
+    def deny_trade(data: dict) -> bool:
+        if mongo.db is None:
+            return False
+        trade_id: str | None = data.get("trade_id")
+        filtro: dict = {"_id": ObjectId(trade_id)}
+        new_value: dict = {"$set": {"trade_status": "denied"}}
+        result: bool = mongo.db.trades.update_one(filtro, new_value).acknowledged
         return result
 
     @staticmethod
@@ -56,8 +71,29 @@ class Trade:
         if mongo.db is None:
             return None
         pending_trades: list = list(
-            mongo.db.trainers.find({"friend_id": trainer_id, "trade_status": "pending"})
+            mongo.db.trades.find({"friend_id": trainer_id, "trade_status": "pending"})
         )
+        for p in pending_trades:
+            p["_id"] = str(p["_id"])
+
+        return pending_trades
+
+    @staticmethod
+    def get_pending_trades_specific(trainer_id: str, friend_id: str) -> list | None:
+        if mongo.db is None:
+            return None
+        pending_trades: list = list(
+            mongo.db.trades.find(
+                {
+                    "trainer_id": friend_id,
+                    "friend_id": trainer_id,
+                    "trade_status": "pending",
+                }
+            )
+        )
+        for p in pending_trades:
+            p["_id"] = str(p["_id"])
+
         return pending_trades
 
 
@@ -69,58 +105,77 @@ def monitor_trades():
             print("Escuchando cambios en la colección 'trades'...")
             for change in change_stream:
                 if change["operationType"] == "update":
-                    fullDocument: dict = change["fullDocument"]
-                    if fullDocument["trade_status"] == "confirmed":
-                        trainer_id: str = fullDocument["trainer_id"]
-                        friend_id: str = fullDocument["friend_id"]
-                        pokemon_traded: int = fullDocument["pokemon_traded"]
-                        pokemon_received: int = fullDocument["pokemon_received"]
 
-                        filtro_trainer: dict = {"_id": ObjectId(trainer_id)}
-                        trainer: dict | None = mongo.db.trainers.find_one(
-                            filtro_trainer
-                        )
-                        filtro_friend: dict = {"_id:": ObjectId(friend_id)}
-                        friend: dict | None = mongo.db.trainers.find_one(filtro_friend)
-                        if trainer and friend:
-                            team: list = trainer["pokemon_team"]
-                            friend_team: list = friend["pokemon_team"]
-                        else:
-                            print("No se encontraron los entrenadores")
-                            continue
+                    updateDescription: dict = change["updateDescription"]
+                    for key, value in updateDescription["updatedFields"].items():
 
-                        case1: bool = False
-                        case2: bool = False
-                        if pokemon_traded in team and pokemon_traded not in friend_team:
-                            print(
-                                f"El entrenador {trainer_id} ha intercambiado {pokemon_traded}"
-                            )
-                            team.remove(pokemon_traded)
-                            friend_team.append(pokemon_traded)
-                            case1 = True
+                        if "trade_status" in key:
+                            if value == "confirmed":
+                                _id: str = str(change["documentKey"]["_id"])
+                                trade: dict = Trade.get_request(_id)
+                                print(trade)
+                                trainer_id: str = trade["trainer_id"]
+                                friend_id: str = trade["friend_id"]
+                                pokemon_traded: int = trade["pkm_traded"]
+                                pokemon_received: int = trade["pkm_received"]
+                                print(friend_id)
 
-                        if (
-                            pokemon_received not in team
-                            and pokemon_received in friend_team
-                        ):
-                            print(
-                                f"El entrenador {friend_id} ha recibido {pokemon_received}"
-                            )
-                            team.append(pokemon_received)
-                            friend_team.remove(pokemon_received)
-                            case2 = True
+                                filtro_trainer: dict = {"_id": ObjectId(trainer_id)}
+                                trainer: dict | None = mongo.db.trainers.find_one(
+                                    filtro_trainer
+                                )
+                                filtro_friend: dict = {"_id": ObjectId(friend_id)}
+                                friend: dict | None = mongo.db.trainers.find_one(
+                                    filtro_friend
+                                )
 
-                        result1: bool = mongo.db.trainers.update_one(
-                            filtro_trainer, {"$set": {"pokemon_team": team}}
-                        ).acknowledged
-                        result2: bool = mongo.db.trainers.update_one(
-                            filtro_friend, {"$set": {"pokemon_team": friend_team}}
-                        ).acknowledged
+                                if trainer is not None and friend is not None:
+                                    team: list = trainer["pokemon_team"]
+                                    friend_team: list = friend["pokemon_team"]
+                                else:
+                                    print("No se encontraron los entrenadores")
+                                    continue
 
-                        print(
-                            f"RESULTADO:  {str((case1 and case2) and (result1 and result2))}"
-                        )
-                        print("Documento actualizado:", change["updateDescription"])
+                                case1: bool = False
+                                case2: bool = False
+                                if (
+                                    pokemon_traded in team
+                                    and pokemon_traded not in friend_team
+                                ):
+                                    print(
+                                        f"El entrenador {trainer_id} ha intercambiado {pokemon_traded}"
+                                    )
+                                    team.remove(pokemon_traded)
+                                    friend_team.append(pokemon_traded)
+                                    case1 = True
+
+                                if (
+                                    pokemon_received not in team
+                                    and pokemon_received in friend_team
+                                ):
+                                    print(
+                                        f"El entrenador {friend_id} ha recibido {pokemon_received}"
+                                    )
+                                    team.append(pokemon_received)
+                                    friend_team.remove(pokemon_received)
+                                    case2 = True
+
+                                result1: bool = mongo.db.trainers.update_one(
+                                    filtro_trainer, {"$set": {"pokemon_team": team}}
+                                ).acknowledged
+                                result2: bool = mongo.db.trainers.update_one(
+                                    filtro_friend,
+                                    {"$set": {"pokemon_team": friend_team}},
+                                ).acknowledged
+
+                                print(
+                                    f"RESULTADO:  {str((case1 and case2) and (result1 and result2))}"
+                                )
+                                print(
+                                    "Documento actualizado:",
+                                    change["updateDescription"],
+                                )
+
     except KeyboardInterrupt:
         print("Deteniendo...")
         if mongo.cx:

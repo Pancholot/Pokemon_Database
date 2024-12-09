@@ -98,6 +98,7 @@ const LoginScreen = () => {
             onChange={handleInputPasswordChange}
             onFocus={handleInputPasswordFocus}
             required
+
           />
           <div className="w-full flex items-center justify-evenly mt-3">
             <button
