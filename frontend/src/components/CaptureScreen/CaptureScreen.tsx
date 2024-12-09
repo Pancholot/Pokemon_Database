@@ -13,7 +13,7 @@ const Capture = ({ children }: any) => {
     const [toCatch, setToCatch] = useState<Pokemon[]>([]);
     const [numToCatch, setNumToCatch] = useState<number[]>([]);
     const [caught, setCaught] = useState<boolean>(false);
-
+    const [isCatching, setIsCatching] = useState<boolean>(false);
     useEffect(() => {
         const getData = async () => {
             try {
@@ -47,14 +47,18 @@ const Capture = ({ children }: any) => {
     }
 
     const handleCatch = async (pokemon_id: number) => {
+        if (isCatching) return;
+        setIsCatching(true);
         try {
             const response = await putData("/capture", {
-                pokemon_id: pokemon_id,
+                pokemon_id,
                 lista_pokemon_to_catch: numToCatch,
             });
             setCaught(response.success);
         } catch {
-            console.error("Error al capturar el pokemon");
+            console.error("Error al capturar el Pokémon");
+        } finally {
+            setIsCatching(false);
         }
     };
 
@@ -80,16 +84,14 @@ const Capture = ({ children }: any) => {
                     ))}
             </div>
 
-            {/* Mensaje cuando todos están capturados */}
             {caught && (
                 <div className="text-center text-green-600 text-lg mt-4">
-                    ¡Has capturado todos los pokemones del día!
+                    ¡Has capturado el pokemon!
                 </div>
             )}
 
             {children}
 
-            {/* Botón para volver al Home */}
             <div className="mt-6">
                 <button
                     type="button"

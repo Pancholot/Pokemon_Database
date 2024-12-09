@@ -85,9 +85,9 @@ export const logOut = async () => {
   }
 };
 
-export const retrieveData = async (route: string) => {
+export const retrieveData = async (route: string, params: unknown = {}) => {
   try {
-    const response = await api.get(route);
+    const response = await api.get(route, { params });
     return response.data;
   } catch (error) {
     console.error("Error al obtener datos:", error, route);

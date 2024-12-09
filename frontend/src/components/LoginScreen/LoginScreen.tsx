@@ -99,7 +99,7 @@ const LoginScreen = () => {
             onFocus={handleInputPasswordFocus}
             required
           />
-          <div className="w-full flex items-center justify-evenly">
+          <div className="w-full flex items-center justify-evenly mt-3">
             <button
               type="button"
               onClick={() => navigate("/register")}

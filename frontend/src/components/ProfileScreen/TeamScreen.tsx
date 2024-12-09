@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import { retrieveData } from '@/funcs/api';
 import { Pokemon } from '@/types/Pokemon';
 import { Vortex } from "react-loader-spinner";
+import { capitalizeFirstLetter } from '@/funcs/CapitalizeLetter';
 
 const TeamScreen = () => {
     const navigate = useNavigate();
@@ -156,7 +157,7 @@ const TeamScreen = () => {
                             </div>
                             <div className="text-center bg-gray-100 p-2 rounded-lg shadow-md w-1/4">
                                 <p className="text-lg font-semibold text-black">Type 1</p>
-                                <p className="font-bold">{pokemon.type1}</p>
+                                <p className="font-bold">{capitalizeFirstLetter(pokemon.type1)}</p>
                             </div>
 
                         </div>
@@ -169,7 +170,9 @@ const TeamScreen = () => {
                             </div>
                             <div className="text-center bg-gray-100 p-2 rounded-lg shadow-md w-1/4">
                                 <p className="text-lg font-semibold text-black">Type 2</p>
-                                <p className="font-bold">{pokemon.type2 || "N/A"}</p>
+                                <p className="font-bold">
+                                    {pokemon.type2 ? capitalizeFirstLetter(pokemon.type2) : "N/A"}
+                                </p>
                             </div>
                         </div> </>}
                 </div>

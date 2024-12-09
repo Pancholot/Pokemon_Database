@@ -44,9 +44,9 @@ const Home = () => {
 
   return (
     <div className="bg-bgHome bg-cover min-h-screen text-center flex flex-col px-8 items-center justify-center">
-      <h2 className="text-white">Hola, {capitalizeFirstLetter(name)}</h2>
+      <h2 className="text-white mb-16 text-6xl">Hola, {capitalizeFirstLetter(name)}</h2>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-6">
         <button
           type="button"
           onClick={() => navigate("/capturescreen")}

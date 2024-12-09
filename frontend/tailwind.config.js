@@ -14,6 +14,7 @@ export default {
         bgHome: 'url("https://preview.redd.it/i-made-a-cool-pokemon-koi-pond-wallpaper-v0-zipswqk1ztva1.png?auto=webp&s=fdf174c9c6d009638b40f8ede42fc2bfe00f0800")',
         bgFriendScreen: 'url("https://wallpapercave.com/wp/wp9805173.png")',
         bgPokemonTeam: 'url("https://images.alphacoders.com/135/thumb-1920-1357289.png")',
+        bgTradeScreen: 'url("https://images8.alphacoders.com/135/1351987.jpeg")',
       },
 
       borderRadius: {

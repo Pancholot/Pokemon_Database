@@ -133,7 +133,7 @@ const Register = () => {
           {/*<input required type='text' name='region' placeholder='Type your region...' className={InputStyle} onChange={(event: any) => {
                         setRegion(event.target.value)
                     }} />*/}
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex items-center justify-between mt-3">
             <a href="/login" className="underline text-white font-mono">
               Log In
             </a>

@@ -1,3 +1,5 @@
+
+
 CREATE USER 'nuevousuario'@'%' IDENTIFIED BY 'password';
 
 GRANT ALL PRIVILEGES ON *.* TO 'nuevousuario'@'%' WITH GRANT OPTION;

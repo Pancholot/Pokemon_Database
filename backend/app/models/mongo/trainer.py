@@ -159,8 +159,11 @@ class Trainer:
         if mongo.db is None:
             return False
 
-        filtro: dict = {"_id": ObjectId(_id_friend)}
-
+        filtro: dict = {}
+        try:
+            filtro = {"_id": ObjectId(_id_friend)}
+        except:
+            return False
         trainer_friend: dict | None = mongo.db.trainers.find_one(filtro)
         if not trainer_friend:
             return False
@@ -168,6 +171,12 @@ class Trainer:
         friends_requests_list: list = trainer_friend.get("requests")
         if friends_requests_list is None:
             return False
+        check: list = [
+            req["sender"] for req in trainer_friend["requests"] if req["sender"] == _id
+        ]
+        if len(check) > 0 or _id in friends_requests_list:
+            return False
+
         friends_requests_list.append({"sender": _id, "status": "pending"})
         update: dict = {"$set": {"requests": friends_requests_list}}
         result = mongo.db.trainers.update_one(filtro, update).acknowledged
@@ -188,11 +197,7 @@ class Trainer:
         friends_requests_list[index]["status"] = "accepted"
         update: dict = {"$set": {"requests": friends_requests_list}}
         result = mongo.db.trainers.update_one(filtro, update).acknowledged
-        done: bool = False
-        if result:
-            update: dict = {"$set": {"requests": friends_requests_list}}
-            done = mongo.db.trainers.update_one(filtro, update).acknowledged
-        return done
+        return result
 
     @staticmethod
     def deny_friend_request(_id: str, index: int) -> bool:
@@ -244,30 +249,18 @@ def monitor_trainers():
         with mongo.db.trainers.watch() as change_stream:
             print("Escuchando cambios en la colección 'trainers'...")
             for change in change_stream:
-
                 if change["operationType"] != "update":
                     continue
-
                 updateDescription: dict = change["updateDescription"]
-
                 for key, value in updateDescription["updatedFields"].items():
-                    if "requests" in key:
-                        path: list = key.split(".")
-                        if len(path) <= 2:
-                            continue
-                        index = path[1]
-                        request_status = value
-                        if request_status == "accepted":
-                            id: str = str(change["documentKey"]["_id"])
-                            print(id)
-                            request: dict | None = Trainer.find_request(id, int(index))
-                            if request:
-                                print(request)
-                                Trainer.add_friend(request["sender"], id)
-                                Trainer.update_request(id, request["sender"])
-
-                print("Documento actualizado:", change["updateDescription"])
-
+                    if "requests" in key and isinstance(value, list):
+                        requests = value
+                        for request in requests:
+                            if request["status"] == "accepted":
+                                _id: str = str(change["documentKey"]["_id"])
+                                Trainer.add_friend(request["sender"], _id)
+                                Trainer.update_request(_id, request["sender"])
+                                Trainer.update_request(request["sender"], _id)
     except IndexError:
         print("Error de índice")
     except KeyboardInterrupt:

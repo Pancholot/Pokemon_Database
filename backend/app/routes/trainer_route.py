@@ -76,6 +76,7 @@ def get_trainer():
                         "region": trainer["region"],
                         "pokemon_team": trainer["pokemon_team"],
                         "friends": trainer["friends"],
+                        "requests": trainer["requests"],
                     },
                 }
             ),
@@ -85,14 +86,46 @@ def get_trainer():
         return jsonify({"message": "Trainer not found", "success": False}), 404
 
 
-@trainer_bp.route("/trainer/add_friend", methods=["PUT"])
+@trainer_bp.route("/trainer/<id>", methods=["GET"])
 @jwt_required()
-def add_friend():
+def get_trainer_id(id: str):
+    trainer: dict | None = Trainer.get_trainer_by_id(id)
+    if trainer:
+        return (
+            jsonify(
+                {
+                    "trainer": {
+                        "_id": trainer["_id"],
+                        "name": trainer["name"],
+                        "region": trainer["region"],
+                        "pokemon_team": trainer["pokemon_team"],
+                    },
+                }
+            ),
+            200,
+        )
+    else:
+        return jsonify({"message": "Trainer not found", "success": False}), 404
+
+
+@trainer_bp.route("/trainer/send_friend_request", methods=["PUT"])
+@jwt_required()
+def send_friend_request():
     identity: str = get_jwt_identity()
     data: dict = request.get_json()
     friend_id: str | None = data.get("friend_id")
     if not friend_id:
         return jsonify({"message": "Friend ID is required", "success": False}), 400
+    result: bool = Trainer.send_friend_request(identity, friend_id)
+    return {"message": "Action completed", "success": result}, 200
 
-    result: bool = Trainer.add_friend(identity, friend_id)
+
+@trainer_bp.route("/trainer/accept_friend_request", methods=["PUT"])
+@jwt_required()
+def accept_friend_request():
+    identity: str = get_jwt_identity()
+    data: dict = request.get_json()
+    i: int | None = data.get("index")
+    print(i)
+    result: bool = Trainer.accept_friend_request(identity, i)
     return {"message": "Action completed", "success": result}, 200

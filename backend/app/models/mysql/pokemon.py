@@ -89,6 +89,19 @@ class Pokemon:
         rows = cursor.fetchall()
         return [Pokemon(*row).to_dict() for row in rows]
 
+    def get_from_list(pokemon_list: list):
+        database: Any | None = mysql.get_db()
+        if database is None:
+            return []
+        cursor: Cursor = database.cursor()
+        query = "SELECT * FROM pokemon WHERE pokedex_number IN (%s)" % ", ".join(
+            ["%s"] * len(pokemon_list)
+        )
+        cursor.execute(query, pokemon_list)
+        rows = cursor.fetchall()
+
+        return [Pokemon(*row).to_dict() for row in rows]
+
     @staticmethod
     def get_all_even():
         database: Any | None = mysql.get_db()
@@ -97,6 +110,7 @@ class Pokemon:
         cursor: Cursor = database.cursor()
         cursor.execute("SELECT * FROM pokemon WHERE MOD(pokedex_number,2) = 0 ")
         rows: tuple[tuple[Any, ...], ...] = cursor.fetchall()
+        cursor.close()
         return [Pokemon(*row).to_dict() for row in rows]
 
     @staticmethod
@@ -107,6 +121,7 @@ class Pokemon:
         cursor: Cursor = database.cursor()
         cursor.execute(f"SELECT * FROM pokemon WHERE  pokedex_number = {pkx_num}")
         row: tuple | None = cursor.fetchone()
+        cursor.close()
         if row is None:
             return {}
         return Pokemon(*row).to_dict()
