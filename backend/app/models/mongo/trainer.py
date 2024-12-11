@@ -1,4 +1,5 @@
-from app import mongo, bcrypt
+import gevent
+from app import mongo, bcrypt, socket_io
 from datetime import datetime
 from bson import ObjectId
 import re
@@ -255,20 +256,30 @@ def monitor_trainers():
                 if change["operationType"] != "update":
                     continue
                 updateDescription: dict = change["updateDescription"]
+                _id: str = str(change["documentKey"]["_id"])
                 for key, value in updateDescription["updatedFields"].items():
                     if "requests" in key and isinstance(value, list):
                         requests = value
+                        data = {
+                            "_id": _id,
+                            "requests": requests,
+                        }
+                        socket_io.emit("updated_friend_requests", data)
                         for request in requests:
                             if request["status"] == "accepted":
-                                _id: str = str(change["documentKey"]["_id"])
                                 Trainer.add_friend(request["sender"], _id)
                                 Trainer.update_request(_id, request["sender"])
                                 Trainer.update_request(request["sender"], _id)
-    except IndexError:
-        print("Error de índice")
-    except KeyboardInterrupt:
-        print("Deteniendo...")
-        if mongo.cx:
-            mongo.cx.close()
-        if mongo.db is not None:
-            mongo.db.client.close()
+                    if "friends" in key and isinstance(value, list):
+                        friends = value
+                        data = {
+                            "_id": _id,
+                            "friends": friends,
+                        }
+                        socket_io.emit("updated_friends", data)
+        change_stream.close()
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+gevent.spawn(monitor_trainers)

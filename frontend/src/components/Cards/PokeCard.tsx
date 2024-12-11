@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   PokeCardStyle,
   PokeCardTitleStyle,
@@ -11,10 +10,6 @@ import {
 import { Pokemon } from "@/types/Pokemon";
 const PokeCard = function ({ pokemon }: { pokemon: Pokemon }) {
   const { pokedex_number, name, image, classification, attack } = pokemon;
-
-  useEffect(() => {
-    console.log(image)
-  }, [])
 
   return pokemon ? (
     <div className={PokeCardStyle}>

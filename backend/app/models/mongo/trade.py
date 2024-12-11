@@ -1,4 +1,5 @@
-from app import mongo
+import gevent
+from app import mongo, socket_io
 from datetime import datetime
 from bson import ObjectId
 
@@ -39,11 +40,11 @@ class Trade:
         return result
 
     @staticmethod
-    def get_request(trade_id) -> dict:
+    def get_request(trade_id) -> dict | None:
         if mongo.db is None:
-            return False
+            return
         filtro: dict = {"_id": ObjectId(trade_id)}
-        trade: dict = mongo.db.trades.find_one(filtro)
+        trade: dict | None = mongo.db.trades.find_one(filtro)
         return trade
 
     @staticmethod
@@ -105,20 +106,18 @@ def monitor_trades():
             print("Escuchando cambios en la colección 'trades'...")
             for change in change_stream:
                 if change["operationType"] == "update":
-
                     updateDescription: dict = change["updateDescription"]
                     for key, value in updateDescription["updatedFields"].items():
-
                         if "trade_status" in key:
+                            _id: str = str(change["documentKey"]["_id"])
                             if value == "confirmed":
-                                _id: str = str(change["documentKey"]["_id"])
-                                trade: dict = Trade.get_request(_id)
-                                print(trade)
+                                trade: dict | None = Trade.get_request(_id)
+                                if not trade:
+                                    continue
                                 trainer_id: str = trade["trainer_id"]
                                 friend_id: str = trade["friend_id"]
                                 pokemon_traded: int = trade["pkm_traded"]
                                 pokemon_received: int = trade["pkm_received"]
-                                print(friend_id)
 
                                 filtro_trainer: dict = {"_id": ObjectId(trainer_id)}
                                 trainer: dict | None = mongo.db.trainers.find_one(
@@ -175,10 +174,27 @@ def monitor_trades():
                                     "Documento actualizado:",
                                     change["updateDescription"],
                                 )
+                            elif value == "denied":
+                                data = {
+                                    "_id": _id,
+                                }
+                                socket_io.emit("trade_request_denied", data)
 
-    except KeyboardInterrupt:
-        print("Deteniendo...")
-        if mongo.cx:
-            mongo.cx.close()
-        if mongo.db is not None:
-            mongo.db.client.close()
+                if change["operationType"] == "insert":
+                    fullDocument: dict = change["fullDocument"]
+                    receiver_id: str = fullDocument["friend_id"]
+                    fullDocument["_id"] = str(fullDocument["_id"])
+                    fullDocument["trade_date"] = fullDocument["trade_date"].isoformat()
+                    data = {
+                        "_id": receiver_id,
+                        "request": fullDocument,
+                    }
+                    socket_io.emit("trade_request", data)
+
+        change_stream.close()
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+gevent.spawn(monitor_trades)

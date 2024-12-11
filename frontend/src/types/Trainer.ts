@@ -4,5 +4,5 @@ export type Trainer = {
   region: string;
   pokemon_team: Array<number>;
   friends: Array<string>;
-  requests: Array<any>;
+  requests: Array<unknown>;
 };
